@@ -1,0 +1,852 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+svg {
+    fill: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 65px 60px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', "system-ui", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+
+nav {
+    display: flex;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 14px;
+    background-color: rgba(247, 247, 247, 0.75);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+nav a {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    opacity: 0.5;
+    font-size: 17px;
+    align-items: center;
+    border-radius: 10px;
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+nav a:hover {
+    background: rgb(0, 0, 0, 0.08);
+    opacity: 0.75;
+}
+
+.selected {
+    background: rgb(0, 0, 0, 0.05);
+    opacity: 0.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    height: fit-content;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 28px;
+    padding-inline: 10px;
+}
+
+h1 sec {
+    opacity: 0.5;
+}
+
+segment {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+/* Ideas from design */
+
+.left, .right {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(0, 0, 0, 0.06);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: background-color 0.15s ease-out;
+}
+
+.left:active, .right:active {
+    background-color: rgb(0, 0, 0, 0.12);
+}
+
+.left svg {
+    margin-right: 2px;
+}
+
+.right svg {
+    margin-left: 2px;
+}
+
+
+
+
+
+
+
+/* Case Cards */
+
+card-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 444px));
+    gap: 20px;
+    row-gap: 40px;
+    margin-block: 15px;
+    align-items: center;
+}
+
+card-holder a {
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+    background-color: white;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    max-width: 490px;
+}
+
+card-holder a h1 {
+    font-size: 40px;
+}
+
+card-holder a group h1:nth-child(2) {
+    opacity: 0.25;
+}
+
+card-holder a h2 {
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+card-holder a project {
+    display: flex;
+    gap: 7px;
+    padding: 8px 16px 8px 20px;
+    background-color: rgb(0, 122, 255, 0.1);
+    font-size: 17px;
+    font-weight: 500;
+    color: #007AFF;
+    fill:#007AFF;
+    align-items: center;
+    border-radius: 100px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, fill 0.25s ease-in-out;
+}
+
+card-holder a project:hover {
+    background-color: rgb(0, 122, 255, 1);
+    color: white;
+    fill: white;
+    cursor:pointer;
+}
+
+
+card-holder a project svg {
+    margin-top: 2px;
+}
+
+group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 300px;
+}
+
+slider-about group, slider-photos group, indie group {
+    gap: 0px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Ideas that launched cases */
+.top-2 {
+    padding-top: 40px;
+}
+
+.braun a {
+    justify-content: flex-start;
+    gap: 10px;
+    color: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.0);
+}
+
+.braun a p {
+    font-size: 19px;
+}
+
+.braun a h2 {
+    opacity: 0.6;
+}
+
+.bottom {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Writing -- foundations and principles */
+
+carousel {
+    height: 750px;
+    border-radius: 28px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+slider, slider-about, slider-photos {
+    height: 100%;
+    display: flex;
+    width: 300%;
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 1s;
+}
+
+slider-about {
+    width: 400%;
+}
+
+slider-photos {
+    width: 600%;
+}
+
+platter {
+    display: flex;
+    gap: 10px;
+}
+
+controls {
+    display: flex;
+    padding: 8px 12px;
+    gap: 16px;
+    width:fit-content;
+    align-items: center;
+    background-color: rgb(232, 232, 237, 0.75);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 100px;
+    position: relative;
+    top: -31px;
+    margin: 0 auto;
+}
+
+indicator, indicator2 {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+indicator.selected, indicator2.selected {
+    background-color: rgb(0, 0, 0, 1);
+}
+
+
+
+/* Writing fundementals and principles slide*/
+
+slider a {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    gap: 6px;
+}
+
+slider a h1 {
+    font-size: 96px;
+    text-wrap:nowrap;
+    line-height: 115px;
+}
+
+slider a h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+slider a h3 {
+    font-size: 17px;
+}
+
+slider-about a, slider-photos a {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 0px;
+    cursor: default;
+}
+
+.reverse {
+    justify-content: flex-end;
+    color: white;
+}
+
+.reverse a p {
+    opacity: 0.6;
+}
+
+slider-about a h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+slider-about a p {
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+slider-about a group, slider-photos a group {
+    display: grid;
+    gap: 0px;
+    justify-items: center;
+}
+
+slider-photos a {
+    justify-content: flex-end;
+    color: white;
+    padding: 100px;
+}
+
+slider-photos a h1 {
+    font-size: 72px;
+    font-weight: 700;
+}
+
+slider-photos a h2 {
+    font-size: 21px;
+}
+
+border {
+    display: flex;
+    gap: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border: 1.5px solid;
+    border-radius: 100px;
+    margin-top: 5px;
+    color: #000;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+}
+
+.read:hover  {
+    background: #EFEFEF;
+    border-color: #EFEFEF;
+}
+
+border:hover, .audio border:hover {
+    color: black;
+    background: #fff;
+    border-color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Chin*/
+
+chin {
+    display: grid;
+    gap: 10px;
+    margin-top: -15px;
+    padding-inline: 120px;
+    padding-bottom: 20px;
+}
+
+chin p {
+    font-size: 12px;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+chin p sec {
+    color: rgb(0, 0, 0, 0.75);
+}
+
+
+
+
+
+
+
+
+/* About my heroes*/
+
+grid-caption {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    align-items: flex-start;
+    padding: 10px 40px 30px;
+    text-align: left;
+}
+
+grid-caption h1 {
+    font-size: 21px;
+    color: black;
+}
+
+indie {
+    display: grid;
+    justify-content: center;
+    padding: 100px 60px 120px;
+    gap: 40px;
+    width: 100vw;
+    position: relative;
+    left: -60px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%, white 25%);
+}
+
+indie group {
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+}
+
+indie group h1 {
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+}
+
+indie group h2 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Designs */
+
+.boards {
+    gap: 10px;
+    padding-inline: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: white;
+}
+
+.boards chin {
+    margin-top: 0px;
+    padding: 60px 180px 80px;
+}
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+    gap: 10px;
+    background-color: #F7F7F7;
+    cursor: pointer;
+    padding: 30px;
+}
+
+.top {
+    padding-top: 60px;
+}
+
+.center {
+    justify-content: center;
+}
+
+.cover h1 {
+    font-size: 56px;
+    line-height: 56px;
+}
+
+.cover p {
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* AUDIO */
+
+.audio slider a, .audio border {
+    color: white;
+    border-color: white;
+    justify-content: center;
+}
+
+.audio slider a h1 {
+    font-size: 80px;
+    line-height: 92px
+}
+
+.audio border {
+    margin-top: 10px;
+}
+
+/* PLAYLIST */
+
+.playlist {
+    gap: 15px;
+}
+
+.list {
+    gap: 0px;
+}
+
+heading, .list a {
+    display: flex;
+    gap: 15px;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+heading {
+    padding: 8px 25px 8px 15px;
+}
+
+.list a {
+    padding: 8px 20px 8px 30px;
+    cursor:initial;
+}
+
+.gray {
+    background:rgb(0, 0, 0, 0.025)
+}
+
+.ghost {
+    opacity: 0;
+}
+
+art {
+    display: block;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 6px;
+}
+
+.list p {
+    font-size: 17px;
+    opacity: 0.5;
+    width: 100%;
+}
+
+.list heading p {
+    font-weight: 500;
+}
+
+.list a :nth-child(2), .list heading :nth-child(2) {
+    opacity: 1;
+}
+
+play {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px;
+    min-height: 36px; 
+    background:rgb(0, 0, 0, 0.025);
+    border-radius: 100px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+play:hover {
+    background-color: rgb(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+play:active {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+play svg {
+    margin-left: 3px;
+}
+
+
+
+
+
+
+
+
+
+/* ESSAY */
+
+.essay {
+    padding: 65px 0;
+    align-items: center;
+    gap: 0px;
+}
+
+.essay group {
+    gap: 5px;
+    align-items: center;
+    height: auto;
+}
+
+.essay h1 {
+    font-size: 80px;
+    font-weight: 700;
+    opacity: 0.85;
+}
+
+.essay h2 {
+    font-size: 21px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+photo-back {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    padding: 25px 60px;
+}
+
+gradient {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgb(247, 247, 247) 0%, rgba(247, 247, 247, 0.70) 20%, rgba(247, 247, 247, 0.10) 40%, rgba(247, 247, 247, 0.10) 60%, rgba(247, 247, 247, 0.70) 80%, #f7f7f7 100%)
+}
+
+photo-frame, photo-frame-shadow {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+    animation: immersivePhoto 1.5s ease-in-out none;
+    position: relative;
+    width: 100%;
+}
+
+photo-frame {
+    border-radius: 21px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes immersivePhoto {
+    0% {
+        scale: 0.95;
+    }
+    25% {
+        scale: 1.01;
+    }
+    50% {
+        scale: 0.999;
+    }
+    75% {
+        scale: 1.001;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+photo-frame-shadow {
+    z-index: 1;
+    filter: blur(25px) saturate(200%);
+    opacity: 0.4;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    bottom: 25px;
+    margin: 0 auto;
+}
+
+photo-front {
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    left: -60px;
+    z-index: 2;
+}
+
+.essay p {
+    font-size: 17px;
+}
+
+written {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 80px;
+    gap: 20px;
+}
+
+detail {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.essay detail p {
+    font-size: 19px;
+    opacity: 0.5;
+}
+
+read-essay {
+    columns: 300px 4;
+    column-gap: 25px;
+}
+
+.essay read-essay p {
+    padding-bottom: 1em;
+    font-size: 21px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.essay chin {
+    text-align: center;
+    padding: 100px 150px 20px;
+}
+
+.essay chin p {
+    font-size:12px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 180px;
+    gap: 10px;
+}
+
+.grouped {
+    padding: 0px 0 100px;
+}
+
+.essay written h2 {
+    font-size: 36px;
+    align-self: center;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+.grouped h3 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.essay section h1 {
+    font-size: 36px;
+    padding: 0;
+}
+
+line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
+    margin-bottom: 20px;
+}
+
+item-grid {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 65px;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+
+.essay item-grid h1 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.essay item-grid group {
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.essay item-grid p {
+    font-size: 19px;
+    opacity: 0.5;
+}
