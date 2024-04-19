@@ -36,79 +36,98 @@
     </nav>
 
     <segment>
-        <wordmark>
+        <wordmark class="lead">
             <h1>Shelf</h1>
             <p>A new era of self-expression.</p>
         </wordmark>
-        <holder class="keys">
+        <holder class="hold-key">
             <img class="key" src="Im/s-key.webp">
         </holder>
         <wordmark class="shout">
-            <h2>Your photos, video, notes, voice, and links.</h2>
-            <h2><sec>Arranged like the shelves on your walls.</sec></h2>
-            <h2><sec>With color coded spaces and tunnels to expand.</sec></h2>
-            <h1>Say hello to Shelf.</h1>
+            <h4>Your photos, video, notes, voice, and links.</h4>
+            <h4><sec>Arranged like the shelves on your walls.</sec></h4>
+            <h4><sec>With color coded spaces and tunnels to expand.</sec></h4>
+            <h5>Say hello to Shelf.</h5>
+            <color-options id="image-container">
+                <color-panel>
+                    <h1>Personalize Shelf with any two colors.</h1>
+                <div class="panel" id="button-container">
+                </color-panel>
+                    <div class="label">
+                        <button class="button selected-color" onclick="handleButtonClick(event, 'Im/s-blue.webp')">
+                            <paint class="blue">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5"/>
+                                </svg>
+                            </paint>
+                        </button>
+                        <p>Blue</p>
+                    </div>
+                    <div class="label">
+                        <button class="button" onclick="handleButtonClick(event, 'Im/s-green.webp')">
+                            <paint class="green">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5"/>
+                                </svg>
+                            </paint>
+                        </button>
+                        <p>Green</p>
+                    </div>
+                    <div class="label">
+                        <button class="button" onclick="handleButtonClick(event, 'Im/s-orange.webp')">
+                            <paint class="orange">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5"/>
+                                </svg>
+                            </paint>
+                        </button>
+                        <p>Orange</p>
+                    </div>
+                    <div class="label">
+                        <button class="button" onclick="handleButtonClick(event, 'Im/s-pink.webp')">
+                            <paint class="pink">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5"/>
+                                </svg>
+                            </paint>
+                        </button>
+                        <p>Pink</p>
+                    </div>
+                    <div class="label">
+                        <button class="button" onclick="handleButtonClick(event, 'Im/s-purple.webp')">
+                            <paint class="purple">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5"/>
+                                </svg>
+                            </paint>
+                        </button>
+                        <p>Purple</p>
+                    </div>
+                </div>
+            </color-options>
         </wordmark>
     </segment>
 
-    <color-options id="image-container">
-        <color-panel>
-            <h1>Personalize Shelf with any two colors.</h1>
-        <div class="panel" id="button-container">
-        </color-panel>
-            <div class="label">
-                <button class="button selected-color" onclick="handleButtonClick(event, 'Im/s-blue.webp')">
-                    <paint class="blue">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10" height="10" rx="5"/>
-                        </svg>
-                    </paint>
-                </button>
-                <p>Blue</p>
-            </div>
-            <div class="label">
-                <button class="button" onclick="handleButtonClick(event, 'Im/s-green.webp')">
-                    <paint class="green">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10" height="10" rx="5"/>
-                        </svg>
-                    </paint>
-                </button>
-                <p>Green</p>
-            </div>
-            <div class="label">
-                <button class="button" onclick="handleButtonClick(event, 'Im/s-orange.webp')">
-                    <paint class="orange">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10" height="10" rx="5"/>
-                        </svg>
-                    </paint>
-                </button>
-                <p>Orange</p>
-            </div>
-            <div class="label">
-                <button class="button" onclick="handleButtonClick(event, 'Im/s-pink.webp')">
-                    <paint class="pink">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10" height="10" rx="5"/>
-                        </svg>
-                    </paint>
-                </button>
-                <p>Pink</p>
-            </div>
-            <div class="label">
-                <button class="button" onclick="handleButtonClick(event, 'Im/s-purple.webp')">
-                    <paint class="purple">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10" height="10" rx="5"/>
-                        </svg>
-                    </paint>
-                </button>
-                <p>Blue</p>
-            </div>
-        </div>
-    </color-options>
+    <segment>
+        <caption-grid>
+            <topic>
+                <h1>The Gist</h1>
+                <p>Could Shelf decorate our homes? It just might. What if you could write a hand written letter on a desk and walk it over to its right place? Or rip it up to delete it? What if when you put your ear to a voice memo, it starts to play? Welcome to spatial computing.</p>
+            </topic>
+            <topic>
+                <h1>Tidbits Throughout</h1>
+                <p>Tidbits of design thinking are sprinked throughout. Research, iterations, and more writing about 'why' and 'for whom' appear toward the end of this case.</p>
+            </topic>
+        </caption-grid>
+        <a class="jump" href="#writing">
+            Jump to the writing
+            <svg width="8" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.48596 6.71191C8.48596 6.8584 8.45667 6.99756 8.39807 7.12939C8.34436 7.25635 8.25647 7.37842 8.1344 7.49561L2.50208 13.0107C2.31165 13.1963 2.07971 13.2891 1.80627 13.2891C1.63049 13.2891 1.46692 13.2451 1.31555 13.1572C1.16418 13.0693 1.04211 12.9521 0.949341 12.8057C0.86145 12.6592 0.817505 12.4932 0.817505 12.3076C0.817505 12.0391 0.920044 11.7998 1.12512 11.5898L6.14221 6.71191L1.12512 1.83398C0.920044 1.62891 0.817505 1.38965 0.817505 1.11621C0.817505 0.935547 0.86145 0.771973 0.949341 0.625488C1.04211 0.474121 1.16418 0.354492 1.31555 0.266602C1.46692 0.178711 1.63049 0.134766 1.80627 0.134766C2.07971 0.134766 2.31165 0.227539 2.50208 0.413086L8.1344 5.92822C8.25159 6.04541 8.33948 6.16748 8.39807 6.29443C8.45667 6.42139 8.48596 6.56055 8.48596 6.71191Z"/>
+            </svg>
+        </a>
+    </segment>
 
+    
     <segment>
         <wordmark>
             <h2>Timeless forms bring Shelf to life.</h2>
@@ -148,13 +167,229 @@
             </item>
             <item class="wider" style="background-image: url(Im/s-cabinet.webp);">
                 <h1>Magic Cabinet</h1>
-                <p>For adding & changing themes. Fallen items get archived here.</p>
+                <p>For adding & changing themes; fallen items get archived here.</p>
             </item>
             <item class="wider" style="background-image: url(Im/s-bikes.webp);">
                 <h1>Decor</h1>
                 <p>Just a finishing touch.</p>
             </item>
         </item-grid>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Magic Cabinet</h3>
+            <h2>Add as fast as you think.</h2>
+        </wordmark>
+        <three-iPhones>
+            <iPhone-text>
+                <holder class="hold-iPhone">
+                    <img class="iPhone" src="Im/s-add.webp">
+                </holder>
+                <holder>
+                    <h1>Add</h1>
+                    <p>Thoughts are your decor.</p>
+                </holder>
+            </iPhone-text>
+            <iPhone-text>
+                <holder class="hold-iPhone">
+                    <img class="iPhone" src="Im/s-theme.webp">
+                </holder>
+                <holder>
+                    <h1>Set a Theme</h1>
+                    <p>Save up to six themes.</p>
+                </holder>
+            </iPhone-text>
+            <iPhone-text>
+                <holder class="hold-iPhone">
+                    <img class="iPhone" src="Im/s-archive.webp">
+                </holder>
+                <holder>
+                    <h1>Archive</h1>
+                    <p>Keep things hidden.</p>
+                </holder>
+            </iPhone-text>
+        </three-iPhones>
+        <caption-grid>
+            <topic>
+                <h1>Design</h1>
+                <p>Inspired by the beauty and simplicity of shelves in our homes, Shelf feels familiar yet utterly unique. Its bold and brilliant color invites you to rethink, reshape, and reorganize. This is thinking elevated to an art form—a place that is actually a part of creative conversation.</p>
+            </topic>
+            <topic>
+                <h1>You're an Art Curator</h1>
+                <p>Shelf's cabinet makes trying out new colors easy. And because it's built into every shelf, it can add items as fast as you think of them. If your shelves overflow, older items get safely tucked away in the cabinet. Think of yourself as an art curator. Some exhibitions only last so long. Others, well, they're due for a revival.</p>
+            </topic>
+        </caption-grid>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Time Capsules</h3>
+            <h2>Time is the only password<br> you'll need.</h2>
+        </wordmark>
+        <staggered>
+            <holder class="staggered-hold-iPhone">
+                <img class="iPhone" src="Im/s-time-1.webp">
+            </holder>
+            <holder class="staggered-hold-text">
+                <h1>Set your duration.</h1>
+            </holder>
+        </staggered>
+        <staggered>
+            <holder class="staggered-hold-text">
+                <h1>Add a caption.</h1>
+            </holder>
+            <holder class="staggered-hold-iPhone">
+                <img class="iPhone" src="Im/s-time-2.webp">
+            </holder>
+        </staggered>
+        <staggered>
+            <holder class="staggered-hold-iPhone">
+                <img class="iPhone" src="Im/s-time-3.webp">
+            </holder>
+            <holder class="staggered-hold-text">
+                <h1>Pour your heart out.</h1>
+            </holder>
+        </staggered>
+        <staggered class="bottom">
+            <holder class="staggered-hold-text">
+                <h1>Just like that.</h1>
+            </holder>
+            <holder class="staggered-hold-iPhone">
+                <img class="iPhone" src="Im/s-time-4.webp">
+            </holder>
+        </staggered>
+        <caption-grid>
+            <topic>
+                <h1>No locks?</h1>
+                <p>Time is the only password you’ll need. Time capsules are designed for reflection, and they can hold pretty much anything from notes and photos to voice memos.</p>
+            </topic>
+            <topic>
+                <h1>Encrypted, Secure, & Adorable.</h1>
+                <p>With Time Capsules, securely seal pieces of you away in encrypted envelopes, for days, weeks, months or even seasons.</p>
+            </topic>
+        </caption-grid>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Item Viewing</h3>
+            <h2>Your ideas, whims, and dreams<br>in technicolor.</h2>
+        </wordmark>
+        <holder class="hold-six">
+            <img class="six" src="Im/s-item-viewing.webp" id="preloadImage">
+        </holder>
+        <wordmark class="shout">
+            <h4>Artifacts adapt to your aesthetic.</h4>
+            <h4><sec>They take the two colors from your shelf.</sec></h4>
+            <h4><sec>It’s an intimate experience.</sec></h4>
+            <h5>Make it yours.</h5>
+        </wordmark>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Tunnels</h3>
+            <h2>Expand your Shelf.</h2>
+        </wordmark>
+        <four-iPhones>
+            <holder class="four-hold-iPhone">
+                <img class="iPhone" src="Im/s-tunnel-1.webp">
+            </holder>
+            <holder class="four-hold-iPhone">
+                <img class="iPhone" src="Im/s-tunnel-2.webp">
+            </holder>
+            <holder class="four-hold-iPhone">
+                <img class="iPhone" src="Im/s-tunnel-3.webp">
+            </holder>
+            <holder class="four-hold-iPhone">
+                <img class="iPhone" src="Im/s-tunnel-4.webp">
+            </holder>
+        </four-iPhones>
+        <stats>
+            <stat>
+                <h3>UP TO</h3>
+                <h1>1,944</h1>
+                <h2>items in one space.</h2>
+            </stat>
+            <stat>
+                <h3>UP TO</h3>
+                <h1>11,664</h1>
+                <h2>items using all six.</h2>
+            </stat>
+        </stats>
+        <caption-grid>
+            <topic>
+                <h1>Labyrinths of Thought</h1>
+                <p>Tunnels inspire introspection by drawing one inward both visually and metaphorically, created to make your innermost thoughts as easy to find as a Van Gogh in MoMA. Tunnel titles help you group main ideas. They're like their own rooms. </p>
+            </topic>
+            <topic>
+                <h1>Your Metropolitan Museum of Art </h1>
+                <p>There is no limit to the amount of tunnels you can have in Shelf. You can even make a whole room of tunnels if you like. And in the odd chance that a space capable of holding 1,944 artifacts isn't enough, just create another space!</p>
+            </topic>
+        </caption-grid>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Share & Gift</h3>
+            <h2>Like mail. Unlike mail.</h2>
+        </wordmark>
+        <two-iPhones>
+            <iPhone-text>
+                <holder class="hold-iPhone">
+                    <img class="iPhone" src="Im/s-send.webp">
+                </holder>
+                <holder>
+                    <h1>Send & Recieve</h1>
+                    <p>See items in a list alongside any<br>message someone left.</p>
+                </holder>
+            </iPhone-text>
+            <iPhone-text>
+                <holder class="hold-iPhone">
+                    <img class="iPhone" src="Im/s-view.webp">
+                </holder>
+                <holder>
+                    <h1>View</h1>
+                    <p>Check out items, remove, add, or move<br>them to any existing space!</p>
+                </holder>
+            </iPhone-text>
+        </two-iPhones>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h3>Vision Pro</h3>
+            <h2>Just reach for what you’re looking for.</h2>
+        </wordmark>
+        <vision style="background-image: url(Im/s-vision-1.webp);"></vision>
+        <wordmark>
+            <h3>Vision Pro</h3>
+            <h2>Up to four windows open.</h2>
+        </wordmark>
+        <vision style="background-image: url(Im/s-vision-2.webp);"></vision>
+        <wordmark>
+            <h3>Vision Pro</h3>
+            <h2>Larger than life picture.</h2>
+        </wordmark>
+        <vision style="background-image: url(Im/s-vision-3.webp);"></vision>
+        <caption-grid>
+            <topic>
+                <h1>Exploring Interaction</h1>
+                <p>Could Shelf decorate our homes? It just might. What if you could write a hand written letter on a desk and walk it over to its right place? Or rip it up to delete it? What if when you put your ear to a voice memo, it starts to play? Welcome to spatial computing.</p>
+            </topic>
+            <topic>
+                <h1>Knock it Down</h1>
+                <p>What if you could knock over a shelf and watch your stuff fall onto the ground? Maybe you could pick up an idea, a literal idea, and turn it over in your hands. Place it somewhere new, like tidying your room. In Shelf, the future of emotional design is wide open.</p>
+            </topic>
+        </caption-grid>
+    </segment>
+
+    <segment>
+        <wordmark id="writing">
+            <h3>Dive Deeper</h3>
+            <h2>Explore the full story.</h2>
+        </wordmark>
     </segment>
 
     <script src="s-case.js"></script>

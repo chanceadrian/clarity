@@ -38,4 +38,3 @@ function handleButtonClick(event, imageUrl) {
 
 // Set the first image as the default background image
 changeBackgroundImage(images[0]);
-
