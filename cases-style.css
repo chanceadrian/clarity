@@ -296,17 +296,21 @@ color-panel {
 item-grid {
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(350px, 1fr));
+        repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 20px;
     row-gap: 20px;
+}
+
+.wider {
+    grid-column: span 3;
 }
 
 .wide {
     grid-column: span 2;
 }
 
-.wider {
-    grid-column: span 3;
+.widest {
+    grid-column: span 4;
 }
 
 item {
@@ -316,12 +320,13 @@ item {
     align-items: center;
     justify-content: flex-end;
     background: #f7f7f7;
-    height: 450px;
-    padding: 60px;
+    height: 320px;
+    padding: 30px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
+    text-align: center;
 }
 
 item h1 {
@@ -329,7 +334,7 @@ item h1 {
 }
 
 item p {
-    font-size: 21px;
+    font-size: 19px;
     opacity: 0.5;
 }
 
