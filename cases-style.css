@@ -146,6 +146,10 @@ sec {
     display:flex;
 }
 
+.only-small {
+    display:none;
+}
+
 @media only screen and (max-width: 1200px) {
     wordmark {
         padding-block: 20px;
@@ -154,12 +158,16 @@ sec {
     .only-large {
         display:none;
     }
-    .only-medium {
-        display:flex;
-    }
 }
 
 @media only screen and (max-width: 900px) {
+    .only-medium {
+        display:flex;
+    }
+    
+    .only-small {
+        display:flex;
+    }
 
     .emphasis {
         gap: 100px;
@@ -566,6 +574,10 @@ topic p {
 
 .centered {
     justify-content: center;
+}
+
+.scale {
+    scale: 1.25;
 }
 
 .staggered h1 {
