@@ -527,6 +527,8 @@ indie group h2 {
 
 .center {
     justify-content: center;
+    color: white;
+    fill: white;
 }
 
 .cover h1 {

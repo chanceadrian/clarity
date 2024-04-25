@@ -38,79 +38,80 @@
     <segment>
         <wordmark class="lead">
             <h1>Shelf</h1>
-            <p>A new era of self-expression.</p>
+            <p>A new frontier of self-expression.</p>
         </wordmark>
-        <holder class="hold-key">
-            <img class="key" src="Im/s-key.webp">
+        <holder class="hold-iPhones-3">
+            <img class="iPhones-3" src="Im/s-key.webp">
         </holder>
-        <wordmark class="shout">
-            <h4>Your photos, video, notes, voice, and links.</h4>
-            <h4><sec>Arranged like the shelves on your walls.</sec></h4>
-            <h4><sec>With color coded spaces and tunnels to expand.</sec></h4>
-            <h5>Say hello to Shelf.</h5>
+        <wordmark class="emphasis">
+            <h1>Today,</h1>
+            <h2>Computers are built on office culture.</h2>
+            <h2>We've got folders, files, and the ‘desktop.’</h2>
+            <h2>But what if they were built on something different?</h2>
+            <h1>Say hello to Shelf.</h1>
             <color-options id="image-container">
-                <color-panel>
+                <color-touch>
                     <h1>Personalize Shelf with any two colors.</h1>
-                <div class="panel" id="button-container">
-                </color-panel>
-                    <div class="label">
-                        <button class="button selected-color" onclick="handleButtonClick(event, 'Im/s-blue.webp')">
-                            <paint class="blue">
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="10" height="10" rx="5"/>
-                                </svg>
-                            </paint>
-                        </button>
-                        <p>Blue</p>
-                    </div>
-                    <div class="label">
-                        <button class="button" onclick="handleButtonClick(event, 'Im/s-green.webp')">
-                            <paint class="green">
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="10" height="10" rx="5"/>
-                                </svg>
-                            </paint>
-                        </button>
-                        <p>Green</p>
-                    </div>
-                    <div class="label">
-                        <button class="button" onclick="handleButtonClick(event, 'Im/s-orange.webp')">
-                            <paint class="orange">
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="10" height="10" rx="5"/>
-                                </svg>
-                            </paint>
-                        </button>
-                        <p>Orange</p>
-                    </div>
-                    <div class="label">
-                        <button class="button" onclick="handleButtonClick(event, 'Im/s-pink.webp')">
-                            <paint class="pink">
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="10" height="10" rx="5"/>
-                                </svg>
-                            </paint>
-                        </button>
-                        <p>Pink</p>
-                    </div>
-                    <div class="label">
-                        <button class="button" onclick="handleButtonClick(event, 'Im/s-purple.webp')">
-                            <paint class="purple">
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="10" height="10" rx="5"/>
-                                </svg>
-                            </paint>
-                        </button>
-                        <p>Purple</p>
-                    </div>
-                </div>
+                    <color-panel id="button-container">
+                        <div class="label">
+                            <button class="button selected-color" onclick="handleButtonClick(event, { small: 'Im/s-blue-small.webp', medium: 'Im/s-blue-med.webp', large: 'Im/s-blue.webp' })">
+                                <paint class="blue">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="10" rx="5"/>
+                                    </svg>
+                                </paint>
+                            </button>
+                            <p>Blue</p>
+                        </div>
+                        <div class="label">
+                            <button class="button" onclick="handleButtonClick(event, { small: 'Im/s-green-small.webp', medium: 'Im/s-green-med.webp', large: 'Im/s-green.webp' })">
+                                <paint class="green">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="10" rx="5"/>
+                                    </svg>
+                                </paint>
+                            </button>
+                            <p>Green</p>
+                        </div>
+                        <div class="label">
+                            <button class="button" onclick="handleButtonClick(event, { small: 'Im/s-orange-small.webp', medium: 'Im/s-orange-med.webp', large: 'Im/s-orange.webp' })">
+                                <paint class="orange">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="10" rx="5"/>
+                                    </svg>
+                                </paint>
+                            </button>
+                            <p>Orange</p>
+                        </div>
+                        <div class="label">
+                            <button class="button" onclick="handleButtonClick(event, { small: 'Im/s-pink-small.webp', medium: 'Im/s-pink-med.webp', large: 'Im/s-pink.webp' })">
+                                <paint class="pink">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="10" rx="5"/>
+                                    </svg>
+                                </paint>
+                            </button>
+                            <p>Pink</p>
+                        </div>
+                        <div class="label">
+                            <button class="button" onclick="handleButtonClick(event, { small: 'Im/s-purple-small.webp', medium: 'Im/s-purple-med.webp', large: 'Im/s-purple.webp' })">
+                                <paint class="purple">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="10" height="10" rx="5"/>
+                                    </svg>
+                                </paint>
+                            </button>
+                            <p>Purple</p>
+                        </div>
+                    </color-panel>
+                </color-touch>
             </color-options>
         </wordmark>
     </segment>
 
     <segment>
         <wordmark>
-            <h2>Timeless forms bring Shelf to life.</h2>
+            <h1>Timeless forms bring<br class="only-med"> Shelf to life.</h1>
         </wordmark>
         <item-grid>
             <item style="background-image: url(Im/s-note.webp);">
@@ -129,63 +130,61 @@
                 <h1>Tunnel</h1>
                 <p>Expand your Shelf.</p>
             </item>
-            <item style="background-image: url(Im/s-time-capsule.webp);">
-                <h1>Time Capsule</h1>
-                <p>Lock anything with time.</p>
-            </item>
             <item class="wider" style="background-image: url(Im/s-links.webp);">
                 <h1>Links</h1>
                 <p>For URLs. Up to three styles.</p>
+            </item>
+            <item style="background-image: url(Im/s-time-capsule.webp);">
+                <h1>Time Capsule</h1>
+                <p>Lock anything with time.</p>
             </item>
             <item style="background-image: url(Im/s-radio.webp);">
                 <h1>Radio</h1>
                 <p>Voice memos and other audio.</p>
             </item>
-            <item style="background-image: url(Im/s-flower.webp);">
-                <h1>Flower</h1>
-                <p>For peace and calm.</p>
-            </item>
             <item class="wide" style="background-image: url(Im/s-cabinet.webp);">
                 <h1>Magic Cabinet</h1>
                 <p>For adding & changing themes; fallen items get archived here.</p>
             </item>
+            <item style="background-image: url(Im/s-flower.webp);">
+                <h1>Flower</h1>
+                <p>For peace and calm.</p>
+            </item>
         </item-grid>
     </segment>
 
+    
+
     <segment>
         <wordmark>
-            <h3>Magic Cabinet</h3>
-            <h2>Add as fast as you think.</h2>
+            <h2>Magic Cabinet</h2>
+            <h1>Add as fast as you think.</h1>
         </wordmark>
-        <three-iPhones>
-            <iPhone-text>
-                <holder class="hold-iPhone">
-                    <img class="iPhone" src="Im/s-add.webp">
-                </holder>
-                <holder>
-                    <h1>Add</h1>
-                    <p>Thoughts are your decor.</p>
-                </holder>
-            </iPhone-text>
-            <iPhone-text>
-                <holder class="hold-iPhone">
-                    <img class="iPhone" src="Im/s-theme.webp">
-                </holder>
-                <holder>
-                    <h1>Set a Theme</h1>
-                    <p>Save up to six themes.</p>
-                </holder>
-            </iPhone-text>
-            <iPhone-text>
-                <holder class="hold-iPhone">
-                    <img class="iPhone" src="Im/s-archive.webp">
-                </holder>
-                <holder>
-                    <h1>Archive</h1>
-                    <p>Keep things hidden.</p>
-                </holder>
-            </iPhone-text>
-        </three-iPhones>
+        <holder class="staggered">
+            <holder>
+                <img class="iPhone" src="Im/s-add.webp">
+            </holder>
+            <holder class="centered">
+                <h1>Thoughts are<br class="only-med"> your decor.</h1>
+            </holder>
+        </holder>
+        <holder class="staggered">
+            <holder class="centered">
+                <h1>Save up to<br class="only-med">six themes.</h1>
+            </holder>
+            <holder>
+                <img class="iPhone" src="Im/s-theme.webp">
+            </holder>
+        </holder>
+        <holder class="staggered bottom">
+            <holder>
+                <img class="iPhone" src="Im/s-archive.webp">
+            </holder>
+            <holder class="centered">
+                <h1>Keep things<br class="only-med">hidden.</h1>
+            </holder>
+        </holder>
+
         <caption-grid>
             <topic>
                 <h1>Design</h1>
@@ -200,88 +199,23 @@
 
     <segment>
         <wordmark>
-            <h3>Time Capsules</h3>
-            <h2>Time is the only password<br> you'll need.</h2>
+            <h2>Tunnels</h2>
+            <h1>Expand your Shelf.</h1>
         </wordmark>
-        <staggered>
-            <holder class="staggered-hold-iPhone">
-                <img class="iPhone" src="Im/s-time-1.webp">
-            </holder>
-            <holder class="staggered-hold-text">
-                <h1>Set your duration.</h1>
-            </holder>
-        </staggered>
-        <staggered>
-            <holder class="staggered-hold-text">
-                <h1>Add a caption.</h1>
-            </holder>
-            <holder class="staggered-hold-iPhone">
-                <img class="iPhone" src="Im/s-time-2.webp">
-            </holder>
-        </staggered>
-        <staggered>
-            <holder class="staggered-hold-iPhone">
-                <img class="iPhone" src="Im/s-time-3.webp">
-            </holder>
-            <holder class="staggered-hold-text">
-                <h1>Pour your heart out.</h1>
-            </holder>
-        </staggered>
-        <staggered class="bottom">
-            <holder class="staggered-hold-text">
-                <h1>Just like that.</h1>
-            </holder>
-            <holder class="staggered-hold-iPhone">
-                <img class="iPhone" src="Im/s-time-4.webp">
-            </holder>
-        </staggered>
-        <caption-grid>
-            <topic>
-                <h1>No locks?</h1>
-                <p>Time is the only password you’ll need. Time capsules are designed for reflection, and they can hold pretty much anything from notes and photos to voice memos.</p>
-            </topic>
-            <topic>
-                <h1>Encrypted, Secure, & Adorable.</h1>
-                <p>With Time Capsules, securely seal pieces of you away in encrypted envelopes, for days, weeks, months or even seasons.</p>
-            </topic>
-        </caption-grid>
-    </segment>
-
-    <segment>
-        <wordmark>
-            <h3>Item Viewing</h3>
-            <h2>Your ideas, whims, and dreams<br>in technicolor.</h2>
-        </wordmark>
-        <holder class="hold-six">
-            <img class="six" src="Im/s-item-viewing.webp" id="preloadImage">
-        </holder>
-        <wordmark class="shout">
-            <h4>Artifacts adapt to your aesthetic.</h4>
-            <h4><sec>They take the two colors from your shelf.</sec></h4>
-            <h4><sec>It’s an intimate experience.</sec></h4>
-            <h5>Make it yours.</h5>
-        </wordmark>
-    </segment>
-
-    <segment>
-        <wordmark>
-            <h3>Tunnels</h3>
-            <h2>Expand your Shelf.</h2>
-        </wordmark>
-        <four-iPhones>
-            <holder class="four-hold-iPhone">
+        <holder class="hold-four">
+            <holder>
                 <img class="iPhone" src="Im/s-tunnel-1.webp">
             </holder>
-            <holder class="four-hold-iPhone">
+            <holder>
                 <img class="iPhone" src="Im/s-tunnel-2.webp">
             </holder>
-            <holder class="four-hold-iPhone">
+            <holder>
                 <img class="iPhone" src="Im/s-tunnel-3.webp">
             </holder>
-            <holder class="four-hold-iPhone">
+            <holder>
                 <img class="iPhone" src="Im/s-tunnel-4.webp">
             </holder>
-        </four-iPhones>
+        </holder>
         <stats>
             <stat>
                 <h3>UP TO</h3>
@@ -308,45 +242,155 @@
 
     <segment>
         <wordmark>
-            <h3>Share & Gift</h3>
-            <h2>Like mail. Unlike mail.</h2>
+            <h2>Item Viewing</h2>
+            <h1>Your ideas, whims, and dreams<br>in technicolor.</h1>
         </wordmark>
-        <two-iPhones>
-            <iPhone-text>
-                <holder class="hold-iPhone">
-                    <img class="iPhone" src="Im/s-send.webp">
-                </holder>
-                <holder>
-                    <h1>Send & Recieve</h1>
-                    <p>See items in a list alongside any<br>message someone left.</p>
-                </holder>
-            </iPhone-text>
-            <iPhone-text>
-                <holder class="hold-iPhone">
-                    <img class="iPhone" src="Im/s-view.webp">
-                </holder>
-                <holder>
-                    <h1>View</h1>
-                    <p>Check out items, remove, add, or move<br>them to any existing space!</p>
-                </holder>
-            </iPhone-text>
-        </two-iPhones>
+        <holder class="hold-six">
+            <img class="six" src="Im/s-item-viewing.webp" id="preloadImage">
+        </holder>
+        <wordmark class="emphasis">
+            <h2 class="black">Your photos, video, notes, voice, and links.</h2>
+            <h2>All adapted to your aesthetic.</h2>
+            <h2>Lock any item with time.</h2>
+            <h1>Make it yours.</h1>
+        </wordmark>
     </segment>
 
     <segment>
         <wordmark>
-            <h3>Vision Pro</h3>
-            <h2>Just reach for what you’re looking for.</h2>
+            <h2>Time Capsules</h2>
+            <h1>Time is the only password<br> you'll need.</h1>
+        </wordmark>
+        <holder class="hold-two">
+            <holder>
+                <img class="iPhone" src="Im/s-time-1.webp">
+            </holder>
+            <holder>
+                <img class="iPhone" src="Im/s-time-2.webp">
+            </holder>
+        </holder>
+        <caption-grid>
+            <topic>
+                <h1>No locks?</h1>
+                <p>Time capsules are designed for reflection, and they can hold pretty much anything from notes and photos to voice memos.</p>
+            </topic>
+            <topic>
+                <h1>Encrypted, Secure, & Adorable.</h1>
+                <p>With Time Capsules, securely seal pieces of you away in encrypted envelopes, for days, weeks, months or even seasons.</p>
+            </topic>
+        </caption-grid>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h2>Captions</h2>
+            <h1>Add a lingering thought<br>to anything.</h1>
+        </wordmark>
+        <carousel>
+            <slider class="left">
+                <svg width="12" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.654541 8C0.654541 8.16602 0.687744 8.32373 0.75415 8.47314C0.815023 8.61702 0.914632 8.75537 1.05298 8.88818L7.43628 15.1387C7.6521 15.349 7.91496 15.4541 8.22485 15.4541C8.42407 15.4541 8.60946 15.4043 8.78101 15.3047C8.95256 15.2051 9.0909 15.0723 9.19604 14.9062C9.29565 14.7402 9.34546 14.5521 9.34546 14.3418C9.34546 14.0374 9.22925 13.7663 8.99683 13.5283L3.31079 8L8.99683 2.47168C9.22925 2.23926 9.34546 1.9681 9.34546 1.6582C9.34546 1.45345 9.29565 1.26807 9.19604 1.10205C9.0909 0.930501 8.95256 0.794922 8.78101 0.695312C8.60946 0.595703 8.42407 0.545898 8.22485 0.545898C7.91496 0.545898 7.6521 0.651042 7.43628 0.861328L1.05298 7.11182C0.920166 7.24463 0.820557 7.38298 0.75415 7.52686C0.687744 7.67074 0.654541 7.82845 0.654541 8Z"/>
+                </svg>  
+            </slider>
+            <holder class="hold-three">
+                <holder class="with-text">
+                    <holder>
+                        <img class="iPhone" src="Im/s-caption-1.webp">
+                    </holder>
+                    <holder>
+                        <h1>Add</h1>
+                        <p>Caption anything, from time<br>capsules to photos!</p>
+                    </holder>
+                </holder>
+                <holder class="with-text">
+                    <holder>
+                        <img class="iPhone" src="Im/s-caption-2.webp">
+                    </holder>
+                    <holder>
+                        <h1>Write</h1>
+                        <p>Pour your heart out. Add as little<br>or as much as you like.</p>
+                    </holder>
+                </holder>
+                <holder class="with-text">
+                    <holder>
+                        <img class="iPhone" src="Im/s-caption-3.webp">
+                    </holder>
+                    <holder>
+                        <h1>Reminisce</h1>
+                        <p>Captions are great for leaving<br>notes to future selves.</p>
+                    </holder>
+                </holder>
+            </holder>
+            <slider class="right">
+                <svg width="12" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.34546 8C9.34546 8.16602 9.31226 8.32373 9.24585 8.47314C9.18498 8.61702 9.08537 8.75537 8.94702 8.88818L2.56372 15.1387C2.3479 15.349 2.08504 15.4541 1.77515 15.4541C1.57593 15.4541 1.39054 15.4043 1.21899 15.3047C1.04744 15.2051 0.909098 15.0723 0.803955 14.9062C0.704346 14.7402 0.654541 14.5521 0.654541 14.3418C0.654541 14.0374 0.770752 13.7663 1.00317 13.5283L6.68921 8L1.00317 2.47168C0.770752 2.23926 0.654541 1.9681 0.654541 1.6582C0.654541 1.45345 0.704346 1.26807 0.803955 1.10205C0.909098 0.930501 1.04744 0.794922 1.21899 0.695312C1.39054 0.595703 1.57593 0.545898 1.77515 0.545898C2.08504 0.545898 2.3479 0.651042 2.56372 0.861328L8.94702 7.11182C9.07983 7.24463 9.17944 7.38298 9.24585 7.52686C9.31226 7.67074 9.34546 7.82845 9.34546 8Z"/>
+                </svg>
+            </slider>
+        </carousel>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h2>Share</h2>
+            <h1>The Shelf Postal Service</h1>
+        </wordmark>
+        <carousel>
+            <slider class="left">
+                <svg width="12" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.654541 8C0.654541 8.16602 0.687744 8.32373 0.75415 8.47314C0.815023 8.61702 0.914632 8.75537 1.05298 8.88818L7.43628 15.1387C7.6521 15.349 7.91496 15.4541 8.22485 15.4541C8.42407 15.4541 8.60946 15.4043 8.78101 15.3047C8.95256 15.2051 9.0909 15.0723 9.19604 14.9062C9.29565 14.7402 9.34546 14.5521 9.34546 14.3418C9.34546 14.0374 9.22925 13.7663 8.99683 13.5283L3.31079 8L8.99683 2.47168C9.22925 2.23926 9.34546 1.9681 9.34546 1.6582C9.34546 1.45345 9.29565 1.26807 9.19604 1.10205C9.0909 0.930501 8.95256 0.794922 8.78101 0.695312C8.60946 0.595703 8.42407 0.545898 8.22485 0.545898C7.91496 0.545898 7.6521 0.651042 7.43628 0.861328L1.05298 7.11182C0.920166 7.24463 0.820557 7.38298 0.75415 7.52686C0.687744 7.67074 0.654541 7.82845 0.654541 8Z"/>
+                </svg>  
+            </slider>
+            <holder class="hold-three tighter">
+                <holder class="with-text">
+                    <holder class="three-hold-iPhone">
+                        <img class="iPhone" src="Im/s-share-1.webp">
+                    </holder>
+                    <holder>
+                        <h1>Share</h1>
+                        <p>Wouldn't it be nice to send things<br>to your best friends?</p>
+                    </holder>
+                </holder>
+                <holder class="with-text">
+                    <holder class="three-hold-iPhone">
+                        <img class="iPhone" src="Im/s-share-2.webp">
+                    </holder>
+                    <holder>
+                        <h1>Share</h1>
+                        <p>Wouldn't it be nice to send things<br>to your best friends?</p>
+                    </holder>
+                </holder>
+                <holder class="with-text">
+                    <holder class="three-hold-iPhone">
+                        <img class="iPhone" src="Im/s-share-3.webp">
+                    </holder>
+                    <holder>
+                        <h1>Share</h1>
+                        <p>Wouldn't it be nice to send things<br>to your best friends?</p>
+                    </holder>
+                </holder>
+            </holder>
+            <slider class="right">
+                <svg width="12" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.34546 8C9.34546 8.16602 9.31226 8.32373 9.24585 8.47314C9.18498 8.61702 9.08537 8.75537 8.94702 8.88818L2.56372 15.1387C2.3479 15.349 2.08504 15.4541 1.77515 15.4541C1.57593 15.4541 1.39054 15.4043 1.21899 15.3047C1.04744 15.2051 0.909098 15.0723 0.803955 14.9062C0.704346 14.7402 0.654541 14.5521 0.654541 14.3418C0.654541 14.0374 0.770752 13.7663 1.00317 13.5283L6.68921 8L1.00317 2.47168C0.770752 2.23926 0.654541 1.9681 0.654541 1.6582C0.654541 1.45345 0.704346 1.26807 0.803955 1.10205C0.909098 0.930501 1.04744 0.794922 1.21899 0.695312C1.39054 0.595703 1.57593 0.545898 1.77515 0.545898C2.08504 0.545898 2.3479 0.651042 2.56372 0.861328L8.94702 7.11182C9.07983 7.24463 9.17944 7.38298 9.24585 7.52686C9.31226 7.67074 9.34546 7.82845 9.34546 8Z"/>
+                </svg>
+            </slider>
+        </carousel>
+    </segment>
+
+    <segment>
+        <wordmark>
+            <h2>Vision Pro</h2>
+            <h1>Just reach for what you’re looking for.</h1>
         </wordmark>
         <vision style="background-image: url(Im/s-vision-1.webp);"></vision>
         <wordmark>
-            <h3>Vision Pro</h3>
-            <h2>Up to four windows open.</h2>
+            <h2>Vision Pro</h2>
+            <h1>Up to four windows open.</h1>
         </wordmark>
         <vision style="background-image: url(Im/s-vision-2.webp);"></vision>
         <wordmark>
-            <h3>Vision Pro</h3>
-            <h2>Larger than life picture.</h2>
+            <h2>Vision Pro</h2>
+            <h1>Larger than life picture.</h1>
         </wordmark>
         <vision style="background-image: url(Im/s-vision-3.webp);"></vision>
         <caption-grid>
@@ -363,8 +407,8 @@
 
     <segment>
         <wordmark id="writing">
-            <h3>Dive Deeper</h3>
-            <h2>Explore the full story.</h2>
+            <h2>Dive Deeper</h2>
+            <h1>Explore the full story.</h1>
         </wordmark>
     </segment>
 

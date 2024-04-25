@@ -21,29 +21,24 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 150px;
-    padding: 120px 60px;
+    padding: 15px 60px;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', "system-ui", sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow-x:hidden;
     width: 100vw;
 }
-
 
 nav {
     display: flex;
     padding: 4px;
     gap: 4px;
     border-radius: 14px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(247, 247, 247, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: fit-content;
     height: fit-content;
-    position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 3;
 }
 
@@ -80,12 +75,16 @@ p {
     font-weight: 400;
 }
 
+@media only screen and (max-width: 900px) {
+    body {
+        gap: 120px;
+        padding: 15px 30px;
+    }
+}
 
 
 
-
-
-/* KEY SECTION & GENERAL LAYOUTS */
+/* GENERAL HEADER LAYOUTS */
 
 wordmark {
     display: flex;
@@ -97,33 +96,83 @@ wordmark {
 
 .lead {
     gap: 15px;
+    padding-top: 0px;
 }
   
-
-wordmark h1, shout h1 {
-    font-size: 96px;
-}
-
-wordmark h2 {
-    font-size: 56px;
-}
-
-wordmark h4 {
-    font-size: 48px;
-}
-
-wordmark h5 {
+.lead h1, .emphasis h1 {
     font-size: 80px;
 }
 
-wordmark h3 {
-    font-size: 24px;
+.lead p {
+    font-size: 32px;
+}
+
+.emphasis {
+    gap: 80px;
+    padding-block: 0px;
+}
+
+.emphasis h2 {
+    font-size: 48px;
+}
+
+wordmark h1 {
+    font-size: 56px;
+}
+
+wordmark h2 {
+    font-size: 32px;
     opacity: 0.5;
 }
 
-wordmark p {
-    font-size: 32px;
+.black {
+    opacity: 1;
 }
+
+sec {
+    opacity: 0.5;
+}
+
+.only-med {
+    display:none;
+}
+
+@media only screen and (max-width: 900px) {
+    wordmark {
+        padding-block: 20px;
+    }
+
+    .lead h1, .emphasis h1 {
+        font-size: 64px;
+    }
+
+    .lead p {
+        font-size: 28px;
+    }
+
+    .emphasis h2 {
+        font-size: 40px;
+    }
+
+    wordmark h1 {
+        font-size: 48px;
+    }
+
+    wordmark h2 {
+        font-size: 28px;
+    }
+
+    .only-med {
+        display:initial;
+    }
+}
+
+
+
+
+
+
+/* GENERAL STRUCTURE LAYOUT*/
 
 segment {
     display: flex;
@@ -131,6 +180,7 @@ segment {
     gap: 20px;
     padding: 0px 0px 60px;
     width: 100%;
+    max-width: 1600px;
 }
 
 img {
@@ -147,26 +197,35 @@ holder {
     width: 100%;
 }
 
-.key {
+@media only screen and (max-width: 834px) {
+    segment {
+        padding: 0px 0px 80px;
+    }
+}
+
+
+
+
+
+/* KEY IMAGES*/
+
+.iPhones-3 {
     min-height: 1100px;
 }
 
-sec {
-    opacity: 0.5;
-}
-
-.hold-key {
+.hold-iPhones-3 {
     max-height: 1010px;
 }
 
-.shout {
-    gap: 80px;
-    padding-block: 0px;
+@media only screen and (max-width: 834px) {
+    .iPhones-3 {
+        min-height: 840px;
+    }
+    
+    .hold-iPhones-3 {
+        max-height: 800px;
+    }
 }
-
-
-
-
 
 
 
@@ -182,25 +241,27 @@ color-options {
     align-items:flex-end;
     justify-content: space-between;
     padding: 30px 40px;
-    background-image: url("Im/s-blue.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.3s ease-in-out;
 }
 
-color-options h1 {
-    font-size: 36px;
-    padding-left: 20px;
+color-touch {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+color-panel {
+    display: flex;
+    width: fit-content;
 }
 
 .selected-color {
     border: 3px rgb(0, 122, 255, 0.5) solid;
     background-color: #FFF;
-}
-
-.panel {
-    display: flex;
 }
 
 button {
@@ -254,8 +315,8 @@ paint {
 }
 
 .purple {
-    background: #525CB2;
-    fill: #F0A145;
+    background: #5256B2;
+    fill: #D9CEC6;
 }
 
 .label {
@@ -266,9 +327,34 @@ paint {
     width: 70px;
     height: 70px;
     gap: 5px;
+    margin-inline: 7.5px;
 }
 
-.label p {
+@media only screen and (max-width: 900px) {
+    color-options {
+        height: 950px;
+    }
+    color-touch {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+/* COLOR PICKER TEXTS, .emphasis because the color picker is within the key segment */
+
+.emphasis color-options h1 {
+    font-size: 36px;
+    padding-left: 20px;
+    text-wrap: nowrap;
+}
+
+.emphasis color-options p {
     opacity: 0;
     font-size: 15px;
     transition: opacity 0.1s ease, scale 0.2s ease;
@@ -280,12 +366,13 @@ paint {
     scale: 1;
 }
 
-color-panel {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+@media only screen and (max-width: 900px) {
+    .emphasis color-options h1 {
+        font-size: 28px;
+        padding-left: 0px;
+        text-wrap: wrap;
+    }
 }
-
 
 
 
@@ -295,8 +382,7 @@ color-panel {
 
 item-grid {
     display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
 }
@@ -329,6 +415,34 @@ item {
     text-align: center;
 }
 
+@media only screen and (max-width: 900px) {
+    item-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wider {
+        grid-column: span 2;
+    }
+    
+    .wide {
+        grid-column: span 2;
+    }
+    
+    .widest {
+        grid-column: span 2;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ITEM TEXT */
+
 item h1 {
     font-size: 21px;
 }
@@ -344,50 +458,6 @@ item p {
 
 
 
-/* THREE & GENERAL IPHONES */
-
-three-iPhones {
-    display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(390px, 1fr));
-    row-gap: 30px;
-    padding-inline: 60px;
-}
-
-iPhone-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 60px;
-    min-width: 100%;
-}
-
-iPhone-text holder {
-    gap: 5px;
-    width: auto;
-}
-
-iPhone-text holder h1 {
-    font-size: 24px;
-}
-
-iPhone-text holder p {
-    font-size: 21px;
-    opacity: 0.5;
-}
-
-.hold-iPhone {
-    max-height: 760px;
-}
-
-.iPhone {
-    max-width: 810px;
-}
-
-
-
-
-
 
 
 /* CAPTIONS */
@@ -395,7 +465,7 @@ iPhone-text holder p {
 caption-grid {
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(500px, 1fr));
+        repeat(auto-fit, minmax(400px, 1fr));
     row-gap: 20px;
     column-gap: 20px;
 }
@@ -409,83 +479,180 @@ topic {
     gap: 10px;
 }
 
-topic > h1 {
+topic h1 {
     font-size: 21px;
 }
 
-topic > p {
+topic p {
     font-size: 19px;
     opacity: 0.5;
+    line-height:1.4;
 }
 
-.jump {
-    display: flex;
-    padding: 8px 16px 8px 20px;
-    gap: 7px;
-    font-size: 17px;
-    font-weight: 500;
-    background-color: rgb(0, 122, 255, 0.1);
-    color:#007AFF;
-    fill: #007AFF;
-    align-items: center;
-    align-self: center;
-    border-radius: 100px;
-    width: fit-content;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, fill 0.25s ease-in-out;
-}
-
-.jump svg {
-    margin-top: 2px;
-}
-
-.jump:hover {
-    background-color: #007AFF;
-    color: white;
-    fill: white;
-    cursor:pointer;
+@media only screen and (max-width: 900px) {
+    topic {
+        padding: 40px;
+    }
+    
+    topic h1 {
+        font-size: 19px;
+    }
 }
 
 
 
 
 
-/* STAGGERED SECTION*/
 
-staggered {
+/* iPHONES */
+
+/* ONE STAGGERED */
+
+.staggered {
     display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 0px;
     row-gap: 20px;
     padding-inline: 100px;
 }
 
-.staggered-hold-iPhone {
+.staggered holder {
     max-height: 750px;
 }
 
-.staggered-hold-text {
+.staggered .iPhone {
+    max-height: 970px;
+}
+
+.centered {
     justify-content: center;
 }
 
-.staggered-hold-text > h1 {
+.staggered h1 {
     font-size: 48px;
 }
 
-staggered > holder > .iphone {
-    max-width: 900px;
-}
-
 .bottom {
-    padding-bottom: 120px;
+    padding-bottom: 140px;
+}
+
+@media only screen and (max-width: 900px) {
+    .staggered {
+        padding-inline: 60px;
+        column-gap: 60px;
+        margin-bottom: 50px;
+    }
+
+    .staggered holder {
+        max-height: 700px;
+    }
+    
+    .staggered .iPhone {
+        max-height: 820px;
+    }
+    
+    .staggered h1 {
+        font-size: 36px;
+    }
+    
+    .bottom {
+        padding-bottom: 0px;
+    }
+}
+
+/* TWO TWO */
+
+.hold-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 0px;
+    justify-content: center;
+    row-gap: 60px;
+    padding-inline: 250px;
+}
+
+.hold-two .iPhone {
+    max-height: 850px;
+}
+
+.hold-two holder {
+    max-height: 770px;
+}
+
+@media only screen and (max-width: 900px) {
+    .hold-two {
+        padding-inline: 20px;
+    }
+
+    .hold-two .iPhone {
+        max-height: 750px;
+    }
+    
+    .hold-two holder {
+        max-height: 700px;
+    }
+}
+
+/* THREE THREE THREE*/
+
+.hold-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 20px;
+}
+
+.hold-three .iPhone {
+    height: 820px;
+}
+
+.hold-three holder {
+    max-height: 720px;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .hold-three .iPhone {
+        height: 850px;
+    }
+    
+    .hold-three holder {
+        max-height: 750px;
+    }
+}
+
+/* FOUR FOUR FOUR FOUR */
+
+.hold-four {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    row-gap: 60px;
+}
+
+.hold-four .iPhone {
+    height: 730px;
+}
+
+.hold-four holder {
+    max-height: 650px;
+}
+
+@media only screen and (max-width: 900px) {
+    .hold-four {
+        padding-inline: 20px;
+    }
+    
+    .hold-four .iPhone {
+        height: 750px;
+    }
+
+    .hold-four holder {
+        max-height: 670px;
+    }
 }
 
 
 
-
-
-
-/* SIX IPHONES */
+/* SIX SIX SIX SIX SIX SIX */
 
 .hold-six {
     max-height: 1860px;
@@ -495,27 +662,85 @@ staggered > holder > .iphone {
     max-width: 1820px;
 }
 
-
-
-
-
-
-/* FOUR IPHONES */
-
-four-iPhones {
-    display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(310px, 1fr));
-    column-gap: 0px;
-    row-gap: 60px;
+@media only screen and (max-width: 900px) {
+    .hold-six {
+        max-height: 1450px;
+    }
+    
+    .six {
+        max-width: 1400px;
+    }
 }
 
-.four-hold-iPhone {
-    max-height: 650px;
+
+
+
+
+
+
+/* WITH TEXT */
+
+.with-text {
+    gap: 20px;
+    margin-bottom: 120px;
+    width: 100%;
 }
 
-four-iPhones > holder > .iphone {
-    max-width: 685px;
+.with-text h1 {
+    font-size: 24px;
+}
+
+.with-text p {
+    font-size: 21px;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 900px) {
+    .with-text h1 {
+        font-size: 21px;
+    }
+    
+    .with-text p {
+        font-size: 19px;
+    }
+}
+
+
+
+
+/* CAROUSEL */
+
+carousel {
+    display: flex;
+    align-items: center;
+}
+
+slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    min-width: 48px;
+    background: rgb(0, 0, 0, 0.05);
+    border-radius: 100px;
+}
+
+slider svg {
+    opacity: 0.5;
+}
+
+.left svg {
+    margin-right: 3px;
+}
+
+.right svg {
+    margin-left: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+    carousel {
+        padding-inline: 90px;
+    }
 }
 
 
@@ -539,44 +764,30 @@ stat {
     text-align: center;
 }
 
-stat > h3 {
+stat h3 {
     font-size: 17px;
     font-weight: 700;
     opacity: 0.5;
 }
 
-stat > h1 {
+stat h1 {
     font-size: 80px;
 }
 
-stat > h2 {
+stat h2 {
     font-size: 32px;
     opacity: 0.5;
 }
 
-
-
-
-
-
-
-/* FOUR IPHONES */
-
-two-iPhones {
-    display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 0px;
-    row-gap: 60px;
-    padding-inline: 220px;
-}
-
-.two-hold-iPhone {
-    max-height: 760px;
-}
-
-two-iPhones > holder > .iphone {
-    max-width: 810px;
+@media only screen and (max-width: 900px) {
+    
+    stat h1 {
+        font-size: 64px;
+    }
+    
+    stat h2 {
+        font-size: 28px;
+    }
 }
 
 
@@ -590,4 +801,11 @@ vision {
     aspect-ratio: 1392 / 850;
     border-radius: 30px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    vision {
+        aspect-ratio:unset;
+        height: 480px;
+    }
 }
