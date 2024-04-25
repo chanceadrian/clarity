@@ -650,6 +650,9 @@ topic p {
 }
 
 @media only screen and (max-width: 1200px) {
+    .hold-three {
+        column-gap: 0px;
+    }
 
     .with-text .iPhone {
         height: 850px;
@@ -764,7 +767,7 @@ slider-caption {
     height: 100%;
     display: flex;
     width: 200%;
-    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 1s;
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1) 0.75s;
 }
 
 slider-caption a {
@@ -780,7 +783,7 @@ slider-caption a {
 platter {
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding-block: 20px;
 }
 
 indicator {
