@@ -14,6 +14,7 @@ svg {
     fill: inherit;
 }
 
+
 body {
     margin: 0;
     background-color: #FFF;
@@ -158,13 +159,14 @@ sec {
     .only-large {
         display:none;
     }
-}
-
-@media only screen and (max-width: 900px) {
+    
     .only-medium {
         display:flex;
     }
-    
+}
+
+@media only screen and (max-width: 900px) {
+
     .only-small {
         display:flex;
     }
