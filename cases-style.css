@@ -188,11 +188,11 @@ sec {
     }
 
     wordmark h1 {
-        font-size: 48px;
+        font-size: 44px;
     }
 
     wordmark h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .only-med {
@@ -576,10 +576,6 @@ topic p {
 
 .centered {
     justify-content: center;
-}
-
-.scale {
-    scale: 1.25;
 }
 
 .staggered h1 {

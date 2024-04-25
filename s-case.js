@@ -34,6 +34,10 @@ const imageObjects = [];
 function preloadImages(imageList) {
     imageList.forEach(imageUrl => {
         const img = new Image();
+        img.onload = () => {
+            // Image has been loaded
+            console.log(`Image loaded: ${imageUrl}`);
+        };
         img.src = imageUrl;
         imageObjects.push(img);
     });
