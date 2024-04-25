@@ -50,7 +50,7 @@ function changeBackgroundImage(imageUrl) {
 function handleButtonClick(event, imageUrlArray) {
     const screenWidth = document.documentElement.clientWidth;
     let imageUrl;
-    if (screenWidth < 900) {
+    if (screenWidth < 800) {
         imageUrl = imageUrlArray.small;
     } else if (screenWidth < 1200) {
         imageUrl = imageUrlArray.medium;
