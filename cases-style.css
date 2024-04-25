@@ -77,7 +77,7 @@ p {
 
 @media only screen and (max-width: 900px) {
     body {
-        gap: 120px;
+        gap: 130px;
         padding: 15px 30px;
     }
 }
@@ -137,9 +137,16 @@ sec {
     display:none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     wordmark {
         padding-block: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .emphasis {
+        gap: 100px;
     }
 
     .lead h1, .emphasis h1 {
@@ -197,7 +204,7 @@ holder {
     width: 100%;
 }
 
-@media only screen and (max-width: 834px) {
+@media only screen and (max-width: 900px) {
     segment {
         padding: 0px 0px 80px;
     }
@@ -330,7 +337,7 @@ paint {
     margin-inline: 7.5px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     color-options {
         height: 950px;
     }
@@ -366,7 +373,7 @@ paint {
     scale: 1;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .emphasis color-options h1 {
         font-size: 28px;
         padding-left: 0px;
@@ -415,7 +422,20 @@ item {
     text-align: center;
 }
 
+@media only screen and (max-width: 1200px) {
+
+    item {
+        gap: 0px;
+        height: 260px;
+    }
+}
+
+
 @media only screen and (max-width: 900px) {
+    item {
+        height: 320px;
+    }
+
     item-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -489,9 +509,10 @@ topic p {
     line-height:1.4;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     topic {
-        padding: 40px;
+        padding: 30px 40px;
+        gap: 5px;
     }
     
     topic h1 {
@@ -536,7 +557,7 @@ topic p {
     padding-bottom: 140px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .staggered {
         padding-inline: 60px;
         column-gap: 60px;
@@ -579,7 +600,7 @@ topic p {
     max-height: 770px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .hold-two {
         padding-inline: 20px;
     }
@@ -609,7 +630,7 @@ topic p {
     max-height: 720px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
 
     .hold-three .iPhone {
         height: 850px;
@@ -636,9 +657,10 @@ topic p {
     max-height: 650px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .hold-four {
         padding-inline: 20px;
+        row-gap: 40px;
     }
     
     .hold-four .iPhone {
@@ -662,7 +684,7 @@ topic p {
     max-width: 1820px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .hold-six {
         max-height: 1450px;
     }
@@ -695,9 +717,10 @@ topic p {
     opacity: 0.5;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     .with-text h1 {
         font-size: 21px;
+        gap: 10px;
     }
     
     .with-text p {
@@ -737,7 +760,7 @@ slider svg {
     margin-left: 3px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     carousel {
         padding-inline: 90px;
     }
@@ -751,7 +774,7 @@ slider svg {
 stats {
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(400px, 1fr));
+        repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 0px;
     row-gap: 20px;
     padding: 60px 180px;
@@ -779,8 +802,11 @@ stat h2 {
     opacity: 0.5;
 }
 
-@media only screen and (max-width: 900px) {
-    
+@media only screen and (max-width: 1200px) {
+    stats {
+        row-gap: 60px;
+    }
+
     stat h1 {
         font-size: 64px;
     }
