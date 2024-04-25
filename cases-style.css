@@ -598,11 +598,11 @@ topic p {
     }
 
     .staggered holder {
-        max-height: 700px;
+        max-height: 640px;
     }
     
     .staggered .iPhone {
-        max-height: 820px;
+        max-height: 780px;
     }
     
     .staggered h1 {
