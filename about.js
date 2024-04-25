@@ -30,7 +30,7 @@ function pauseAutoplay() {
 
 // Event listener for left arrow click
 leftArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex > 0) ? essayIndex - 1 : 0;
+    essayIndex = (essayIndex > 0) ? essayIndex - 1 : 3;
     setIndex();
     pauseAutoplay(); // Pause autoplay when user interacts with the carousel
 });
@@ -111,7 +111,7 @@ rightArrow2.addEventListener('click', function() {
 });
 
 // Event listener for indicator click for writingSlider2 carousel
-document.querySelectorAll('#platter2 indicator2').forEach(function(indicator2, ind2) {
+document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, ind2) {
     indicator2.addEventListener('click', function() {
         essayIndex2 = ind2;
         setIndex2();
