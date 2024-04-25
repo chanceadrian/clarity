@@ -798,7 +798,12 @@ indicator.selected, indicator2.selected {
 @media only screen and (max-width: 1200px) {
     slider-caption {
         width: 600%;
+        padding-inline: 0px;
         transition: ease-in-out 0.5s;
+    }
+
+    slider-caption a {
+        padding-inline: 0px;
     }
 }
 

@@ -104,29 +104,43 @@ const leftArrow = document.getElementById('leftSlide');
 const rightArrow = document.getElementById('rightSlide');
 const indicatorParents = document.getElementById('platter');
 var essayIndex = 0;
+var slideWidth;
+var maxIndex;
+
+// Function to calculate slide width and maximum index based on screen size
+function calculateSlideParams() {
+    const screenWidth = document.documentElement.clientWidth;
+    if (screenWidth > 1200) {
+        slideWidth = 50; 
+        maxIndex = 1; 
+    } else {
+        slideWidth = 16.666666; 
+        maxIndex = 5; 
+    }
+}
 
 // Function to set the slide index and update the slider position
 function setIndex() {
     document.querySelector('#platter .selected').classList.remove('selected');
-    slider.style.transform = 'translate(' + (essayIndex * -50) + '%)';
+    slider.style.transform = 'translate(' + (essayIndex * -slideWidth) + '%)';
     indicatorParents.children[essayIndex].classList.add('selected');
 }
 
 // Function to handle slide transitions
 function nextSlide() {
-    essayIndex = (essayIndex < 1) ? essayIndex + 1 : 0;
+    essayIndex = (essayIndex < maxIndex) ? essayIndex + 1 : maxIndex; // Use maxIndex variable
     setIndex();
 }
 
 // Event listener for left arrow click
 leftArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex > 0) ? essayIndex - 1 : 1;
+    essayIndex = (essayIndex > 0) ? essayIndex - 1 : maxIndex; // Use maxIndex variable
     setIndex();
 });
 
 // Event listener for right arrow click
 rightArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex < 1) ? essayIndex + 1 : 0;
+    essayIndex = (essayIndex < maxIndex) ? essayIndex + 1 : 0; // Use maxIndex variable
     setIndex();
 });
 
@@ -137,6 +151,11 @@ document.querySelectorAll('platter indicator').forEach(function(indicator, ind) 
         setIndex();
     });
 });
+
+// Call calculateSlideParams initially and on window resize
+calculateSlideParams();
+window.addEventListener('resize', calculateSlideParams);
+
 
 
 
@@ -158,25 +177,25 @@ var essayIndex2 = 0;
 // Function to set the slide index and update the slider position for postalSlider carousel
 function setIndex2() {
     document.querySelector('#platter2 .selected').classList.remove('selected');
-    slider2.style.transform = 'translate(' + (essayIndex2 * -50) + '%)'; // Update slide translation
+    slider2.style.transform = 'translate(' + (essayIndex2 * -slideWidth) + '%)'; // Update slide translation
     indicatorParents2.children[essayIndex2].classList.add('selected');
 }
 
 // Function to handle slide transitions for postalSlider carousel
 function nextSlide2() {
-    essayIndex2 = (essayIndex2 < 1) ? essayIndex2 + 1 : 0; // Update condition for looping slides
+    essayIndex2 = (essayIndex2 < maxIndex) ? essayIndex2 + 1 : maxIndex; // Update condition for looping slides
     setIndex2();
 }
 
 // Event listener for left arrow click for postalSlider carousel
 leftArrow2.addEventListener('click', function() {
-    essayIndex2 = (essayIndex2 > 0) ? essayIndex2 - 1 : 1; // Update condition for left arrow
+    essayIndex2 = (essayIndex2 > 0) ? essayIndex2 - 1 : maxIndex; // Update condition for left arrow
     setIndex2();
 });
 
 // Event listener for right arrow click for postalSlider carousel
 rightArrow2.addEventListener('click', function() {
-    essayIndex2 = (essayIndex2 < 1) ? essayIndex2 + 1 : 0; // Update condition for right arrow
+    essayIndex2 = (essayIndex2 < maxIndex) ? essayIndex2 + 1 : 0; // Update condition for right arrow
     setIndex2();
 });
 
@@ -196,41 +215,3 @@ document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, in
 
 
 
-const slider3 = document.getElementById('postalSlider2');
-const leftArrow3 = document.getElementById('leftSlide3');
-const rightArrow3 = document.getElementById('rightSlide3');
-const indicatorParents3 = document.getElementById('platter3');
-var essayIndex3 = 0;
-
-// Function to set the slide index and update the slider position for postalSlider carousel
-function setIndex3() {
-    document.querySelector('#platter3 .selected').classList.remove('selected');
-    slider3.style.transform = 'translate(' + (essayIndex3 * -16.666666) + '%)'; // Update slide translation
-    indicatorParents3.children[essayIndex3].classList.add('selected');
-}
-
-// Function to handle slide transitions for postalSlider carousel
-function nextSlide3() {
-    essayIndex3 = (essayIndex3 < 5) ? essayIndex3 + 1 : 0; // Update condition for looping slides
-    setIndex3();
-}
-
-// Event listener for left arrow click for postalSlider carousel
-leftArrow3.addEventListener('click', function() {
-    essayIndex3 = (essayIndex3 > 0) ? essayIndex3 - 1 : 5; // Update condition for left arrow
-    setIndex3();
-});
-
-// Event listener for right arrow click for postalSlider carousel
-rightArrow3.addEventListener('click', function() {
-    essayIndex3 = (essayIndex3 < 5) ? essayIndex3 + 1 : 0; // Update condition for right arrow
-    setIndex3();
-});
-
-// Event listener for indicator click for postalSlider carousel
-document.querySelectorAll('#platter3 indicator').forEach(function(indicator3, ind3) {
-    indicator3.addEventListener('click', function() {
-        essayIndex3 = ind3;
-        setIndex3();
-    });
-});
