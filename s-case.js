@@ -50,7 +50,7 @@ function changeBackgroundImage(imageUrl) {
 function handleButtonClick(event, imageUrlArray) {
     const screenWidth = document.documentElement.clientWidth;
     let imageUrl;
-    if (screenWidth < 700) {
+    if (screenWidth < 900) {
         imageUrl = imageUrlArray.small;
     } else if (screenWidth < 1200) {
         imageUrl = imageUrlArray.medium;
@@ -113,6 +113,9 @@ function calculateSlideParams() {
     if (screenWidth > 1200) {
         slideWidth = 50; 
         maxIndex = 1; 
+    } else if (screenWidth > 900) {
+        slideWidth = 33.333333; 
+        maxIndex = 2; 
     } else {
         slideWidth = 16.666666; 
         maxIndex = 5; 
