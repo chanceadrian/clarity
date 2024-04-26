@@ -152,9 +152,6 @@ sec {
 }
 
 @media only screen and (max-width: 1370px) {
-    wordmark {
-        padding-block: 20px;
-    }
 
     .only-large {
         display:none;
@@ -166,6 +163,10 @@ sec {
 }
 
 @media only screen and (max-width: 1130px) {
+    wordmark {
+        padding-block: 20px;
+    }
+
     .only-small {
         display:flex;
     }
@@ -246,20 +247,30 @@ holder {
 /* KEY IMAGES*/
 
 .iPhones-3 {
-    min-height: 1100px;
+    max-height: 1100px;
 }
 
 .hold-iPhones-3 {
     max-height: 1010px;
 }
 
-@media only screen and (max-width: 834px) {
+@media only screen and (max-width: 1370px) {
     .iPhones-3 {
-        min-height: 840px;
+        max-height: 900px;
     }
     
     .hold-iPhones-3 {
         max-height: 800px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .iPhones-3 {
+        min-height: 800px;
+    }
+    
+    .hold-iPhones-3 {
+        max-height: 700px;
     }
 }
 
@@ -352,7 +363,7 @@ paint {
 
 .purple {
     background: #7F8DB2;
-    fill: #ABCBDF;
+    fill: #A7D0E8;
 }
 
 .label {
@@ -360,7 +371,7 @@ paint {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 60px;
+    width: 65px;
     height: 70px;
     gap: 5px;
 }
@@ -766,6 +777,7 @@ carousel-contain {
     width: 100vw;
     align-items: center;
     justify-content: center;
+    max-width: 1550px;
 }
 
 carousel {

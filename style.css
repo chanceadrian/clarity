@@ -21,6 +21,7 @@ body {
     background-color: #F7F7F7;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     padding: 65px 60px;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', "system-ui", sans-serif;
@@ -99,9 +100,11 @@ segment {
     flex-direction: column;
     position: relative;
     gap: 5px;
+    width: 100%;
+    max-width: 1550px;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1370px) {
     body {
         padding: 75px 30px;
     }
@@ -147,7 +150,7 @@ segment {
 
 card-holder {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(425px, 444px));
+    grid-template-columns: repeat(auto-fit, minmax(425px, 450px));
     gap: 20px;
     row-gap: 40px;
     margin-block: 15px;
@@ -222,17 +225,28 @@ slider-about group, slider-photos group, indie group {
 
 @media only screen and (max-width: 1370px) {
     card-holder {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 377px));
+        grid-template-columns: 1fr 1fr 1fr;
     }
-   
+
     card-holder a {
-        height: 500px;
-        background-color: white;
-        padding: 30px;
+        height: 550px;
+        padding-inline: 25px;
     }
 
     card-holder a h1 {
         font-size: 32px;
+        padding-inline: 0px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    card-holder {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    card-holder a {
+        height: 580px;
+        padding-inline: 20px;
     }
 }
 
@@ -330,7 +344,23 @@ indicator.selected, indicator2.selected {
 
 @media only screen and (max-width: 1370px) {
     carousel {
-        height: 500px;
+        height: 600px;
+    }
+
+    slider a {
+        padding-inline: 20px;
+        padding-top: 20px;
+        gap: 5px;
+    }
+
+    slider-about a, slider-photos a {
+        padding: 20px;
+    }
+
+    slider-photos a {
+        padding: 30px;
+        justify-content: center;
+        align-items: flex-end;
     }
 }
 
@@ -441,23 +471,10 @@ border:hover, .audio border:hover {
 }
 
 @media only screen and (max-width: 1370px) {
-    carousel {
-        height: 500px;
-    }
-
-    slider a {
-        padding-inline: 20px;
-        padding-top: 20px;
-        gap: 5px;
-    }
 
     slider a h1 {
         font-size: 64px;
         line-height: 64px;
-    }
-
-    slider-about a, slider-photos a {
-        padding: 20px;
     }
     
     slider-about a h1 {
@@ -466,12 +483,6 @@ border:hover, .audio border:hover {
     
     slider-about a p {
         font-size: 21px;
-    }
-
-    slider-photos a {
-        padding: 30px;
-        justify-content: center;
-        align-items: flex-end;
     }
     
     slider-photos a h1 {
@@ -497,6 +508,7 @@ chin {
     margin-top: -15px;
     padding-inline: 120px;
     padding-bottom: 20px;
+    max-width: 1550px;
 }
 
 chin p {
@@ -565,14 +577,16 @@ indie group h2 {
     font-weight: 700;
 }
 
-@media only screen and (max-width: 1370px) {
-    grid-caption {
-        padding: 10px 20px 30px;
-    }
-    
+@media only screen and (max-width: 1130px) {
     indie {
+        left: -60px;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+    indie, grid-caption {
         padding: 100px 30px 120px;
-        left: -30px;
+        gap: 30px;
     }
 
     indie group h1 {
@@ -612,6 +626,7 @@ indie group h2 {
     background-color: #F7F7F7;
     cursor: pointer;
     padding: 30px;
+    width: 100%;
 }
 
 .top {
@@ -1001,6 +1016,12 @@ item-grid {
     opacity: 0.5;
 }
 
+@media only screen and (max-width: 1130px) {
+    read-essay {
+        columns: 300px 1;
+    }
+}
+
 @media only screen and (max-width: 1370px) {
     .essay {
         padding: 75px 0;
@@ -1022,10 +1043,6 @@ item-grid {
     photo-front {
         height: 600px;
         left: -30px;
-    }
-    
-    read-essay {
-        columns: 300px 1;
     }
 
     written {
@@ -1068,4 +1085,4 @@ item-grid {
     .essay item-grid h1 {
         font-size: 19px;
     }
-}
+} 
