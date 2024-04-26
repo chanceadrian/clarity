@@ -889,6 +889,7 @@ indicator.selected, indicator2.selected {
     -webkit-backdrop-filter: saturate(120%) blur(10px);
     z-index: 3;
     transition: background 0.3s ease-in-out;
+    margin-bottom: 80px;
 }
 
 .left {
