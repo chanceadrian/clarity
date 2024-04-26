@@ -101,7 +101,7 @@ segment {
     gap: 5px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     body {
         padding: 75px 30px;
     }

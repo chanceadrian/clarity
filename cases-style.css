@@ -76,7 +76,7 @@ p {
     font-weight: 400;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1130px) {
     body {
         gap: 130px;
         padding: 15px 30px;
@@ -165,11 +165,17 @@ sec {
     }
 }
 
-@media only screen and (max-width: 900px) {
-
+@media only screen and (max-width: 1130px) {
     .only-small {
         display:flex;
     }
+
+    .only-med {
+        display:initial;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
 
     .emphasis {
         gap: 100px;
@@ -193,10 +199,6 @@ sec {
 
     wordmark h2 {
         font-size: 24px;
-    }
-
-    .only-med {
-        display:initial;
     }
 }
 
@@ -231,7 +233,7 @@ holder {
     width: 100%;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1130px) {
     segment {
         padding: 0px 0px 80px;
     }
@@ -363,7 +365,7 @@ paint {
     gap: 5px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     color-options {
         height: 950px;
     }
@@ -458,7 +460,7 @@ item {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1130px) {
     item {
         height: 320px;
     }
@@ -628,7 +630,7 @@ topic p {
     max-height: 770px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     .hold-two {
         padding-inline: 20px;
     }
@@ -658,7 +660,7 @@ topic p {
     max-height: 700px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     .hold-three {
         column-gap: 0px;
     }
@@ -688,7 +690,7 @@ topic p {
     max-height: 680px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     .hold-four {
         padding-inline: 20px;
         row-gap: 40px;
@@ -715,7 +717,7 @@ topic p {
     max-height: 1923px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     .hold-six {
         max-height: 1450px;
     }
@@ -819,7 +821,7 @@ indicator.selected, indicator2.selected {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1130px) {
     slider-caption {
         width: 600%;
     }
@@ -897,7 +899,7 @@ indicator.selected, indicator2.selected {
     margin-left: 3px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     carousel {
         width: auto;
     }
@@ -968,7 +970,7 @@ vision {
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1130px) {
     vision {
         aspect-ratio:unset;
         height: 480px;
