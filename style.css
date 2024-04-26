@@ -101,7 +101,11 @@ segment {
     gap: 5px;
 }
 
-
+@media only screen and (max-width: 1370px) {
+    body {
+        padding: 75px 30px;
+    }
+}
 
 
 
@@ -216,6 +220,27 @@ slider-about group, slider-photos group, indie group {
     margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 1370px) {
+    card-holder {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 377px));
+    }
+   
+    card-holder a {
+        height: 500px;
+        background-color: white;
+        padding: 30px;
+    }
+
+    card-holder a h1 {
+        font-size: 32px;
+    }
+}
+
+
+
+
+
+
 
 /* Ideas that launched cases */
 .top-2 {
@@ -302,6 +327,14 @@ indicator, indicator2 {
 indicator.selected, indicator2.selected {
     background-color: rgb(0, 0, 0, 1);
 }
+
+@media only screen and (max-width: 1370px) {
+    carousel {
+        height: 500px;
+    }
+}
+
+
 
 
 
@@ -407,7 +440,49 @@ border:hover, .audio border:hover {
     border-color: #fff;
 }
 
+@media only screen and (max-width: 1370px) {
+    carousel {
+        height: 500px;
+    }
 
+    slider a {
+        padding-inline: 20px;
+        padding-top: 20px;
+        gap: 5px;
+    }
+
+    slider a h1 {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    slider-about a, slider-photos a {
+        padding: 20px;
+    }
+    
+    slider-about a h1 {
+        font-size: 64px;
+    }
+    
+    slider-about a p {
+        font-size: 21px;
+    }
+
+    slider-photos a {
+        padding: 30px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    slider-photos a h1 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    slider-photos a h2 {
+        font-size: 19px;
+    }
+}
 
 
 
@@ -433,7 +508,12 @@ chin p sec {
     color: rgb(0, 0, 0, 0.75);
 }
 
-
+@media only screen and (max-width: 1370px) {
+    chin {
+        margin-top: -30px;
+        padding-inline: 60px;
+    }
+}
 
 
 
@@ -485,7 +565,20 @@ indie group h2 {
     font-weight: 700;
 }
 
+@media only screen and (max-width: 1370px) {
+    grid-caption {
+        padding: 10px 20px 30px;
+    }
+    
+    indie {
+        padding: 100px 30px 120px;
+        left: -30px;
+    }
 
+    indie group h1 {
+        font-size: 72px;
+    }
+}
 
 
 
@@ -527,8 +620,7 @@ indie group h2 {
 
 .center {
     justify-content: center;
-    color: white;
-    fill: white;
+
 }
 
 .cover h1 {
@@ -540,7 +632,25 @@ indie group h2 {
     font-size: 28px;
 }
 
+@media only screen and (max-width: 1370px) {
+    .cover {
+        height: 700px;
+        padding: 25px;
+    }
 
+    .cover h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    
+    .cover p {
+        font-size: 24px;
+    }
+
+    .top {
+        padding-top: 40px;
+    }
+}
 
 
 
@@ -567,6 +677,27 @@ indie group h2 {
     margin-top: 10px;
 }
 
+.only-med {
+    display: none;
+}
+
+@media only screen and (max-width: 1370px) {
+    .audio slider a h1 {
+        font-size: 56px;
+        line-height: 56px;
+        text-wrap:wrap;
+        text-align: center;
+    }
+    
+    .only-med {
+        display: initial;
+    }
+}
+
+
+
+
+
 /* PLAYLIST */
 
 .playlist {
@@ -586,7 +717,7 @@ heading, .list a {
 }
 
 heading {
-    padding: 8px 25px 8px 15px;
+    padding: 8px 25px 8px 25px;
 }
 
 .list a {
@@ -647,7 +778,24 @@ play svg {
     margin-left: 3px;
 }
 
+@media only screen and (max-width: 1370px) {
+    heading, .list a {
+        gap: 10px;
+    }
 
+    heading {
+        padding: 8px 19px 8px 16px;
+    }
+    
+    .list a {
+        padding: 8px 15px 8px 20px;
+        cursor:initial;
+    }
+
+    .list a :nth-child(4), .list heading :nth-child(4) {
+        max-width: 130px;
+    }
+}
 
 
 
@@ -851,4 +999,73 @@ item-grid {
 .essay item-grid p {
     font-size: 19px;
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 1370px) {
+    .essay {
+        padding: 75px 0;
+    }
+    
+    .essay h1 {
+        font-size: 64px;
+    }
+    
+    photo-back {
+        height: 600px;
+        padding: 25px 30px;
+    }
+    
+    photo-frame {
+        border-radius: 20px;
+    }
+    
+    photo-front {
+        height: 600px;
+        left: -30px;
+    }
+    
+    read-essay {
+        columns: 300px 1;
+    }
+
+    written {
+        padding: 0px 60px;
+    }
+    
+    .essay chin {
+        text-align: left;
+        padding: 10px 80px 20px;
+    }
+    
+    section {
+        padding: 40px 0 120px;
+    }
+    
+    .grouped {
+        padding: 0px 0 60px;
+    }
+    
+    .essay written h2 {
+        font-size: 24px;
+    }
+    
+    .grouped h3 {
+        font-size: 24px;
+    }
+    
+    .essay section h1 {
+        font-size: 24px;
+    }
+    
+    line {
+        margin-bottom: 10px;
+    }
+    
+    item-grid {
+        gap: 60px;
+    }
+    
+    .essay item-grid h1 {
+        font-size: 19px;
+    }
 }

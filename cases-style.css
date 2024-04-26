@@ -151,7 +151,7 @@ sec {
     display:none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     wordmark {
         padding-block: 20px;
     }
@@ -358,13 +358,12 @@ paint {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 70px;
+    width: 60px;
     height: 70px;
     gap: 5px;
-    margin-inline: 5px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     color-options {
         height: 950px;
     }
@@ -400,7 +399,7 @@ paint {
     scale: 1;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .emphasis color-options h1 {
         font-size: 28px;
         padding-left: 0px;
@@ -450,7 +449,7 @@ item {
     text-align: center;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
 
     item {
         gap: 0px;
@@ -538,7 +537,7 @@ topic p {
     line-height:1.4;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     topic {
         padding: 30px 40px;
         gap: 5px;
@@ -586,7 +585,7 @@ topic p {
     padding-bottom: 140px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .staggered {
         padding-inline: 60px;
         column-gap: 60px;
@@ -629,7 +628,7 @@ topic p {
     max-height: 770px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .hold-two {
         padding-inline: 20px;
     }
@@ -659,7 +658,7 @@ topic p {
     max-height: 700px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .hold-three {
         column-gap: 0px;
     }
@@ -689,7 +688,7 @@ topic p {
     max-height: 680px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .hold-four {
         padding-inline: 20px;
         row-gap: 40px;
@@ -716,7 +715,7 @@ topic p {
     max-height: 1923px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     .hold-six {
         max-height: 1450px;
     }
@@ -808,7 +807,7 @@ indicator.selected, indicator2.selected {
     background-color: rgb(0, 0, 0, 1);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     slider-caption {
         width: 300%;
         padding-inline: 0px;
@@ -898,7 +897,7 @@ indicator.selected, indicator2.selected {
     margin-left: 3px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     carousel {
         width: auto;
     }
@@ -941,7 +940,7 @@ stat h2 {
     opacity: 0.5;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1370px) {
     stats {
         row-gap: 60px;
         padding: 180px 60px 100px;

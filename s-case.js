@@ -56,7 +56,7 @@ function handleButtonClick(event, imageUrlArray) {
     let imageUrl;
     if (screenWidth < 800) {
         imageUrl = imageUrlArray.small;
-    } else if (screenWidth < 1200) {
+    } else if (screenWidth < 1370) {
         imageUrl = imageUrlArray.medium;
     } else {
         imageUrl = imageUrlArray.large;
@@ -84,7 +84,7 @@ function setImagesByScreenWidth() {
     };
     preloadImages(images.small.concat(images.medium, images.large));
     // Change background image to the first one in the updated array
-    changeBackgroundImage(images[screenWidth < 700 ? 'small' : screenWidth < 1200 ? 'medium' : 'large'][0]);
+    changeBackgroundImage(images[screenWidth < 700 ? 'small' : screenWidth < 1370 ? 'medium' : 'large'][0]);
 }
 
 // Set the appropriate list of images based on initial screen width
@@ -114,7 +114,7 @@ var maxIndex;
 // Function to calculate slide width and maximum index based on screen size
 function calculateSlideParams() {
     const screenWidth = document.documentElement.clientWidth;
-    if (screenWidth > 1200) {
+    if (screenWidth > 1370) {
         slideWidth = 50; 
         maxIndex = 1; 
     } else if (screenWidth > 900) {
