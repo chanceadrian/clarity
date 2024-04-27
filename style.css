@@ -36,7 +36,7 @@ nav {
     display: flex;
     padding: 4px;
     gap: 4px;
-    border-radius: 14px;
+    border-radius: 16px;
     background-color: rgba(247, 247, 247, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -56,7 +56,7 @@ nav a {
     opacity: 0.5;
     font-size: 17px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: background 0.3s ease, opacity 0.3s ease;
 }
 
@@ -106,6 +106,12 @@ segment {
 
 @media only screen and (max-width: 1370px) {
     body {
+        padding: 75px 60px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    body {
         padding: 75px 30px;
     }
 }
@@ -150,7 +156,7 @@ segment {
 
 card-holder {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(425px, 450px));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     row-gap: 40px;
     margin-block: 15px;
@@ -224,10 +230,6 @@ slider-about group, slider-photos group, indie group {
 }
 
 @media only screen and (max-width: 1370px) {
-    card-holder {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
     card-holder a {
         height: 550px;
         padding-inline: 25px;
@@ -342,28 +344,6 @@ indicator.selected, indicator2.selected {
     background-color: rgb(0, 0, 0, 1);
 }
 
-@media only screen and (max-width: 1370px) {
-    carousel {
-        height: 600px;
-    }
-
-    slider a {
-        padding-inline: 20px;
-        padding-top: 20px;
-        gap: 5px;
-    }
-
-    slider-about a, slider-photos a {
-        padding: 20px;
-    }
-
-    slider-photos a {
-        padding: 30px;
-        justify-content: center;
-        align-items: flex-end;
-    }
-}
-
 
 
 
@@ -470,7 +450,29 @@ border:hover, .audio border:hover {
     border-color: #fff;
 }
 
+@media only screen and (max-width: 1130px) {
+
+    slider a {
+        padding-inline: 20px;
+        padding-top: 20px;
+        gap: 5px;
+    }
+
+    slider-about a, slider-photos a {
+        padding: 20px;
+    }
+
+    slider-photos a {
+        padding: 30px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
 @media only screen and (max-width: 1370px) {
+    carousel {
+        height: 600px;
+    }
 
     slider a h1 {
         font-size: 64px;
@@ -553,10 +555,10 @@ indie {
     display: grid;
     justify-content: center;
     padding: 100px 60px 120px;
+    margin-block: 40px;
     gap: 40px;
     width: 100vw;
     position: relative;
-    left: -60px;
     background: linear-gradient(to bottom, rgb(255, 255, 255, 0) 0%, white 25%);
 }
 
@@ -577,20 +579,24 @@ indie group h2 {
     font-weight: 700;
 }
 
-@media only screen and (max-width: 1130px) {
-    indie {
-        left: -60px;
-    }
-}
-
 @media only screen and (max-width: 1370px) {
     indie, grid-caption {
-        padding: 100px 30px 120px;
+        padding: 20px 0px 40px;
         gap: 30px;
+    }
+
+    indie {
+        padding: 80px 60px 100px;
     }
 
     indie group h1 {
         font-size: 72px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    indie {
+        padding: 80px 30px 100px;
     }
 }
 
@@ -800,7 +806,7 @@ play svg {
     margin-left: 3px;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1130px) {
     heading, .list a {
         gap: 10px;
     }

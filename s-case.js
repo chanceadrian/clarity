@@ -222,3 +222,51 @@ document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, in
 
 
 
+
+const slider3 = document.getElementById('iteraSlider');
+const leftArrow3 = document.getElementById('leftSlide3');
+const rightArrow3 = document.getElementById('rightSlide3');
+const indicatorParents3 = document.getElementById('platter3');
+var essayIndex3 = 0;
+
+// Function to set the slide index and update the slider position for postalSlider carousel
+function setIndex3() {
+    document.querySelector('#platter3 .selected').classList.remove('selected');
+    slider3.style.transform = 'translate(' + (essayIndex3 * -slideWidth) + '%)'; // Update slide translation
+    indicatorParents3.children[essayIndex3].classList.add('selected');
+}
+
+// Function to handle slide transitions for postalSlider carousel
+function nextSlide3() {
+    essayIndex3 = (essayIndex3 < maxIndex) ? essayIndex3 + 1 : maxIndex; // Update condition for looping slides
+    setIndex3();
+}
+
+// Event listener for left arrow click for postalSlider carousel
+leftArrow3.addEventListener('click', function() {
+    essayIndex3 = (essayIndex3 > 0) ? essayIndex3 - 1 : maxIndex; // Update condition for left arrow
+    setIndex3();
+});
+
+// Event listener for right arrow click for postalSlider carousel
+rightArrow3.addEventListener('click', function() {
+    essayIndex3 = (essayIndex3 < maxIndex) ? essayIndex3 + 1 : 0; // Update condition for right arrow
+    setIndex3();
+});
+
+// Event listener for indicator click for postalSlider carousel
+document.querySelectorAll('#platter3 indicator').forEach(function(indicator3, ind3) {
+    indicator3.addEventListener('click', function() {
+        essayIndex3 = ind3;
+        setIndex3();
+    });
+});
+
+
+
+
+
+
+
+
+
