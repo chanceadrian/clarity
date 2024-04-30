@@ -263,7 +263,7 @@ sec {
         gap: 80px;
     }
 
-    .lead h1, .emphasis h1 {
+    .lead h1 {
         font-size: 44px;
         padding-inline: 20px;
     }
@@ -272,9 +272,13 @@ sec {
         font-size: 24px;
     }
 
-    .emphasis h2 {
+    .emphasis h2, .emphasis h1 {
         font-size: 32px;
         padding-inline: 20px;
+    }
+
+    .emphasis h1 {
+        font-size: 36px;
     }
 
     wordmark h1 {
@@ -487,7 +491,7 @@ paint {
 
 @media only screen and (max-width: 700px) {
     color-options {
-        height: 750px;
+        height: 600px;
         width: 100vw;
         border-radius: 0px;
     }
@@ -523,6 +527,13 @@ paint {
         font-size: 28px;
         padding-left: 0px;
         text-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .emphasis color-options h1 {
+        font-size: 24px;
+        padding-inline: 0px;
     }
 }
 
@@ -566,6 +577,14 @@ item {
     background-repeat: no-repeat;
     border-radius: 10px;
     text-align: center;
+}
+
+.links {
+    background-image: url(Im/s-links.webp);
+}
+
+.cabinet {
+    background-image: url(Im/s-cabinet.webp);
 }
 
 @media only screen and (max-width: 1370px) {
@@ -617,6 +636,14 @@ item {
     
     .widest {
         grid-column: span 1;
+    }
+
+    .links {
+        background-image: url(Im/s-links-small.webp);
+    }
+    
+    .cabinet {
+        background-image: url(Im/s-cabinet-small.webp);
     }
 }
 

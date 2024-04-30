@@ -299,6 +299,10 @@ slider-about group, slider-photos group, indie group {
         height: 490px;
         padding-inline: 30px;
     }
+
+    card-holder a h1 {
+        font-size: 32px;
+    }
 }
 
 
@@ -677,7 +681,7 @@ chin p sec {
 @media only screen and (max-width: 700px) {
     chin {
         padding-inline: 20px;
-        padding-bottom: -20px;
+        padding-bottom: 0px;
     }
 }
 
@@ -1062,6 +1066,10 @@ play svg {
         min-width: 32px;
         min-height: 32px; 
     }
+
+    play svg {
+        margin-left: 2px;
+    }
 }
 
 
@@ -1351,7 +1359,7 @@ item-grid {
 
 @media only screen and (max-width: 700px) {
     .essay detail p {
-        font-size: 19px;
+        font-size: 17px;
     }
     
     .essay read-essay p {
@@ -1377,7 +1385,7 @@ item-grid {
     }
     
     .essay chin {
-        padding: 60px 25px 40px;
+        padding: 30px 25px 0px;
     }
     
     .essay written h2 {
