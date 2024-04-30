@@ -264,8 +264,12 @@ sec {
     }
 
     .lead h1, .emphasis h1 {
-        font-size: 48px;
+        font-size: 44px;
         padding-inline: 20px;
+    }
+
+    .lead p {
+        font-size: 24px;
     }
 
     .emphasis h2 {
