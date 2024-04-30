@@ -368,6 +368,7 @@ holder {
     
     .hold-iPhones-3 {
         max-height: 500px;
+        min-height: 500px;
     }
 }
 
