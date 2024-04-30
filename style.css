@@ -843,6 +843,8 @@ play svg {
     gap: 5px;
     align-items: center;
     height: auto;
+    text-align: center;
+    padding-inline: 30px;
 }
 
 .essay h1 {

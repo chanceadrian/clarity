@@ -54,7 +54,7 @@ nav {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: fit-content;
     height: fit-content;
-    z-index: 3;
+    z-index: 4;
 }
 
 nav a {
@@ -97,6 +97,42 @@ p {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    body {
+        padding: 15px 20px;
+    }
+
+    .contain {
+        padding-inline: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        padding: 120px 20px;
+    }
+
+    nav {
+        border-radius: 0;
+        width: 100vw;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+    }
+
+    nav a svg {
+        display: none;
+    }
+
+    .selected svg {
+        display: initial;
+    }
+
+    .selected {
+        background: none;
+    }
+}
+
 
 
 /* GENERAL HEADER LAYOUTS */
@@ -126,6 +162,7 @@ wordmark {
 .emphasis {
     gap: 80px;
     padding-block: 0px;
+    align-items: center;
 }
 
 .emphasis h2 {
@@ -217,6 +254,34 @@ sec {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .lead {
+        gap: 5px;
+    }
+    
+    .emphasis {
+        gap: 80px;
+    }
+
+    .lead h1, .emphasis h1 {
+        font-size: 48px;
+        padding-inline: 20px;
+    }
+
+    .emphasis h2 {
+        font-size: 32px;
+        padding-inline: 20px;
+    }
+
+    wordmark h1 {
+        font-size: 36px;
+    }
+
+    wordmark h2 {
+        font-size: 21px;
+    }
+}
+
 
 
 
@@ -280,11 +345,21 @@ holder {
 
 @media only screen and (max-width: 1130px) {
     .iPhones-3 {
-        min-height: 800px;
+        max-height: 800px;
     }
     
     .hold-iPhones-3 {
         max-height: 700px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .iPhones-3 {
+        max-height: 600px;
+    }
+    
+    .hold-iPhones-3 {
+        max-height: 500px;
     }
 }
 
@@ -385,7 +460,7 @@ paint {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 65px;
+    width: 70px;
     height: 70px;
     gap: 5px;
 }
@@ -394,10 +469,23 @@ paint {
     color-options {
         height: 950px;
     }
+    
     color-touch {
         flex-direction: column;
         gap: 20px;
         align-items: center;
+    }
+
+    .label {
+        width: 65px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    color-options {
+        height: 780px;
+        width: 100vw;
+        border-radius: 0px;
     }
 }
 
@@ -477,7 +565,6 @@ item {
 }
 
 @media only screen and (max-width: 1370px) {
-
     item {
         gap: 0px;
         height: 260px;
@@ -504,6 +591,28 @@ item {
     
     .widest {
         grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    item {
+        height: 290px;
+    }
+
+    item-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wider {
+        grid-column: span 1;
+    }
+    
+    .wide {
+        grid-column: span 1;
+    }
+    
+    .widest {
+        grid-column: span 1;
     }
 }
 
@@ -568,6 +677,7 @@ topic {
     background: #f7f7f7;
     padding: 50px;
     gap: 10px;
+    max-width: 100%;
 }
 
 topic h1 {
@@ -599,7 +709,15 @@ topic p {
     }
 }
 
-
+@media only screen and (max-width: 700px) {
+    caption-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    topic {
+        padding: 30px 30px;
+    }
+}
 
 
 
@@ -657,6 +775,21 @@ topic p {
     
     .bottom {
         padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .staggered holder, .hold-two holder, .hold-four holder {
+        max-height: 670px;
+    }
+    
+    .staggered .iPhone, .hold-two .iPhone, .hold-four .iPhone {
+        max-height: 730px;
     }
 }
 
@@ -720,6 +853,17 @@ topic p {
     
     .with-text holder {
         max-height: 750px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .with-text .iPhone {
+        height: 570px;
+    }
+    
+    .with-text holder {
+        max-height: 510px;
     }
 }
 
@@ -956,6 +1100,15 @@ indicator.selected, indicator2.selected {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .left {
+        left: 20px;
+    }
+    
+    .right {
+        right: 20px;
+    }
+}
 
 
 
@@ -1008,6 +1161,16 @@ stat h2 {
     }
 }
 
+@media only screen and (max-width: 700px) {
+
+    stat h1 {
+        font-size: 48px;
+    }
+    
+    stat h2 {
+        font-size: 24px;
+    }
+}
 
 
 
@@ -1025,5 +1188,17 @@ vision {
     vision {
         aspect-ratio:unset;
         height: 480px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    vision {
+        height: 500px;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .hide-small {
+        display: none;
     }
 }
