@@ -483,7 +483,7 @@ paint {
 
 @media only screen and (max-width: 700px) {
     color-options {
-        height: 780px;
+        height: 750px;
         width: 100vw;
         border-radius: 0px;
     }

@@ -104,6 +104,10 @@ segment {
     max-width: 1550px;
 }
 
+.only-small {
+    display: none;
+}
+
 @media only screen and (max-width: 1370px) {
     body {
         padding: 75px 60px;
@@ -113,6 +117,36 @@ segment {
 @media only screen and (max-width: 1130px) {
     body {
         padding: 75px 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .only-small {
+        display: initial;
+    }
+    
+    body {
+        padding: 75px 20px;
+    }
+
+    nav {
+        border-radius: 0;
+        width: 100vw;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+    }
+
+    nav a svg {
+        display: none;
+    }
+
+    .selected svg {
+        display: initial;
+    }
+
+    .selected {
+        background: none;
     }
 }
 
@@ -252,6 +286,17 @@ slider-about group, slider-photos group, indie group {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    card-holder {
+        grid-template-columns: 1fr;
+    }
+
+    card-holder a {
+        height: 490px;
+        padding-inline: 30px;
+    }
+}
+
 
 
 
@@ -365,12 +410,14 @@ slider a h1 {
     font-size: 96px;
     text-wrap:nowrap;
     line-height: 115px;
+    text-align: center;
 }
 
 slider a h2 {
     font-size: 21px;
     font-weight: 700;
     line-height: 32px;
+    text-align: center;
 }
 
 slider a h3 {
@@ -450,23 +497,24 @@ border:hover, .audio border:hover {
     border-color: #fff;
 }
 
-@media only screen and (max-width: 1130px) {
+.rams {
+    background-image: url(Im/Rams.webp);
+}
 
-    slider a {
-        padding-inline: 20px;
-        padding-top: 20px;
-        gap: 5px;
-    }
+.jobs {
+    background-image: url(Im/Jobs.webp);
+}
 
-    slider-about a, slider-photos a {
-        padding: 20px;
-    }
+.paglia {
+    background-image: url(Im/Paglia.webp);
+}
 
-    slider-photos a {
-        padding: 30px;
-        justify-content: center;
-        align-items: flex-end;
-    }
+.what {
+    background-image: url(Im/What.webp);
+}
+
+.think {
+    background-image: url(Im/Think.webp);
 }
 
 @media only screen and (max-width: 1370px) {
@@ -494,6 +542,94 @@ border:hover, .audio border:hover {
 
     slider-photos a h2 {
         font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+
+    slider a {
+        padding-inline: 20px;
+        padding-top: 20px;
+        gap: 5px;
+    }
+
+    slider-about a, slider-photos a {
+        padding: 20px;
+    }
+
+    slider-photos a {
+        padding: 30px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    slider a {
+        padding: 25px;
+    }
+    
+    carousel {
+        height: 470px;
+    }
+
+    slider a h1 {
+        font-size: 40px;
+        line-height: 40px;
+        padding-inline: 0px;
+    }
+    
+    slider a h2 {
+        line-height: 28px;
+    }
+    
+    slider-about a h1 {
+        font-size: 44px;
+    }
+    
+    slider-about a p {
+        font-size: 21px;
+    }
+    
+    slider-photos a h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    slider-photos a h2 {
+        font-size: 19px;
+    }
+
+    slider-about a {
+        padding: 30px;
+        justify-content: center;
+        align-items: flex-end;
+        color: white;
+    }
+
+    .reverse {
+        justify-content: center;
+    }
+
+    .rams {
+        background-image: url(Im/Rams-small.webp);
+    }
+
+    .jobs {
+        background-image: url(Im/Jobs-small.webp);
+    }
+
+    .paglia {
+        background-image: url(Im/Paglia-small.webp);
+    }
+
+    .what {
+        background-image: url(Im/What-small.webp);
+    }
+    
+    .think {
+        background-image: url(Im/Think-small.webp);
     }
 }
 
@@ -529,7 +665,11 @@ chin p sec {
     }
 }
 
-
+@media only screen and (max-width: 700px) {
+    chin {
+        padding-inline: 20px;
+    }
+}
 
 
 
@@ -597,6 +737,16 @@ indie group h2 {
 @media only screen and (max-width: 1130px) {
     indie {
         padding: 80px 30px 100px;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    indie group h1 {
+        font-size: 48px;
+    }
+
+    indie {
+        padding: 80px 20px 100px;
     }
 }
 
@@ -674,7 +824,26 @@ indie group h2 {
 }
 
 
+@media only screen and (max-width: 700px) {
+    .cover {
+        height: 650px;
+        padding: 25px;
+    }
+    
+    .cover h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    .cover p {
+        font-size: 21px;
+    }
 
+    .boards chin {
+        padding: 20px 20px 40px;
+        text-align: center;
+    }
+}
 
 
 
@@ -722,6 +891,24 @@ indie group h2 {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .audio slider a h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .audio slider a h2 {
+        padding-block: 15px;
+    }
+    
+    .only-med {
+        display: none;
+    }
+
+    .hide-small {
+        display: none;
+    }  
+}
 
 
 
@@ -822,6 +1009,42 @@ play svg {
 
     .list a :nth-child(4), .list heading :nth-child(4) {
         max-width: 130px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .list {
+        width: 100vw;
+        align-self: center;
+    }
+
+    .list heading p {
+        font-weight: 600;
+    }
+    
+    .list p {
+        font-size: 15px;
+    }
+    
+    heading, .list a {
+        border-radius: 0px;
+    }
+
+    heading {
+        padding: 8px 13px 8px 17px;
+    }
+    
+    .list a {
+        padding: 8px 10px 8px 20px;
+    }
+
+    .list a :nth-child(4), .list heading :nth-child(4) {
+        display: none;
+    }
+
+    play {
+        min-width: 32px;
+        min-height: 32px; 
     }
 }
 
@@ -1107,5 +1330,73 @@ item-grid {
     
     .essay item-grid h1 {
         font-size: 19px;
+    }
+} 
+
+@media only screen and (max-width: 700px) {
+    .essay detail p {
+        font-size: 21px;
+    }
+    
+    .essay read-essay p {
+        font-size: 21px;
+    }
+    
+    .essay h1 {
+        font-size: 40px;
+    }
+    
+    photo-back {
+        height: 500px;
+        padding: 25px 20px;
+    }
+    
+    photo-front {
+        height: 500px;
+        left: -20px;
+    }
+
+    written {
+        padding: 0px 25px;
+    }
+    
+    .essay chin {
+        padding: 60px 25px 40px;
+    }
+    
+    .essay written h2 {
+        font-size: 28px;
+    }
+    
+    .grouped h3 {
+        font-size: 24px;
+    }
+    
+    .essay section h1 {
+        font-size: 28px;
+    }
+    
+    line {
+        margin-bottom: 15px;
+    }
+    
+    item-grid {
+        gap: 30px;
+    }
+    
+    .essay item-grid h1 {
+        font-size: 19px;
+    }
+
+    .essay item-grid p {
+        text-align: left;
+    }
+
+    .essay group {
+        padding-inline: 0px;
+    }
+
+    .essay h2 {
+        padding-inline: 30px;
     }
 } 
