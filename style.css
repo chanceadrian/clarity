@@ -826,7 +826,7 @@ indie group h2 {
 
 @media only screen and (max-width: 700px) {
     .cover {
-        height: 650px;
+        height: 600px;
         padding: 25px;
     }
     
@@ -894,7 +894,7 @@ indie group h2 {
 @media only screen and (max-width: 700px) {
     .audio slider a h1 {
         font-size: 40px;
-        line-height: 48px;
+        line-height: 44px;
     }
 
     .audio slider a h2 {
@@ -1025,17 +1025,23 @@ play svg {
     .list p {
         font-size: 15px;
     }
+
+    art {
+        min-width: 45px;
+        min-height: 45px;
+        border-radius: 5px;
+    }
     
     heading, .list a {
         border-radius: 0px;
     }
 
     heading {
-        padding: 8px 13px 8px 17px;
+        padding: 8px 12px 8px 23px;
     }
     
     .list a {
-        padding: 8px 10px 8px 20px;
+        padding: 8px 15px 8px 20px;
     }
 
     .list a :nth-child(4), .list heading :nth-child(4) {
@@ -1335,7 +1341,7 @@ item-grid {
 
 @media only screen and (max-width: 700px) {
     .essay detail p {
-        font-size: 21px;
+        font-size: 19px;
     }
     
     .essay read-essay p {
