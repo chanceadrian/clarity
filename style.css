@@ -148,6 +148,10 @@ segment {
     .selected {
         background: none;
     }
+
+    h1 {
+        font-size: 24px;
+    }
 }
 
 
@@ -581,7 +585,8 @@ border:hover, .audio border:hover {
     }
     
     slider a h2 {
-        line-height: 28px;
+        font-size: 19px;
+        line-height: 24px;
     }
     
     slider-about a h1 {
@@ -631,6 +636,10 @@ border:hover, .audio border:hover {
     .think {
         background-image: url(Im/Think-small.webp);
     }
+
+    border {
+        padding: 6px 12px;
+    }
 }
 
 
@@ -668,6 +677,7 @@ chin p sec {
 @media only screen and (max-width: 700px) {
     chin {
         padding-inline: 20px;
+        padding-bottom: -20px;
     }
 }
 
