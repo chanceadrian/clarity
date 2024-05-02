@@ -49,7 +49,7 @@ nav {
     padding: 4px;
     gap: 4px;
     border-radius: 16px;
-    background-color: rgba(247, 247, 247, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: fit-content;
@@ -148,7 +148,7 @@ wordmark {
 
 .lead {
     gap: 15px;
-    padding-top: 0px;
+    padding-block: 0px;
 }
   
 .lead h1, .emphasis h1 {
@@ -333,13 +333,144 @@ holder {
 
 /* KEY IMAGES*/
 
-.iPhones-3 {
-    max-height: 1100px;
+.hold-five {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 20px;
+    width: 1600px;
+    animation: myAnimation 1s ease-in-out;
+    align-items:flex-start;
+    padding-top: 10px;
 }
 
-.hold-iPhones-3 {
-    max-height: 1010px;
+.hold-five .iPhone {
+    height: 670px;
 }
+
+.hold-five holder {
+    max-height: 570px;
+}
+
+.odd {
+    margin-top: 100px;
+    animation: straighten linear forwards;
+    animation-timeline: view();
+    animation-range: contain 0% cover 80%;
+}
+
+@media only screen and (max-width: 1130px) {
+    .hold-five {
+        width: 1200px;
+    }
+
+    .hold-five .iPhone {
+        height: 550px;
+    }
+    
+    .hold-five holder {
+        max-height: 450px;
+    }
+
+    .odd {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hold-five {
+        width: 900px;
+    }
+
+    .hold-five .iPhone {
+        height: 400px;
+    }
+    
+    .hold-five holder {
+        max-height: 350px;
+    }
+
+    .odd {
+        margin-top: 50px;
+    }
+}
+
+@keyframes straighten {
+    0% {
+        margin-top: 100px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.move-left {
+    animation: moveLeft 1s ease-in-out;
+}
+
+.move-left-2 {
+    animation: moveLeft2 1s ease-in-out;
+}
+
+.move-right {
+    animation: moveRight 1s ease-in-out;
+}
+
+.move-right-2 {
+    animation: moveRight2 1s ease-in-out;
+}
+
+@keyframes moveLeft {
+    0% {
+      transform: translateX(40%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@keyframes moveLeft2 {
+    0% {
+      transform: translateX(80%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+      transform: translateX(-40%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@keyframes moveRight2 {
+    0% {
+      transform: translateX(-80%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+
+@keyframes myAnimation {
+    0% {
+      transform: scale(0.9) translateY(20%);
+    }
+    100% {
+      transform: scale(1) translateY(0%);
+    }
+}
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1370px) {
     .iPhones-3 {
@@ -460,7 +591,7 @@ paint {
 }
 
 .purple {
-    background: #7F8DB2;
+    background: #7A8BB6;
     fill: #A7D0E8;
 }
 
@@ -492,7 +623,7 @@ paint {
 
 @media only screen and (max-width: 700px) {
     color-options {
-        height: 600px;
+        height: 800px;
         width: 100vw;
         border-radius: 0px;
     }
@@ -927,28 +1058,6 @@ topic p {
 
     .hold-four holder {
         max-height: 670px;
-    }
-}
-
-
-
-/* SIX SIX SIX SIX SIX SIX */
-
-.hold-six {
-    max-height: 1850px;
-}
-
-.six {
-    max-height: 1923px;
-}
-
-@media only screen and (max-width: 1130px) {
-    .hold-six {
-        max-height: 1450px;
-    }
-    
-    .six {
-        max-height: 1485px;
     }
 }
 
