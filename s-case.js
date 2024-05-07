@@ -1,27 +1,27 @@
 // List of background images for small screens
 const imagesSmall = [
+    'Im/s-pink-small.webp',
     'Im/s-blue-small.webp',
     'Im/s-green-small.webp',
     'Im/s-orange-small.webp',
-    'Im/s-pink-small.webp',
     'Im/s-purple-small.webp',
 ];
 
 // List of background images for medium screens
 const imagesMedium = [
+    'Im/s-pink-med.webp',
     'Im/s-blue-med.webp',
     'Im/s-green-med.webp',
     'Im/s-orange-med.webp',
-    'Im/s-pink-med.webp',
     'Im/s-purple-med.webp',
 ];
 
 // List of background images for large screens
 const imagesLarge = [
+    'Im/s-pink.webp',
     'Im/s-blue.webp',
     'Im/s-green.webp',
     'Im/s-orange.webp',
-    'Im/s-pink.webp',
     'Im/s-purple.webp',
 ];
 
