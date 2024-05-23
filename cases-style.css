@@ -47,6 +47,7 @@ nav {
     width: fit-content;
     height: fit-content;
     z-index: 4;
+    position: fixed;
 }
 
 nav a {
@@ -174,7 +175,7 @@ holder {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    min-width: 100%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -183,7 +184,8 @@ view, responsive {
     flex-direction: column;
     position: relative;
     align-items: center;
-    padding-block: 200px;
+    justify-content: center;
+    padding-block: 150px;
     width: 100%;
 }
 
@@ -200,7 +202,7 @@ responsive {
     position: relative;
 }
 
-view.down {
+view.down, view.down-except {
     background: linear-gradient(to bottom, white, #f7f7f7);
 }
 
@@ -234,6 +236,10 @@ view.up {
     responsive {
         width: 87.5vw;
     }
+
+    view.down-except {
+        background: white;
+    }
 }
 
 
@@ -257,7 +263,7 @@ view.up {
 
 /* Structure */
 view.keymark {
-    padding-block: 80px 200px;
+    padding-block: 120px 150px;
     text-align: center;
 }
 
@@ -320,18 +326,18 @@ view.keymark {
 }
 
 .intro h2 {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 32px;
 }
 
 /* Structure */
 view.intro {
-    padding-block: 200px 150px;
+    padding-block: 200px 210px;
 }
 
 view.intro responsive {
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     max-width: 980px;
 }
 
@@ -347,13 +353,73 @@ view.intro responsive {
 .intro holder {
     max-height: 300px;
     padding-right: 15%;
+    min-width: 100%;
 }
 
 .intro .iPhone {
     height: 1000px;
 }
 
+@media (width <= 1068px) {
+    view.intro {
+        padding-block: 150px;
+    }
 
+    .intro h1 {
+        font-size: 100px;
+        line-height: 104px;
+        margin-bottom: 30px;
+    }
+    
+    .intro h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .intro holder {
+        max-height: 300px;
+        padding-right: 15%;
+        min-width: 100%;
+    }
+    
+    .intro .iPhone {
+        height: 800px;
+    }
+}
+
+@media (width <= 735px) {
+    view.intro {
+        padding-block: 100px;
+    }
+
+    .intro h1 {
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 20px;
+    }
+    
+    .intro h2 {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    .intro .split-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .intro holder {
+        max-height: 480px;
+        padding-right: 35%;
+        min-width: 100%;
+    }
+    
+    .intro .iPhone {
+        height: 600px;
+    }
+}
 
 
 
@@ -625,6 +691,7 @@ item h5 {
 
 .close-look {
     align-items: center;
+    padding-block: 100px 150px;
 }
 
 .close-look responsive {
@@ -815,6 +882,93 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
         z-index: 3;
     }
 }
+
+
+
+
+
+
+
+
+
+/* FEATURE FEATURE FEATURE FEATURE FEATURE FEATURE */
+
+/* Font */
+.feature h1 {
+    font-size: 100px;
+    line-height: 96px;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.feature h3 {
+    font-size: 19px;
+    line-height: 27px;
+    text-align: left;
+    width: 65%;
+}
+
+.feature .body {
+    max-width: 630px;
+}
+
+
+/* Structure */
+.feature responsive{
+    text-align: center;
+    gap: 20px;
+}
+
+.feature holder {
+    max-height: 220px;
+}
+
+
+.feature .cabinet {
+    max-height: 220px;
+    margin-bottom: -80px;
+}
+
+.feature .offset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+}
+
+.feature holder {
+    max-height: 580px;
+    max-width: 100%;
+}
+
+.feature .iPhone {
+    max-height: 750px;
+}
+
+.offset {
+    margin-top: 80px;
+}
+
+/* tunnel variation */
+
+.feature .tunnel holder {
+    max-height: 530px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.feature .tunnel .iPhone {
+    max-height: 650px;
+}
+
+.feature .tunnel h3 {
+    width: 80%;
+}
+
+
 
 
 
