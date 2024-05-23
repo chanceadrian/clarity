@@ -49,6 +49,10 @@ nav {
     z-index: 3;
 }
 
+nav.white {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
 nav a {
     display: flex;
     gap: 6px;
@@ -66,7 +70,6 @@ nav a:hover {
 }
 
 .selected {
-    background: rgb(0, 0, 0, 0.05);
     opacity: 0.75;
 }
 
@@ -779,7 +782,7 @@ indie group h2 {
     padding-inline: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    background-color: white;
+    background-color: #f7f7f7;
 }
 
 .boards chin {
@@ -791,16 +794,13 @@ indie group h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 750px;
-    gap: 10px;
-    background-color: #F7F7F7;
+    height: 1000px;
+    gap: 30px;
+    background-color: #FFF;
     cursor: pointer;
-    padding: 30px;
+    padding: 80px;
     width: 100%;
-}
-
-.top {
-    padding-top: 60px;
+    text-align: center;
 }
 
 .center {
@@ -809,16 +809,24 @@ indie group h2 {
 }
 
 .cover h1 {
-    font-size: 56px;
+    font-size: 80px;
     line-height: 56px;
 }
 
-.cover p {
+.cover h2 {
     font-size: 28px;
+    line-height: 32px;
+    width: 615px;
+    font-weight: 600;
+}
+
+.cover .wider {
+    width: 700px;
 }
 
 .shelf {
-    background-image: url(Im/Shelf-Cover.webp);
+    background-image: url(Im/s-cover.webp);
+    padding-bottom: 240px;
 }
 
 @media only screen and (max-width: 1370px) {
