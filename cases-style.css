@@ -32,9 +32,13 @@ button {
     border:none;
 }
 
+sec {
+    opacity: 0.5;
+}
 
 
-/* NAVIGATION */
+
+/* NAVIGATION ----------------------------------------------------------------------------------------------------- */
 
 nav {
     display: flex;
@@ -62,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-    background: rgb(0, 0, 0, 0.08);
+    background: rgb(0, 0, 0, 0.05);
     opacity: 0.75;
 }
 
@@ -94,63 +98,7 @@ nav a:hover {
 
 
 
-/* FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT FONT*/ 
-sec {
-    opacity: 0.5;
-}
-
-@media (width <= 1068px) {
-    keymark.h1 {
-        font-size: 64px;
-        line-height: 68px;
-    }
-    
-    keymark.h2 {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
-    closer-look h1 {
-        font-size: 36px;
-        line-height: 40px;
-        margin-bottom: 15px;
-    }
-
-    closer-look h2 {
-        font-size: 19px;
-        line-height: 23px;
-    }
-}
-
-@media (width <= 735px) {
-    keymark.h1 {
-        font-size: 48px;
-        line-height: 52px;
-    }
-    
-    keymark.h2 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .closer-look h2 {
-        width: 87.5vw;
-        align-self: center;
-    }
-
-    closer-look h1 {
-        font-size: 40px;
-        line-height: 44px;
-        margin-bottom: 10px;
-    }
-}
-
-
-
-
-
-
-/* STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL STRUCTURAL */
+/* STRUCTURAL ----------------------------------------------------------------------------------------------------- */
 
 .contain, body {
     margin: 0;
@@ -222,6 +170,16 @@ view.up {
     keymark {
         padding-block: 80px 120px;
     }
+
+    keymark.h1 {
+        font-size: 64px;
+        line-height: 68px;
+    }
+    
+    keymark.h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 
 @media (width <= 735px) {
@@ -240,6 +198,16 @@ view.up {
     view.down-except {
         background: white;
     }
+
+    keymark.h1 {
+        font-size: 48px;
+        line-height: 52px;
+    }
+    
+    keymark.h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
 
 
@@ -248,7 +216,7 @@ view.up {
 
 
 
-/* KEYMARK KEYMARK KEYMARK KEYMARK KEYMARK KEYMARK KEYMARK*/
+/* KEYMARK ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
 .keymark h1 {
@@ -316,7 +284,7 @@ view.keymark {
 
 
 
-/* INTRO INTRO INTRO INTRO INTRO INTRO*/
+/* INTRO ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
 .intro h1 {
@@ -428,7 +396,7 @@ view.intro responsive {
 
 
 
-/* GALLERY GALLERY GALLERY GALLERY GALLERY GALLERY */
+/* GALLERY ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
 .gallery h1 {
@@ -469,7 +437,7 @@ item {
     padding: 50px 60px;
 }
 
-/* CONTROLS*/
+/* CONTROLS ----------------------------------------------------------------------------------------------------- */
 
 platter {
     display: flex;
@@ -659,13 +627,12 @@ item h5 {
 
 
 
-/* CLOSER CLOSER CLOSER CLOSER CLOSER CLOSER*/
+/* CLOSER ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
 .close-look h1 {
-    font-size: 56px;
-    line-height: 60px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 36px;
 }
 
 .close-look h2 {
@@ -718,7 +685,7 @@ closer-look holder {
 }
 
 closer-look iPhone {
-    min-height: 860px;
+    min-height: 840px;
     aspect-ratio: 979/1038;
     transition: background-image 0.5s ease-in-out;
 }
@@ -738,6 +705,10 @@ closer-look #iPhone1 {
 }
 
 @media (width <= 1068px) {
+    .closer-text {
+        padding:30px;
+    }
+
     closer-look iPhone {
         min-height: 500px;
     }
@@ -747,14 +718,13 @@ closer-look #iPhone1 {
     }
 
     .close-look h1 {
-        font-size: 48px;
-        line-height: 52px;
-        margin-bottom: 15px;
+        font-size: 28px;
+        line-height: 32px;
     }
     
     .close-look h2 {
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 36px;
+        line-height: 40px;
         margin-bottom: 15px;
     }
     
@@ -771,6 +741,10 @@ closer-look #iPhone1 {
         width: 100%;
         max-width: auto;
         align-items: flex-start;
+    }
+
+    .closer-text {
+        padding:65px;
     }
 
     .closer-text h2 {
@@ -791,9 +765,8 @@ closer-look #iPhone1 {
     }
 
     .close-look h1 {
-        font-size: 32px;
-        line-height: 36px;
-        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 28px;
     }
     
     .close-look h2 {
@@ -803,7 +776,16 @@ closer-look #iPhone1 {
     }
 }
 
-/* CLOSER CONTROLS */
+
+
+
+
+
+
+
+
+
+/* CLOSER CONTROLS ----------------------------------------------------------------------------------------------------- */
 
 segmented-control {
     display: flex;
@@ -812,7 +794,6 @@ segmented-control {
     background-color: rgb(232, 232, 237, 0.75);
     z-index: 3;
     border-radius: 100px;
-    margin-top: 40px;
 }
 
 segmented-control button.selected {
@@ -891,7 +872,7 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 
 
 
-/* FEATURE FEATURE FEATURE FEATURE FEATURE FEATURE */
+/* FEATURE ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
 .feature h1 {
@@ -916,7 +897,6 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
     max-width: 630px;
 }
 
-
 /* Structure */
 .feature responsive{
     text-align: center;
@@ -926,7 +906,6 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 .feature holder {
     max-height: 220px;
 }
-
 
 .feature .cabinet {
     max-height: 220px;
@@ -955,7 +934,7 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 /* tunnel variation */
 
 .feature .tunnel holder {
-    max-height: 530px;
+    max-height: 535px;
     max-width: 100%;
     margin-top: 40px;
 }
@@ -979,7 +958,7 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 
 
 
-/* EFFECTS*/
+/* EFFECTS ----------------------------------------------------------------------------------------------------- */
 
 .title {
     position: absolute;

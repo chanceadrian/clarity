@@ -65,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-    background: rgb(0, 0, 0, 0.08);
+    background: rgb(0, 0, 0, 0.05);
     opacity: 0.75;
 }
 
