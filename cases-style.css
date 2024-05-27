@@ -111,10 +111,12 @@ nav a:hover {
     text-rendering: optimizeLegibility;
     overflow-x:hidden;
     width: 100vw;
+    gap: 10px;
 }
 
 body {
     padding: 0px 0px;
+    gap: 0px;
 }
 
 holder {
@@ -529,12 +531,12 @@ item h5 {
 
 @media (width <= 1068px) {
     item {
-        height: 600px;
-        padding: 40px 60px;
+        height: 628px;
+        padding: 40px 50px;
     }
 
-    .three-lines {
-        width: 40%;
+    .gallery h2.three-lines {
+        width: 50%;
     }
 
     .gal-1 {
@@ -572,7 +574,7 @@ item h5 {
 @media (width <= 735px) {
     item {
         height: 550px;
-        padding: 30px 40px;
+        padding: 30px 20px;
         border-radius: 0;
     }
 
@@ -584,6 +586,10 @@ item h5 {
     gallery {
         gap: 0px;
         width: 500vw;
+    }
+
+    .gallery h2.three-lines {
+        width: 45%;
     }
 
     .gal-1 {
@@ -614,7 +620,7 @@ item h5 {
     .gallery h2 {
         font-size: 21px;
         line-height: 25px;
-        width: 75%;
+        width: 100%;
     }
 
     .three-lines {
@@ -658,7 +664,7 @@ item h5 {
 
 .close-look {
     align-items: center;
-    padding-block: 100px 150px;
+    padding-block: 100px 75px;
 }
 
 .close-look responsive {
@@ -898,6 +904,10 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 }
 
 /* Structure */
+view.feature {
+    padding-block: 150px 75px;
+}
+
 .feature responsive{
     text-align: center;
     gap: 20px;
@@ -1091,4 +1101,105 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+
+
+
+
+
+
+
+
+/* DRAWER BUTTON ----------------------------------------------------------------------------------------------------- */
+
+/* Font */
+button.drawer-btn h1 {
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+/* Structure */
+
+button.drawer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 32px 15px 30px;
+    color: white;
+    gap: 10px;
+    border-radius: 100px;
+    z-index: 3;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.openB, .openG, .openI, .openP {
+    margin-top: 50px;
+}
+
+button.drawer-btn:active {
+    opacity: 0.75;
+}
+
+.pressed {
+    scale: 0.9;
+    opacity: 0.25;
+}
+
+.blue {
+    background-color: #56ADD3;
+}
+
+.blue:hover {
+    background-color: #49A1CE;
+}
+
+.green {
+    background-color: #388D2A;
+}
+
+.ice {
+    background-color: #7A8BB6;
+}
+
+.pink {
+    background-color: #F56390;
+}
+
+
+
+
+
+/* DRAWER ----------------------------------------------------------------------------------------------------- */
+
+/* Font*/
+.drawer-content h1 {
+    font-size: 19px;
+    line-height: 27px;
+}
+
+/* Structure */
+view.drawer-content {
+    background-color: #f7f7f7;
+    padding-block: 0px;
+    height: 0px;
+    transition: padding-block 1s ease-in-out, height 1s ease-in-out;
+    transform-origin: top;
+}
+
+view.open {
+    padding-block: 75px 150px;
+    height: 725px;
+}
+
+view.drawer-content responsive {
+    gap: 75px;
+}
+
+.drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 50px;
+    row-gap: 50px;
 }

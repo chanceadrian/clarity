@@ -30,6 +30,8 @@ handleScroll();
 
 
 
+// Slider 1 -------------------------------------------------------------------------------------------------------
+
 const slider = document.getElementById('viewSlider');
 const leftArrow = document.getElementById('leftSlide');
 const rightArrow = document.getElementById('rightSlide');
@@ -94,7 +96,7 @@ window.addEventListener('resize', calculateSlideParams);
 
 
 
-
+// Load Closer Look Photos -------------------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
   const imagesView = [
     'Im/s-view-note.webp',
@@ -144,12 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log(preloadedImages);
 });
 
-
-
-
-
-
-
+// Closer Look -------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
   const buttons = document.querySelectorAll("#viewPick");
   const iPhone1 = document.getElementById("iPhone1");
@@ -206,8 +203,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+// Slider 2 -------------------------------------------------------------------------------------------------------
 
-// Variables for viewSlider2 carousel
 const slider2 = document.getElementById('viewSlider2');
 const leftArrow2 = document.getElementById('leftSlide2');
 const rightArrow2 = document.getElementById('rightSlide2');
@@ -246,4 +243,78 @@ document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, in
         setIndex2();
     });
 });
+
+
+
+
+
+
+
+
+
+// Drawer -------------------------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  const drawerButtons = document.querySelectorAll(".drawer-btn");
+  const drawerB = document.querySelector(".drawerB");
+  const drawerG = document.querySelector(".drawerG");
+  const drawerI = document.querySelector(".drawerI");
+  const drawerP = document.querySelector(".drawerP");
+
+  drawerButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      if (this.classList.contains("openB")) {
+        drawerB.classList.add("open");
+        this.classList.add("pressed");
+        document.querySelector(".closeB").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("closeB")) {
+        drawerB.classList.remove("open");
+        this.classList.add("pressed");
+        document.querySelector(".openB").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("openG")) {
+        drawerG.classList.add("open");
+        this.classList.add("pressed");
+        document.querySelector(".closeG").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("closeG")) {
+        drawerG.classList.remove("open");
+        this.classList.add("pressed");
+        document.querySelector(".openG").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("openI")) {
+        drawerI.classList.add("open");
+        this.classList.add("pressed");
+        document.querySelector(".closeI").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("closeI")) {
+        drawerI.classList.remove("open");
+        this.classList.add("pressed");
+        document.querySelector(".openI").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("openP")) {
+        drawerP.classList.add("open");
+        this.classList.add("pressed");
+        document.querySelector(".closeP").classList.remove("pressed");
+      }
+
+      if (this.classList.contains("closeP")) {
+        drawerP.classList.remove("open");
+        this.classList.add("pressed");
+        document.querySelector(".openP").classList.remove("pressed");
+      }
+
+    });
+  });
+});
+
+
+
+
 
