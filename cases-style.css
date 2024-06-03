@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     background-size: cover;
@@ -30,6 +34,7 @@ p {
 button {
     outline: none;
     border:none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', "system-ui", sans-serif;
 }
 
 sec {
@@ -157,7 +162,7 @@ view.down, view.down-except {
 }
 
 view.up {
-    background: linear-gradient(to top, white, #f7f7f7);
+    background: linear-gradient(to top, white 40%, #f5f5f5 100%);
 }
 
 @media (width <= 1068px) {
@@ -248,7 +253,7 @@ view.keymark {
 }
 
 .five .iPhone {
-    height: 670px;
+    height: 680px;
 }
 
 @media (width <= 1068px) {
@@ -327,7 +332,7 @@ view.intro responsive {
 }
 
 .intro .iPhone {
-    height: 1000px;
+    height: 1050px;
 }
 
 @media (width <= 1068px) {
@@ -664,7 +669,7 @@ item h5 {
 
 .close-look {
     align-items: center;
-    padding-block: 100px 75px;
+    padding-block: 100px 150px;
 }
 
 .close-look responsive {
@@ -797,7 +802,7 @@ segmented-control {
     display: flex;
     gap: 7px;
     padding: 7px;
-    background-color: rgb(232, 232, 237, 0.75);
+    background-color: rgb(232, 232, 235, 1);
     z-index: 3;
     border-radius: 100px;
 }
@@ -882,9 +887,10 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 
 /* Font */
 .feature h1 {
-    font-size: 100px;
-    line-height: 96px;
+    font-size: 96px;
+    line-height: 100px;
     margin-bottom: 20px;
+    opacity: 1;
 }
 
 .feature h2 {
@@ -905,12 +911,12 @@ segmented-control button:hover > svg, segmented-control button.selected svg {
 
 /* Structure */
 view.feature {
-    padding-block: 150px 75px;
+    padding-block: 150px 150px;
 }
 
 .feature responsive{
     text-align: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .feature holder {
@@ -929,12 +935,12 @@ view.feature {
 }
 
 .feature holder {
-    max-height: 580px;
+    max-height: 540px;
     max-width: 100%;
 }
 
 .feature .iPhone {
-    max-height: 750px;
+    max-height: 700px;
 }
 
 .offset {
@@ -946,7 +952,7 @@ view.feature {
 .feature .tunnel holder {
     max-height: 535px;
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .feature .tunnel .iPhone {
@@ -960,6 +966,174 @@ view.feature {
 
 
 
+
+
+/* WRITTEN ----------------------------------------------------------------------------------------------------- */
+
+/* Font */
+.written-large h3, .written-medium h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    opacity: 0.5;
+    margin: 4px 2px;
+}
+
+.written-large h1, .written-medium h1 {
+    font-size: 56px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.written-large h2, .written-medium h2 {
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+
+/* Structure */
+
+view.written-large, view.written-medium {
+    overflow: hidden;
+    grid-row: 1 / span 2;
+    padding: 0;
+}
+
+view.written-large responsive {
+    flex-direction: row;
+    gap: 40px;
+    padding-block: 100px 50px;
+    text-align: left;
+}
+
+.written-large .contain-writing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.written-large .writing-grid {
+    columns: 400px 2;
+    column-gap: 30px;
+}
+
+.written-medium .writing-grid {
+    columns: 400px 3;
+    column-gap: 30px;
+}
+
+view.written-large img {
+    max-width: 271px;
+}
+
+view.written-medium responsive {
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 125px 50px;
+    text-align: left;
+}
+
+.written-medium .contain-writing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.written-medium .title-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+view.written-medium img {
+    max-width: 100%;
+    grid-column: span 2;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+/* DRAWER ----------------------------------------------------------------------------------------------------- */
+
+/* Font */
+button.toggle-view p {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+/* Color */
+.blue {
+    background-color: #49A1CE;
+}
+
+.green {
+    background-color: #388D2A;
+}
+
+h1.green-text {
+    color: rgb(56, 141, 42, 0.7);
+}
+
+.ice {
+    background-color: #7A8BB6;
+}
+
+.pink {
+    background-color: #F56390;
+}
+
+.orange {
+    background-color: #F8602F;
+}
+
+/* Structure */
+button.toggle-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 32px 15px 30px;
+    width: 186px;
+    color: white;
+    gap: 10px;
+    border-radius: 100px;
+    z-index: 3;
+    margin-block: 0px 0px;
+    transition: width 0.75s ease-in-out;
+    white-space: nowrap;
+}
+
+button.pressed {
+    width: 133px;
+}
+
+button.toggle-view svg {
+    transform: rotate(0);
+    transition: transform 0.75s ease-in-out;
+    flex-shrink: 0;
+}
+
+button.toggle-view:active {
+    opacity: 0.8;
+}
+
+toggle-view {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.75s ease-in-out;
+    margin-top: 50px;
+}
+
+toggle-view.is-open {
+    grid-template-rows: 1fr;
+}
+
+button.pressed svg {
+    transform: rotate(45deg);
+}
 
 
 
@@ -1111,95 +1285,4 @@ view.feature {
 
 
 
-/* DRAWER BUTTON ----------------------------------------------------------------------------------------------------- */
 
-/* Font */
-button.drawer-btn h1 {
-    font-size: 17px;
-    line-height: 21px;
-    margin-bottom: 0;
-}
-
-/* Structure */
-
-button.drawer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 32px 15px 30px;
-    color: white;
-    gap: 10px;
-    border-radius: 100px;
-    z-index: 3;
-    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-}
-
-.openB, .openG, .openI, .openP {
-    margin-top: 50px;
-}
-
-button.drawer-btn:active {
-    opacity: 0.75;
-}
-
-.pressed {
-    scale: 0.9;
-    opacity: 0.25;
-}
-
-.blue {
-    background-color: #56ADD3;
-}
-
-.blue:hover {
-    background-color: #49A1CE;
-}
-
-.green {
-    background-color: #388D2A;
-}
-
-.ice {
-    background-color: #7A8BB6;
-}
-
-.pink {
-    background-color: #F56390;
-}
-
-
-
-
-
-/* DRAWER ----------------------------------------------------------------------------------------------------- */
-
-/* Font*/
-.drawer-content h1 {
-    font-size: 19px;
-    line-height: 27px;
-}
-
-/* Structure */
-view.drawer-content {
-    background-color: #f7f7f7;
-    padding-block: 0px;
-    height: 0px;
-    transition: padding-block 1s ease-in-out, height 1s ease-in-out;
-    transform-origin: top;
-}
-
-view.open {
-    padding-block: 75px 150px;
-    height: 725px;
-}
-
-view.drawer-content responsive {
-    gap: 75px;
-}
-
-.drawer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 50px;
-    row-gap: 50px;
-}

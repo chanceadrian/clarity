@@ -249,72 +249,68 @@ document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, in
 
 
 
-
-
-
-// Drawer -------------------------------------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", function() {
-  const drawerButtons = document.querySelectorAll(".drawer-btn");
-  const drawerB = document.querySelector(".drawerB");
-  const drawerG = document.querySelector(".drawerG");
-  const drawerI = document.querySelector(".drawerI");
-  const drawerP = document.querySelector(".drawerP");
-
-  drawerButtons.forEach(button => {
-    button.addEventListener("click", function() {
-      if (this.classList.contains("openB")) {
-        drawerB.classList.add("open");
-        this.classList.add("pressed");
-        document.querySelector(".closeB").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("closeB")) {
-        drawerB.classList.remove("open");
-        this.classList.add("pressed");
-        document.querySelector(".openB").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("openG")) {
-        drawerG.classList.add("open");
-        this.classList.add("pressed");
-        document.querySelector(".closeG").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("closeG")) {
-        drawerG.classList.remove("open");
-        this.classList.add("pressed");
-        document.querySelector(".openG").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("openI")) {
-        drawerI.classList.add("open");
-        this.classList.add("pressed");
-        document.querySelector(".closeI").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("closeI")) {
-        drawerI.classList.remove("open");
-        this.classList.add("pressed");
-        document.querySelector(".openI").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("openP")) {
-        drawerP.classList.add("open");
-        this.classList.add("pressed");
-        document.querySelector(".closeP").classList.remove("pressed");
-      }
-
-      if (this.classList.contains("closeP")) {
-        drawerP.classList.remove("open");
-        this.classList.add("pressed");
-        document.querySelector(".openP").classList.remove("pressed");
-      }
-
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const togButton = document.querySelector(".blue");
+  const togView = document.getElementById('blue');
+  togButton.addEventListener("click", () => {
+    togButton.classList.toggle("pressed");
+    const isPressed = togButton.classList.contains("pressed");
+    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
+    if (togView) {
+      togView.classList.toggle("is-open");
+    }
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const togButton = document.querySelector(".green");
+  const togView = document.getElementById('green');
+  togButton.addEventListener("click", () => {
+    togButton.classList.toggle("pressed");
+    const isPressed = togButton.classList.contains("pressed");
+    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
+    if (togView) {
+      togView.classList.toggle("is-open");
+    }
+  });
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  const togButton = document.querySelector(".ice");
+  const togView = document.getElementById('ice');
+  togButton.addEventListener("click", () => {
+    togButton.classList.toggle("pressed");
+    const isPressed = togButton.classList.contains("pressed");
+    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
+    if (togView) {
+      togView.classList.toggle("is-open");
+    }
+  });
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  const togButton = document.querySelector(".pink");
+  const togView = document.getElementById('pink');
+  togButton.addEventListener("click", () => {
+    togButton.classList.toggle("pressed");
+    const isPressed = togButton.classList.contains("pressed");
+    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
+    if (togView) {
+      togView.classList.toggle("is-open");
+    }
+  });
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  const togButton = document.querySelector(".orange");
+  const togView = document.getElementById('orange');
+  togButton.addEventListener("click", () => {
+    togButton.classList.toggle("pressed");
+    const isPressed = togButton.classList.contains("pressed");
+    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
+    if (togView) {
+      togView.classList.toggle("is-open");
+    }
+  });
+});
 
