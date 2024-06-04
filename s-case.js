@@ -25,92 +25,17 @@ window.addEventListener('scroll', handleScroll);
 
 // Initial check on page load
 handleScroll();
-  
 
 
 
 
-// Slider 1 -------------------------------------------------------------------------------------------------------
-
-const slider = document.getElementById('viewSlider');
-const leftArrow = document.getElementById('leftSlide');
-const rightArrow = document.getElementById('rightSlide');
-const indicatorParents = document.getElementById('platter');
-var essayIndex = 0;
-var slideWidth;
-var maxIndex;
-
-// Function to calculate slide width and maximum index based on screen size
-function calculateSlideParams() {
-    const screenWidth = document.documentElement.clientWidth;
-    if (screenWidth > 735) {
-      slideWidth = 20.1; 
-      maxIndex = 4; 
-  } else {
-      slideWidth = 20; 
-      maxIndex = 4; 
-  }
-}
-
-// Function to set the slide index and update the slider position
-function setIndex() {
-    document.querySelector('#platter .selected').classList.remove('selected');
-    slider.style.transform = 'translate(' + (essayIndex * -slideWidth) + '%)';
-    indicatorParents.children[essayIndex].classList.add('selected');
-}
-
-// Function to handle slide transitions
-function nextSlide() {
-    essayIndex = (essayIndex < maxIndex) ? essayIndex + 1 : maxIndex; // Use maxIndex variable
-    setIndex();
-}
-
-// Event listener for left arrow click
-leftArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex > 0) ? essayIndex - 1 : maxIndex; // Use maxIndex variable
-    setIndex();
-});
-
-// Event listener for right arrow click
-rightArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex < maxIndex) ? essayIndex + 1 : 0; // Use maxIndex variable
-    setIndex();
-});
-
-// Event listener for indicator click
-document.querySelectorAll('platter indicator').forEach(function(indicator, ind) {
-    indicator.addEventListener('click', function() {
-        essayIndex = ind;
-        setIndex();
-    });
-});
-
-// Call calculateSlideParams initially and on window resize
-calculateSlideParams();
-window.addEventListener('resize', calculateSlideParams);
-
-
-
-
-
-
-
-
-// Load Closer Look Photos -------------------------------------------------------------------------------------------------------
+// Load Cabinet Photos -------------------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
   const imagesView = [
-    'Im/s-view-note.webp',
-    'Im/s-view-photo.webp',
-    'Im/s-view-voice.webp',
-    'Im/s-view-link.webp',
-    'Im/s-view-tunnel.webp',
-    'Im/s-view-cabinet.webp',
-    'Im/s-note.webp',
-    'Im/s-photo.webp',
-    'Im/s-voice.webp',
-    'Im/s-link.webp',
-    'Im/s-tunnel.webp',
-    'Im/s-cabinet.webp',
+    'Im/s-cabinet-1.webp',
+    'Im/s-cabinet-2.webp',
+    'Im/s-cabinet-3.webp',
+    'Im/s-cabinet-4.webp',
   ];
 
   // Function to preload a single image
@@ -148,52 +73,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Closer Look -------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-  const buttons = document.querySelectorAll("#viewPick");
-  const iPhone1 = document.getElementById("iPhone1");
-  const iPhone2 = document.getElementById("iPhone2");
+  const buttons = document.querySelectorAll(".cab-view");
+  const cabinet = document.querySelector(".cabinet");
 
   buttons.forEach(button => {
       button.addEventListener("click", function() {
-          // Remove 'selected' class from all buttons
+          // Remove 'pressed' class from all buttons
           buttons.forEach(btn => {
-              btn.classList.remove("selected");
+              btn.classList.remove("pressed");
           });
 
-          // Add 'selected' class to the clicked button
-          this.classList.add("selected");
+          // Add 'pressed' class to the clicked button
+          this.classList.add("pressed");
 
           // Get the background image URL from the data attribute
           const imageUrl1 = this.getAttribute("data-image-1");
-          const imageUrl2 = this.getAttribute("data-image-2");
 
           // Set the background image in the specified places
-          if (iPhone1) {
-            iPhone1.style.backgroundImage = `url(${imageUrl1})`;
-          }
-
-          if (iPhone2) {
-            iPhone2.style.backgroundImage = `url(${imageUrl2})`;
-          } 
-
-          // Get the text data attributes
-          const type = this.getAttribute("data-type");
-          const title = this.getAttribute("data-title");
-          const body = this.getAttribute("data-body");
-
-          // Update the text content
-          const holder = document.getElementById("closer-text");
-          if (holder) {
-            holder.classList.add('swap');
-
-            setTimeout(() => {
-              holder.querySelector('h4').textContent = type;
-              holder.querySelector('h2').innerHTML = title.replace(/\n/g, '<br>'); // Replace newline characters with <br> for line breaks
-              holder.querySelector('h3').textContent = body;
-            }, 250);
-
-            setTimeout(() => {
-              holder.classList.remove('swap');
-            }, 600);
+          if (cabinet) {
+            cabinet.style.backgroundImage = `url(${imageUrl1})`;
           }
       });
   });
