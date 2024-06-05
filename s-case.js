@@ -103,71 +103,63 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-const slider = document.getElementById('Slider');
-const leftArrow = document.getElementById('leftSlide');
-const rightArrow = document.getElementById('rightSlide');
-var essayIndex = 0;
-var autoplayInterval; // Variable to store the autoplay interval
+class Slideshow {
+  constructor(sliderId, leftArrowId, rightArrowId, totalSlides) {
+      this.slider = document.getElementById(sliderId);
+      this.leftArrow = document.getElementById(leftArrowId);
+      this.rightArrow = document.getElementById(rightArrowId);
+      this.totalSlides = totalSlides;
+      this.index = 0;
 
-// Function to set the slide index and update the slider position
-function setIndex() {
-    slider.style.transform = 'translate(' + (essayIndex * -20) + '%)';
-    // Remove current class from all holders
-    document.querySelectorAll('#Slider holder').forEach(holder => {
-      holder.classList.remove('current');
-    });
+      this.init();
+  }
 
-    // Add current class to the holder corresponding to the current slide index
-    document.querySelectorAll('#Slider holder')[essayIndex].classList.add('current');
+  init() {
+      this.setIndex();
+      this.leftArrow.addEventListener('click', () => this.prevSlide());
+      this.rightArrow.addEventListener('click', () => this.nextSlide());
+
+      this.slider.addEventListener('touchstart', () => this.pauseAutoplay());
+      this.slider.addEventListener('touchend', () => this.startAutoplay());
+  }
+
+  setIndex() {
+      this.slider.style.transform = 'translate(' + (this.index * -20) + '%)';
+      document.querySelectorAll(`#${this.slider.id} holder`).forEach(holder => {
+          holder.classList.remove('current');
+      });
+      document.querySelectorAll(`#${this.slider.id} holder`)[this.index].classList.add('current');
+
+      this.updateArrowOpacity();
+  }
+
+  updateArrowOpacity() {
+      this.leftArrow.style.opacity = (this.index === 0) ? 0.25 : 0.5;
+      this.rightArrow.style.opacity = (this.index === this.totalSlides - 1) ? 0.25 : 0.5;
+  }
+
+  nextSlide() {
+      this.index = (this.index < this.totalSlides - 1) ? this.index + 1 : 0;
+      this.setIndex();
+  }
+
+  prevSlide() {
+      this.index = (this.index > 0) ? this.index - 1 : 0;
+      this.setIndex();
+  }
 }
 
-// Function to handle slide transitions
-function nextSlide() {
-    essayIndex = (essayIndex < 4) ? essayIndex + 1 : 0;
-    setIndex();
-}
-
-// Function to start autoplay
-function startAutoplay() {
-    autoplayInterval = setInterval(nextSlide, 5000); // Autoplay every 5 seconds
-}
-
-// Function to pause autoplay
-function pauseAutoplay() {
-    clearInterval(autoplayInterval);
-}
-
-// Event listener for left arrow click
-leftArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex > 0) ? essayIndex - 1 : 0;
-    setIndex();
-    pauseAutoplay(); // Pause autoplay when user interacts with the carousel
+// Instantiate the slideshow
+document.addEventListener('DOMContentLoaded', () => {
+  new Slideshow('Slider', 'leftSlide', 'rightSlide', 5);
+  new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 5);
 });
 
-// Event listener for right arrow click
-rightArrow.addEventListener('click', function() {
-    essayIndex = (essayIndex < 4) ? essayIndex + 1 : 0;
-    setIndex();
-    pauseAutoplay(); // Pause autoplay when user interacts with the carousel
-});
 
-// Event listener for indicator click
-document.querySelectorAll('platter indicator').forEach(function(indicator, ind) {
-    indicator.addEventListener('click', function() {
-        essayIndex = ind;
-        setIndex();
-        pauseAutoplay(); // Pause autoplay when user interacts with the carousel
-    });
-});
 
-// Start autoplay when the page loads
-startAutoplay();
 
-// Event listener to pause autoplay when the user interacts with the carousel
-//slider.addEventListener('mouseover', pauseAutoplay);//
-slider.addEventListener('touchstart', pauseAutoplay);
-//slider.addEventListener('mouseleave', startAutoplay);//
-slider.addEventListener('touchend', startAutoplay);
+
+
 
 
 
