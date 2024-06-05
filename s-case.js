@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log(preloadedImages);
 });
 
-// Closer Look -------------------------------------------------------------------------------------------------------
+// Cabinet View -------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
   const buttons = document.querySelectorAll(".cab-view");
   const cabinet = document.querySelector(".cabinet");
@@ -101,114 +101,75 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Slider 2 -------------------------------------------------------------------------------------------------------
 
-const slider2 = document.getElementById('viewSlider2');
-const leftArrow2 = document.getElementById('leftSlide2');
-const rightArrow2 = document.getElementById('rightSlide2');
-const indicatorParents2 = document.getElementById('platter2');
-var essayIndex2 = 0;
 
-// Function to set the slide index and update the slider position for writingSlider2 carousel
-function setIndex2() {
-    document.querySelector('#platter2 .selected').classList.remove('selected');
-    slider2.style.transform = 'translate(' + (essayIndex2 * -33.333) + '%)'; // Update slide translation
-    indicatorParents2.children[essayIndex2].classList.add('selected');
+const slider = document.getElementById('Slider');
+const leftArrow = document.getElementById('leftSlide');
+const rightArrow = document.getElementById('rightSlide');
+var essayIndex = 0;
+var autoplayInterval; // Variable to store the autoplay interval
+
+// Function to set the slide index and update the slider position
+function setIndex() {
+    slider.style.transform = 'translate(' + (essayIndex * -20) + '%)';
+    // Remove current class from all holders
+    document.querySelectorAll('#Slider holder').forEach(holder => {
+      holder.classList.remove('current');
+    });
+
+    // Add current class to the holder corresponding to the current slide index
+    document.querySelectorAll('#Slider holder')[essayIndex].classList.add('current');
 }
 
-// Function to handle slide transitions for writingSlider2 carousel
-function nextSlide2() {
-    essayIndex2 = (essayIndex2 < 2) ? essayIndex2 + 1 : 0; // Update condition for looping slides
-    setIndex2();
+// Function to handle slide transitions
+function nextSlide() {
+    essayIndex = (essayIndex < 4) ? essayIndex + 1 : 0;
+    setIndex();
 }
 
-// Event listener for left arrow click for writingSlider2 carousel
-leftArrow2.addEventListener('click', function() {
-    essayIndex2 = (essayIndex2 > 0) ? essayIndex2 - 1 : 2; // Update condition for left arrow
-    setIndex2();
+// Function to start autoplay
+function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 5000); // Autoplay every 5 seconds
+}
+
+// Function to pause autoplay
+function pauseAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+// Event listener for left arrow click
+leftArrow.addEventListener('click', function() {
+    essayIndex = (essayIndex > 0) ? essayIndex - 1 : 0;
+    setIndex();
+    pauseAutoplay(); // Pause autoplay when user interacts with the carousel
 });
 
-// Event listener for right arrow click for writingSlider2 carousel
-rightArrow2.addEventListener('click', function() {
-    essayIndex2 = (essayIndex2 < 2) ? essayIndex2 + 1 : 0; // Update condition for right arrow
-    setIndex2();
+// Event listener for right arrow click
+rightArrow.addEventListener('click', function() {
+    essayIndex = (essayIndex < 4) ? essayIndex + 1 : 0;
+    setIndex();
+    pauseAutoplay(); // Pause autoplay when user interacts with the carousel
 });
 
-// Event listener for indicator click for writingSlider2 carousel
-document.querySelectorAll('#platter2 indicator').forEach(function(indicator2, ind2) {
-    indicator2.addEventListener('click', function() {
-        essayIndex2 = ind2;
-        setIndex2();
+// Event listener for indicator click
+document.querySelectorAll('platter indicator').forEach(function(indicator, ind) {
+    indicator.addEventListener('click', function() {
+        essayIndex = ind;
+        setIndex();
+        pauseAutoplay(); // Pause autoplay when user interacts with the carousel
     });
 });
 
+// Start autoplay when the page loads
+startAutoplay();
+
+// Event listener to pause autoplay when the user interacts with the carousel
+//slider.addEventListener('mouseover', pauseAutoplay);//
+slider.addEventListener('touchstart', pauseAutoplay);
+//slider.addEventListener('mouseleave', startAutoplay);//
+slider.addEventListener('touchend', startAutoplay);
 
 
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const togButton = document.querySelector(".blue");
-  const togView = document.getElementById('blue');
-  togButton.addEventListener("click", () => {
-    togButton.classList.toggle("pressed");
-    const isPressed = togButton.classList.contains("pressed");
-    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
-    if (togView) {
-      togView.classList.toggle("is-open");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const togButton = document.querySelector(".green");
-  const togView = document.getElementById('green');
-  togButton.addEventListener("click", () => {
-    togButton.classList.toggle("pressed");
-    const isPressed = togButton.classList.contains("pressed");
-    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
-    if (togView) {
-      togView.classList.toggle("is-open");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const togButton = document.querySelector(".ice");
-  const togView = document.getElementById('ice');
-  togButton.addEventListener("click", () => {
-    togButton.classList.toggle("pressed");
-    const isPressed = togButton.classList.contains("pressed");
-    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
-    if (togView) {
-      togView.classList.toggle("is-open");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const togButton = document.querySelector(".pink");
-  const togView = document.getElementById('pink');
-  togButton.addEventListener("click", () => {
-    togButton.classList.toggle("pressed");
-    const isPressed = togButton.classList.contains("pressed");
-    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
-    if (togView) {
-      togView.classList.toggle("is-open");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const togButton = document.querySelector(".orange");
-  const togView = document.getElementById('orange');
-  togButton.addEventListener("click", () => {
-    togButton.classList.toggle("pressed");
-    const isPressed = togButton.classList.contains("pressed");
-    togButton.querySelector('p').textContent = isPressed ? "Close" : "Dive Deeper"; 
-    if (togView) {
-      togView.classList.toggle("is-open");
-    }
-  });
-});
 

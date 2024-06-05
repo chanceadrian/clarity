@@ -167,7 +167,6 @@ responsive {
 column, row {
     display: flex;
     flex-direction:column;
-    width: 100%;
 }
 
 row {
@@ -511,77 +510,6 @@ h2 {
 
 
 
-
-/* SUB-SECTION ----------------------------------------------------------------------------------------------------- */
-
-/* Font */
-.sub-section h3 {
-    font-size: 19px;
-    line-height: 23px;
-    font-weight: 500;
-    text-align: center;
-}
-
-/* Color */ 
-.green h3 {
-    color: #328E24;
-}
-.green button {
-    background-color: #328E24;
-}
-
-.orange h3 {
-    color: #F8612F;
-}
-.orange button {
-    background-color: #F8612F;
-}
-
-.ice h3 {
-    color: #8697BD;
-}
-.ice button {
-    background-color: #8697BD;
-}
-
-.pink {
-    color: #F5547E;
-}
-
-.blue {
-    color: #459DCA;
-}
-
-
-/* Structure */
-.sub-section {
-    padding-top: 90px;
-    justify-content: center;
-}
-
-.trigger {
-    align-items: center;
-    gap: 8px;
-    align-self: center;
-}
-
-.trigger button {
-    width: 36px;
-    height: 36px;
-    border-radius: 100px;
-}
-
-@media (width <= 1068px) {
-    .sub-section h3 {
-        max-height: 293px;
-    }
-}
-
-
-
-
-
-
 /* PRESHOW ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
@@ -850,6 +778,266 @@ h2 {
 
     .tunnel-grid responsive {
         max-width: 320px;
+    }
+}
+
+
+
+
+
+
+
+/* SHELF-ICONS ----------------------------------------------------------------------------------------------------- */
+
+/* Font */
+
+.shelf-icons h2 {
+    max-width: 320px;
+}
+
+/* Structure */
+
+.shelf-icons {
+    padding-block: 120px 0px;
+}
+
+.shelf-icons responsive {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.shelf-icons holder {
+    max-width: 490px;
+    text-align: left;
+}
+
+.shelf-icons .iPhone {
+    max-height: 540px
+}
+
+@media (width <= 1068px) {
+    .shelf-icons h2 {
+        max-width: 290px;
+    }
+
+    .shelf-icons holder {
+        max-width: 300px;
+    }
+
+    .shelf-icons .iPhone {
+        max-height: 480px
+    }
+}
+
+@media (width <= 735px) {
+    .shelf-icons responsive {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .shelf-icons h2 {
+        max-width: none;
+    }
+
+    .shelf-icons {
+        padding-block: 100px 0px;
+    }
+
+    .shelf-icons holder {
+        max-width: none;
+    }
+
+    .shelf-icons .iPhone {
+        max-height: 380px
+    }
+}
+
+
+
+
+
+
+
+
+/* WORKFLOW ----------------------------------------------------------------------------------------------------- */
+
+/* Structure */
+.workflow {
+    padding-block: 150px 0px;
+}
+
+.workflow responsive {
+    align-items: flex-start;
+    gap: 90px;
+}
+
+.workflow .scroll {
+    scroll-snap-type: x mandatory;
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100vw;
+    align-self: center;
+}
+
+.workflow row {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: 265px;
+    transition: all 0.5s ease-in-out;
+}
+
+.workflow holder {
+    max-width: 450px;
+    opacity: 0.5;
+    scroll-snap-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.workflow .current {
+    opacity: 1;
+}
+
+.workflow .iPhone {
+    max-height: 650px;
+}
+
+.workflow-trail {
+    padding-block: 40px 120px;
+}
+
+.workflow-trail resposnive {
+    gap: 0px;
+}
+
+.workflow-trail h2 {
+    font-size: 19px;
+    line-height: 27px;
+    max-width: 330px;
+}
+
+@media (width <= 1068px) {
+    .workflow holder {
+        max-width: 390px;
+    }
+
+    .workflow .iPhone {
+        max-height: 560px;
+    }
+
+    .workflow-trail h2 {
+        max-width: 293px;
+    }
+
+    .workflow row {
+        margin-inline: 155px;
+    }
+}
+
+@media (width <= 735px) {
+    .workflow responsive {
+        gap: 60px;
+    }
+
+    .workflow holder {
+        max-width: 315px;
+    }
+
+    .workflow .iPhone {
+        max-height: 450px;
+    }
+
+    .workflow-trail h2 {
+        font-size: 17px;
+        line-height: 25px;
+        max-width: none;
+    }
+
+    .workflow row {
+        margin-inline: -1.5px;
+    }
+}
+
+
+
+
+
+
+
+/* SUB-SECTION ----------------------------------------------------------------------------------------------------- */
+
+/* Font */
+.sub-section h3 {
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Color */ 
+
+.green h3 {
+    color: #328E24;
+}
+.green button {
+    background-color: #328E24;
+}
+
+.orange h3 {
+    color: #F8612F;
+}
+.orange button {
+    background-color: #F8612F;
+}
+
+.ice h3 {
+    color: #8697BD;
+}
+.ice button {
+    background-color: #8697BD;
+}
+
+.pink h3 {
+    color: #F5547E;
+}
+.pink button {
+    background-color: #F5547E;
+}
+
+.blue h3 {
+    color: #459DCA;
+}
+.blue button {
+    background-color: #459DCA;
+}
+
+
+/* Structure */
+.sub-section {
+    padding-top: 90px;
+    justify-content: center;
+}
+
+.tunnel-grid .sub-section column, .sub-section column {
+    align-items: center;
+    align-self: center;
+    gap: 0px;
+    justify-self: center;
+}
+
+.trigger button {
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+}
+
+@media (width <= 1068px) {
+    .sub-section h3 {
+        max-height: 293px;
     }
 }
 
