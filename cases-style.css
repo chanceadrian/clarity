@@ -38,6 +38,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
 }
 
 prim {
@@ -159,18 +160,62 @@ responsive {
     display: none;
 }
 
+.not-small {
+    display: initial;
+}
+
 column, row {
     display: flex;
     flex-direction:column;
+    width: 100%;
 }
 
 row {
     flex-direction:row;
 }
 
+.dark, .darker, .dark-gradient {
+    background: #1D1D1D;
+    color: white;
+}
+
+.darker {
+    background: black;
+}
+
+.dark-gradient {
+    background: linear-gradient(to bottom, #1D1D1D, black);
+}
+
+.dark h2, .darker h2, .dark-gradient h2 {
+    color: rgb(255, 255, 255, 0.55);
+}
+
+.dark prim, .darker prim, .dark-gradient prim {
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 52px;
+}
+
+h2 {
+    font-size: 21px;
+    line-height: 29px;
+    color:rgb(0, 0, 0, 0.5);
+}
+
+
+
 @media (width <= 1068px) {
     responsive {
         max-width: 700px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 44px;
     }
 }
 
@@ -185,6 +230,20 @@ row {
 
     .small {
         display: initial;
+    }
+
+    .not-small {
+        display: none;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    h2 {
+        font-size: 19px;
+        line-height: 27px;
     }
 }
 
@@ -206,6 +265,7 @@ row {
 .keymark h2 {
     font-size: 36px;
     line-height: 40px;
+    color: black;
 }
 
 /* Structure */
@@ -280,20 +340,6 @@ row {
 
 /* DISCOVER ----------------------------------------------------------------------------------------------------- */
 
-/* Font */
-.discover h1 {
-    font-size: 48px;
-    line-height: 52px;
-}
-
-.discover h2 {
-    font-size: 21px;
-    line-height: 29px;
-    color:rgb(0, 0, 0, 0.5);
-}
-
-/* Structure */
-
 .discover responsive {
     padding-inline: 80px;
 }
@@ -343,6 +389,7 @@ row {
     border-radius: 100px;
     align-self: center;
     background-color: rgb(0, 0, 47, 0.05);
+    width:fit-content;
 }
 
 .cab-view {
@@ -384,11 +431,6 @@ row {
 @media (width <= 1068px) {
     .discover responsive {
         padding-inline: 0px;
-    }
-    
-    .discover h1 {
-        font-size: 40px;
-        line-height: 44px;
     }
 
     .yourself .text {
@@ -432,16 +474,6 @@ row {
     .yourself {
         flex-direction: column;
         gap: 40px;
-    }
-
-    .discover h1 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .discover h2 {
-        font-size: 19px;
-        line-height: 27px;
     }
 
     .yourself .text {
@@ -505,8 +537,11 @@ row {
     background-color: #F8612F;
 }
 
-.ice {
+.ice h3 {
     color: #8697BD;
+}
+.ice button {
+    background-color: #8697BD;
 }
 
 .pink {
@@ -521,6 +556,7 @@ row {
 /* Structure */
 .sub-section {
     padding-top: 90px;
+    justify-content: center;
 }
 
 .trigger {
@@ -604,21 +640,6 @@ row {
 
 /* Font */
 
-.artifact-intro h1 {
-    font-size: 48px;
-    line-height: 52px;
-}
-
-.artifact-intro h2 {
-    font-size: 21px;
-    line-height: 29px;
-    color: rgb(255, 255, 255, 0.55);
-}
-
-.artifact-intro prim {
-    color: rgb(255, 255, 255);
-}
-
 .artifact-intro p {
     font-size: 15px;
     line-height: 20px;
@@ -628,8 +649,6 @@ row {
 /* Structure */
 
 .artifact-intro {
-    background: #1D1D1D;
-    color: white;
     padding-block: 120px 60px;
 }
 
@@ -650,10 +669,6 @@ row {
 }
 
 @media (width <= 1068px) {
-    .artifact-intro h1 {
-        font-size: 40px;
-        line-height: 44px;
-    }
 
     .artifact-intro {
         padding-block: 120px 70px;
@@ -675,16 +690,6 @@ row {
 }
 
 @media (width <= 735px) {
-    .artifact-intro h1 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .artifact-intro h2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
-
     .artifact-intro {
         padding-block: 100px 80px;
     }
@@ -695,6 +700,162 @@ row {
         background-image: url(Im/s-items-small.webp);
     }
 }
+
+
+
+
+
+
+
+/* ARTIFACT GALLERY ----------------------------------------------------------------------------------------------------- */
+
+/* Structure */
+
+.artifact-gallery {
+    gap: 90px;
+}
+
+.artifact-gallery responsive {
+    padding-inline: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.artifact-gallery .reverse {
+    flex-direction: row-reverse;
+}
+
+.artifact-gallery .text {
+    gap: 20px;
+    justify-content: center;
+    max-width: 330px;
+}
+
+.artifact-gallery .text holder {
+    align-items: flex-start;
+    max-width: 330px;
+}
+
+.artifact-gallery .artifact {
+    max-height: 100px;
+}
+
+.artifact-gallery holder {
+    max-width: 330px;
+    max-height: 815px;
+}
+
+.artifact-gallery .iPhone {
+    max-height: 950px;
+}
+
+@media (width <= 1068px) {
+    .artifact-gallery responsive {
+        padding-inline: 0px;
+    }
+
+    .artifact-gallery .text {
+        max-width: 293px;
+    }
+
+    .artifact-gallery .text holder {
+        max-width: 293px;
+    }
+
+    .artifact-gallery holder {
+        max-width: 293px;
+        max-height: 643px;
+    }
+    
+    .artifact-gallery .iPhone {
+        max-height: 750px;
+    }
+}
+
+@media (width <= 735px) {
+    .artifact-gallery {
+        padding-block: 100px;
+    }
+
+    .artifact-gallery responsive, .artifact-gallery .reverse {
+        flex-direction: column;
+    }
+
+    .artifact-gallery .text {
+        max-width: 320px;
+    }
+
+    .artifact-gallery .text holder {
+        max-width: 320px;
+    }
+
+    .artifact-gallery holder {
+        max-width: 320px;
+        max-height: 626px;
+    }
+    
+    .artifact-gallery .iPhone {
+        max-height: 730px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ARTIFACT GALLERY ----------------------------------------------------------------------------------------------------- */
+
+.dark-gradient h2 {
+    width: 240px;
+}
+
+/* Structure */
+.tunnel-grid {
+    padding-block: 160px 120px;
+}
+
+.tunnel-grid responsive {
+    max-width: 1270px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    row-gap: 80px;
+}
+
+.tunnel-grid column {
+    gap: 20px;
+    align-items: center;
+}
+
+.tunnel-grid holder {
+    max-height: 555px;
+}
+
+.tunnel-grid .iPhone {
+    max-height: 650px;
+}
+
+@media (width <= 1068px) {
+    .tunnel-grid responsive {
+        max-width: 700px;
+    }
+}
+
+@media (width <= 735px) {
+    .tunnel-grid {
+        padding-block: 120px 100px;
+    }
+
+    .tunnel-grid responsive {
+        max-width: 320px;
+    }
+}
+
+
+
+
 
 
 
