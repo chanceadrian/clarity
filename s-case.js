@@ -125,10 +125,19 @@ class Slideshow {
 
   setIndex() {
       this.slider.style.transform = 'translate(' + (this.index * -20) + '%)';
-      document.querySelectorAll(`#${this.slider.id} holder`).forEach(holder => {
+      const holders = document.querySelectorAll(`#${this.slider.id} holder`);
+      holders.forEach(holder => {
           holder.classList.remove('current');
       });
-      document.querySelectorAll(`#${this.slider.id} holder`)[this.index].classList.add('current');
+      holders[this.index].classList.add('current');
+
+      // Update the h2 text with the data-body attribute of the current slide
+      const currentHolder = holders[this.index];
+      const dataBody = currentHolder.getAttribute('data-body');
+      const h2Element = document.querySelector('.workflow-trail h2');
+      if (h2Element && dataBody) {
+          h2Element.innerHTML = dataBody;
+      }
 
       this.updateArrowOpacity();
   }
@@ -154,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Slideshow('Slider', 'leftSlide', 'rightSlide', 5);
   new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 5);
 });
+
 
 
 

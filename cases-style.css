@@ -734,7 +734,7 @@ h2 {
 
 
 
-/* ARTIFACT GALLERY ----------------------------------------------------------------------------------------------------- */
+/* TUNNEL GRID ----------------------------------------------------------------------------------------------------- */
 
 .dark-gradient h2 {
     width: 240px;
@@ -746,7 +746,7 @@ h2 {
 }
 
 .tunnel-grid responsive {
-    max-width: 1270px;
+    max-width: 1280px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     row-gap: 80px;
@@ -871,30 +871,20 @@ h2 {
     gap: 90px;
 }
 
-.workflow .scroll {
-    scroll-snap-type: x mandatory;
-    position: relative;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    width: 100vw;
-    align-self: center;
-}
-
 .workflow row {
     display: grid;
     grid-auto-flow: column;
     width: -moz-fit-content;
     width: fit-content;
     margin-inline: 265px;
-    transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
     position: relative;
 }
 
 .workflow holder {
     max-width: 450px;
     opacity: 0.5;
-    scroll-snap-align: center;
-    transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
 .workflow .current {
@@ -910,7 +900,7 @@ h2 {
 }
 
 .workflow-trail resposnive {
-    gap: 0px;
+    gap: 60px;
 }
 
 .workflow-trail h2 {
@@ -939,7 +929,6 @@ h2 {
 .left:active, .right:active {
     opacity: 0.85 !important;
 }
-
 
 .left {
     opacity: 0.25;
@@ -989,7 +978,7 @@ h2 {
     .workflow-trail h2 {
         font-size: 17px;
         line-height: 25px;
-        max-width: none;
+        max-width: 240px;
     }
 
     .workflow row {
