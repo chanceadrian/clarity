@@ -53,26 +53,24 @@ nav {
     display: flex;
     padding: 4px;
     gap: 4px;
-    border-radius: 16px;
-    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    width: fit-content;
-    height: fit-content;
-    z-index: 4;
     position: fixed;
     top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 }
 
 nav a {
-    display: flex;
-    gap: 6px;
-    padding: 8px 12px;
+    padding: 8px 16px;
     opacity: 0.5;
     font-size: 17px;
     align-items: center;
-    border-radius: 12px;
-    transition: background 0.3s ease, opacity 0.3s ease;
+    border-radius: 11px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -203,6 +201,13 @@ h2 {
     font-size: 21px;
     line-height: 29px;
     color:rgb(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    color: rgb(0, 0, 0, 0.5);
 }
 
 
@@ -423,7 +428,7 @@ h2 {
     aspect-ratio: 979/630;
     min-height: 660px;
     background-image: url(Im/s-cabinet-1.webp);
-    transition: background-image 0.35s ease-in-out;
+    transition: background-image 0.25s ease-in-out;
 }
 
 
@@ -934,6 +939,32 @@ h2 {
     opacity: 0.25;
 }
 
+.spring-up {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+  
+.spring-up.animate {
+    animation: reveal 0.75s ease-in-out both;
+}
+  
+@keyframes swap {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @media (width <= 1068px) {
     .button-container {
         width: 426px;
@@ -1058,6 +1089,12 @@ h2 {
     width: 32px;
     height: 32px;
     border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+    z-index: 3;
+}
+
+.trigger button svg {
+    transition: all 0.5s ease-in-out;
 }
 
 @media (width <= 1068px) {
@@ -1065,6 +1102,68 @@ h2 {
         max-height: 293px;
     }
 }
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.75s cubic-bezier(0.28, 0.11, 0.32, 1);
+    width: 100%;
+}
+  
+.wrapper.is-open {
+    grid-template-rows: 1fr;
+}
+  
+.inner {
+    overflow: hidden;
+}
+
+.inner .text {
+    padding-block: 150px 120px;
+    background: #F5F7F9;
+    z-index: 0;
+}
+
+.inner .text responsive {
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.vertical {
+    max-height: 600px;
+}
+
+.text responsive column {
+    width: 100%;
+}
+
+.inner-grid {
+    margin-top: 30px;
+    columns: 300px 2;
+    column-gap: 30px;
+}
+
+.text responsive column p {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.tapped {
+    background-color: rgb(0, 0, 0, 0.25) !important;
+    transform: translateY(90px);
+    position: relative;
+}
+
+.tapped svg {
+    transform: rotate(45deg);
+}
+
+
+
 
 
 
@@ -1166,12 +1265,12 @@ h2 {
 }
   
 .spring-up.animate {
-    animation: reveal 1s ease-in-out both;
+    animation: reveal 0.75s ease-in-out both;
 }
   
 @keyframes reveal {
     0% {
-        transform: translateY(25px);
+        transform: translateY(20px);
         opacity: 0;
     }
 
