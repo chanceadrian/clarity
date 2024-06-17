@@ -32,8 +32,18 @@ handleScroll();
 // Load Cabinet Photos -------------------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
   const imagesView = [
+    'Im/s-key-1.webp',
+    'Im/s-key-2.webp',
+    'Im/s-key-3.webp',
+    'Im/s-key-4.webp',
+    'Im/s-key-5.webp',
     'Im/s-cabinet-1.webp',
     'Im/s-cabinet-2.webp',
+    'Im/s-cabinet-2-voice.webp',
+    'Im/s-cabinet-2-link.webp',
+    'Im/s-cabinet-2-note.webp',
+    'Im/s-cabinet-2-photo.webp',
+    'Im/s-cabinet-2-tunnel.webp',
     'Im/s-cabinet-3.webp',
     'Im/s-cabinet-4.webp',
   ];
@@ -73,19 +83,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Cabinet View -------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
-  const buttons = document.querySelectorAll(".cab-view");
+  const buttons = document.querySelectorAll("#swap-view");
   const cabinet = document.querySelector(".cabinet");
 
   buttons.forEach(button => {
       button.addEventListener("click", function() {
-          // Remove 'pressed' class from all buttons
-          buttons.forEach(btn => {
-              btn.classList.remove("pressed");
-          });
-
-          // Add 'pressed' class to the clicked button
-          this.classList.add("pressed");
-
           // Get the background image URL from the data attribute
           const imageUrl1 = this.getAttribute("data-image-1");
 
@@ -96,6 +98,61 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll(".prim-btn");
+  const showButton = document.querySelector(".prim-btn-show");
+  const progViews = document.querySelector(".progressive-views");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function() {
+      // Remove 'pressed' class from all buttons
+      buttons.forEach(btn => {
+        btn.classList.remove("pressed");
+      });
+
+      if (showButton) {
+        showButton.classList.remove("pressed");
+      }
+
+      this.classList.add("pressed");
+      progViews.classList.remove("show");
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const button = document.querySelector(".prim-btn-show");
+  const otherButtons = document.querySelectorAll(".prim-btn");
+  const progViews = document.querySelector(".progressive-views");
+
+  button.addEventListener("click", function() {
+    otherButtons.forEach(function(btn) {
+      btn.classList.remove("pressed");
+    });
+    this.classList.add("pressed");
+    progViews.classList.add("show");
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll(".sec-btn");
+
+  buttons.forEach(button => {
+      button.addEventListener("click", function() {
+          // Remove 'pressed' class from all buttons
+          buttons.forEach(btn => {
+              btn.classList.remove("selec");
+          });
+
+          // Add 'pressed' class to the clicked button
+          this.classList.add("selec");
+      });
+  });
+});
+
 
 
 
@@ -124,7 +181,7 @@ class Slideshow {
   }
 
   setIndex() {
-      this.slider.style.transform = 'translate(' + (this.index * -20) + '%)';
+      this.slider.style.transform = 'translate(' + (this.index * -10) + '%)';
       const holders = document.querySelectorAll(`#${this.slider.id} holder`);
       holders.forEach(holder => {
           holder.classList.remove('current');
@@ -136,15 +193,21 @@ class Slideshow {
       const dataBody = currentHolder.getAttribute('data-body');
       const h2Element = document.querySelector('.workflow-trail h2');
       if (h2Element && dataBody) {
-          h2Element.innerHTML = dataBody;
+          setTimeout(() => {
+            h2Element.innerHTML = dataBody;
+          }, 350);
+          h2Element.classList.add('swap');
+          setTimeout(() => {
+            h2Element.classList.remove('swap');
+          }, 1000);
       }
 
       this.updateArrowOpacity();
   }
 
   updateArrowOpacity() {
-      this.leftArrow.style.opacity = (this.index === 0) ? 0.25 : 0.5;
-      this.rightArrow.style.opacity = (this.index === this.totalSlides - 1) ? 0.25 : 0.5;
+      this.leftArrow.style.opacity = (this.index === 0) ? 0.2 : 0.5;
+      this.rightArrow.style.opacity = (this.index === this.totalSlides - 1) ? 0.2 : 0.5;
   }
 
   nextSlide() {
@@ -160,8 +223,7 @@ class Slideshow {
 
 // Instantiate the slideshow
 document.addEventListener('DOMContentLoaded', () => {
-  new Slideshow('Slider', 'leftSlide', 'rightSlide', 5);
-  new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 5);
+  new Slideshow('Slider', 'leftSlide', 'rightSlide', 10);
 });
 
 

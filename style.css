@@ -233,6 +233,16 @@ responsive {
     position: relative;
 }
 
+column, row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+row {
+    flex-direction: row;
+}
+
 
 
 
@@ -240,8 +250,8 @@ responsive {
 
 /* CHIN ------------------------------------------------------------------------------------------------------------ */
 .chin {
-    padding-block: 60px 120px;
-    background: #F5F5F7;
+    padding-block: 60px 90px;
+    background: #F5F7F9;
 }
 
 .chin p {
@@ -664,5 +674,85 @@ play svg {
 
     play svg {
         margin-left: 2px;
+    }
+}
+
+
+
+
+
+
+
+
+/* CHIN ------------------------------------------------------------------------------------------------------------ */
+.chin {
+    justify-content: flex-start;
+    padding-block: 60px 120px;
+    background: #F5F7F9;
+}
+
+.main {
+    padding-block: 60px 90px;
+}
+
+.chin responsive {
+    max-width: 980px;
+    gap: 90px;
+}
+
+.link-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.sect {
+    gap: 15px;
+    width: 100%;
+}
+
+.sub-sect {
+    gap: 10px;
+}
+
+.chin h1 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 600;
+}
+
+.chin h2 {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.chin h3, .chin p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.chin p {
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@media (width <= 1068px) {
+    .chin h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .chin {
+        padding-block: 60px 100px;
+    }
+
+    .chin responsive {
+        max-width: 700px;
+        gap: 60px;
     }
 }

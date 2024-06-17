@@ -192,9 +192,15 @@ row {
     color: rgb(255, 255, 255);
 }
 
-h1 {
+
+h1, .keymark h3 {
     font-size: 48px;
     line-height: 52px;
+    font-weight: 600;
+}
+
+.keymark h3 {
+    color: rgb(0, 0, 0, 1);
 }
 
 h2 {
@@ -210,14 +216,12 @@ h3 {
     color: rgb(0, 0, 0, 0.5);
 }
 
-
-
 @media (width <= 1068px) {
     responsive {
         max-width: 700px;
     }
 
-    h1 {
+    h1, .keymark h3 {
         font-size: 40px;
         line-height: 44px;
     }
@@ -240,7 +244,7 @@ h3 {
         display: none;
     }
 
-    h1 {
+    h1, .keymark h3 {
         font-size: 32px;
         line-height: 36px;
     }
@@ -274,7 +278,7 @@ h3 {
 
 /* Structure */
 .keymark {
-    gap: 40px;
+    gap: 60px;
     text-align: center;
 }
 
@@ -290,6 +294,10 @@ h3 {
 
 .five .iPhone {
     height: 700px;
+}
+
+.offset {
+    padding-top: 15%;
 }
 
 @media (width <= 1068px) {
@@ -396,22 +404,54 @@ h3 {
     width:fit-content;
 }
 
-.cab-view {
+.prim-btn, .prim-btn-show {
     width: 50px;
     height: 50px;
     border-radius: 100px;
+    font-size: 17px;
 }
 
-.cab-view:hover > svg {
-    opacity: 1;
-}
-
-.cab-view svg {
+.prim-btn svg, .prim-btn-show svg {
     opacity: 0.5;
+}
+
+.progressive-views {
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    margin-bottom: -40px;
+    z-index: 1;
+}
+
+.show {
+    opacity: 1;
+    margin-bottom: -10px;
+}
+
+
+.sec-btn {
+    font-size: 19px;
+    line-height: 25px;
+    color: rgb(0, 0, 0, 0.5);
+    width: 70px;
 }
 
 .pressed {
     background-color: white;
+    opacity: 1;
+}
+
+.selec {
+    color: rgb(0, 0, 0,1);
+    background: none;
+    font-weight: 500;
+}
+
+.cab-controls {
+    gap: 30px;
+    width: 100%;
 }
 
 .pressed svg {
@@ -429,8 +469,8 @@ h3 {
     min-height: 660px;
     background-image: url(Im/s-cabinet-1.webp);
     transition: background-image 0.25s ease-in-out;
+    z-index: 3;
 }
-
 
 @media (width <= 1068px) {
     .discover responsive {
@@ -504,6 +544,16 @@ h3 {
     
     .fit-cabinet .cabinet {
         min-height: 425px;
+    }
+
+    .progressive-views {
+        gap: 10px;
+    }
+
+    .sec-btn {
+        font-size: 17px;
+        line-height: 25px;
+        min-width: 65px;
     }
 }
 
@@ -816,6 +866,11 @@ h3 {
     text-align: left;
 }
 
+.left-word {
+    align-items: flex-start;
+    gap: 15px;
+}
+
 .shelf-icons .iPhone {
     max-height: 540px
 }
@@ -901,7 +956,8 @@ h3 {
 }
 
 .workflow-trail {
-    padding-block: 40px 120px;
+    padding-block: 30px 90px;
+    background: white;
 }
 
 .workflow-trail resposnive {
@@ -929,6 +985,7 @@ h3 {
     width: 36px;
     height: 36px;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .left:active, .right:active {
@@ -947,6 +1004,10 @@ h3 {
 .spring-up.animate {
     animation: reveal 0.75s ease-in-out both;
 }
+
+.swap {
+    animation: swap 0.75s ease-in-out both;
+}
   
 @keyframes swap {
     0% {
@@ -954,8 +1015,13 @@ h3 {
         opacity: 1;
     }
 
+    49% {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+
     50% {
-        transform: translateY(20px);
+        transform: translateY(15px);
         opacity: 0;
     }
 
@@ -1023,144 +1089,79 @@ h3 {
 
 
 
-/* SUB-SECTION ----------------------------------------------------------------------------------------------------- */
 
-/* Font */
-.sub-section h3 {
-    font-size: 19px;
-    line-height: 23px;
-    font-weight: 500;
+/* VISION-PRESHOW ----------------------------------------------------------------------------------------------------- */
+.vision-preshow h1 {
+    font-size: 48px;
+    line-height: 52px;
+    background: linear-gradient(to bottom, #5ABEBA, #4682BD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
     text-align: center;
-    margin-bottom: 8px;
+    max-width: 750px;
 }
 
-/* Color */ 
-
-.green h3 {
-    color: #328E24;
-}
-.green button {
-    background-color: #328E24;
+.vision-preshow h2 {
+    color: black;
 }
 
-.orange h3 {
-    color: #F8612F;
-}
-.orange button {
-    background-color: #F8612F;
-}
+bold {
+    font-size: 64px;
+    line-height: 68px;
+} 
 
-.ice h3 {
-    color: #8697BD;
-}
-.ice button {
-    background-color: #8697BD;
-}
-
-.pink h3 {
-    color: #F5547E;
-}
-.pink button {
-    background-color: #F5547E;
-}
-
-.blue h3 {
-    color: #459DCA;
-}
-.blue button {
-    background-color: #459DCA;
-}
-
-
-/* Structure */
-.sub-section {
-    padding-top: 90px;
-    justify-content: center;
-}
-
-.tunnel-grid .sub-section column, .sub-section column {
-    align-items: center;
-    align-self: center;
+.vision-preshow {
+    padding-block: 180px 120px;
+    background: white;
     gap: 0px;
-    justify-self: center;
-}
-
-.trigger button {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-    transition: all 0.5s ease-in-out;
-    z-index: 3;
-}
-
-.trigger button svg {
-    transition: all 0.5s ease-in-out;
 }
 
 @media (width <= 1068px) {
-    .sub-section h3 {
-        max-height: 293px;
+    .vision-preshow h1 {
+        font-size: 40px;
+        line-height: 44px;
+        max-width: 570px;
+    }
+
+    bold {
+        font-size: 48px;
+        line-height: 52px;
     }
 }
 
-.wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.75s cubic-bezier(0.28, 0.11, 0.32, 1);
-    width: 100%;
-}
-  
-.wrapper.is-open {
-    grid-template-rows: 1fr;
-}
-  
-.inner {
-    overflow: hidden;
+@media (width <= 735px) {
+    .vision-preshow h1 {
+        font-size: 32px;
+        line-height: 36px;
+        max-width: 312px;
+    }
+
+    bold {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .vision-preshow {
+        padding-block: 120px 100px;
+    }
 }
 
-.inner .text {
-    padding-block: 150px 120px;
-    background: #F5F7F9;
-    z-index: 0;
+
+
+
+/* SHELF-VISION ----------------------------------------------------------------------------------------------------- */
+.shelf-vision {
+    height: 950px;
+    background: inherit;
 }
 
-.inner .text responsive {
-    flex-direction: row;
-    gap: 30px;
-    align-items: flex-start;
+.vis-word {
+    gap: 0px;
 }
 
-.vertical {
-    max-height: 600px;
-}
-
-.text responsive column {
-    width: 100%;
-}
-
-.inner-grid {
-    margin-top: 30px;
-    columns: 300px 2;
-    column-gap: 30px;
-}
-
-.text responsive column p {
-    font-size: 17px;
-    line-height: 22px;
-    font-weight: 600;
-    color: rgb(0, 0, 0, 0.5);
-    margin-bottom: 30px;
-}
-
-.tapped {
-    background-color: rgb(0, 0, 0, 0.25) !important;
-    transform: translateY(90px);
-    position: relative;
-}
-
-.tapped svg {
-    transform: rotate(45deg);
-}
+.vis-1 {background-image: url("Im/s-vision-1.webp");}
+.vis-2 {background-image: url("Im/s-vision-2.webp");}
+.vis-3 {background-image: url("Im/s-vision-3.webp");}
 
 
 
@@ -1283,6 +1284,78 @@ h3 {
 
 
 
+
+
+/* CHIN ------------------------------------------------------------------------------------------------------------------ */
+.chin {
+    justify-content: flex-start;
+    padding-block: 60px 120px;
+    background: #F5F7F9;
+}
+
+.chin responsive {
+    max-width: 980px;
+    gap: 90px;
+    align-items: flex-start;
+}
+
+.link-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.sect {
+    gap: 15px;
+    width: 100%;
+}
+
+.sub-sect {
+    gap: 10px;
+}
+
+.chin h1 {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 600;
+}
+
+.chin h2 {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0, 1);
+}
+
+.chin h3, .chin p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.chin p {
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@media (width <= 1068px) {
+    .chin h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .chin {
+        padding-block: 60px 100px;
+    }
+
+    .chin responsive {
+        max-width: 700px;
+        gap: 60px;
+    }
+}
 
 
 
