@@ -346,7 +346,7 @@ photo-front {
 .p-grid, .prin-grid { padding: 0px 70px 30px; }
 .subheading { padding: 0px 70px; }
 .end { padding-bottom: 90px; }
-.plat { padding-bottom: 60px; }
+.plat { padding-bottom: 90px; }
 
 .p-grid {
     columns: 353px 4;
