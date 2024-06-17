@@ -81,7 +81,23 @@ sec {
     color:rgb(0, 0, 0, 0.5);
 }
 
+@media only screen and (max-width: 700px) {
+    nav {
+        border-radius: 0;
+        width: 100vw;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+    }
 
+    nav a svg {
+        display: none;
+    }
+
+    .selected svg {
+        display: initial;
+    }
+}
 
 
 
@@ -140,28 +156,13 @@ p {
 
 @media (width <= 735px) {
     h1 {
-        font-size: 44px;
-        line-height: 48px;
-    }
-
-    h2 {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
-    h3 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 48px;
+        line-height: 52px;
     }
 
     h4 {
         font-size: 19px;
         line-height: 27px;
-    }
-
-    p {
-        font-size: 17px;
-        line-height: 25px;
     }
 
 }
@@ -198,6 +199,28 @@ row {
     flex-direction: row;
 }
 
+.small {
+    display: none;
+}
+
+@media (width <= 1068px) {
+    responsive {
+        max-width: 700px;
+    }
+}
+
+@media (width <= 735px) {
+    .small {
+        display: initial;
+    }
+
+    responsive {
+        max-width: 312px;
+    }
+}
+
+
+
 
 
 /* HEADER ------------------------------------------------------------------------------------------------------------ */
@@ -210,6 +233,7 @@ row {
     gap: 10px;
     align-items: center;
     text-align: center;
+    padding: 30px;
 }
 
 .header column p {
@@ -279,6 +303,39 @@ photo-front {
 .WWDC {background-image: url("Im/WWDC.webp");}
 .v606-601 {background-image: url("Im/606-601.webp");}
 
+@media (width <= 1068px) {
+    photo-back {
+        height: 650px;
+        padding: 30px 60px;
+    }
+    photo-front {
+        height: 650px;
+        left: -60px;
+    }
+}
+
+@media (width <= 735px) {
+    photo-back {
+        height: 560px;
+        padding: 30px 20px;
+    }
+    photo-front {
+        height: 560px;
+        left: -20px;
+    }
+
+    .header column {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .header row {
+        padding-inline: 30px;
+        flex-direction: column;
+    }
+}
+
+
 
 
 
@@ -292,7 +349,7 @@ photo-front {
 .plat { padding-bottom: 60px; }
 
 .p-grid {
-    columns: 300px 4;
+    columns: 353px 4;
     column-gap: 25px;
 }
 
@@ -324,6 +381,14 @@ line {
 }
 
 .end { padding-bottom: 90px; }
+
+
+@media (width <= 735px) {
+    .p-grid, .prin-grid { padding: 0px 30px 30px; }
+    .subheading { padding: 0px 30px; }
+}
+
+
 
 
 
@@ -395,6 +460,23 @@ line {
 
     .chin responsive {
         max-width: 700px;
+        gap: 60px;
+    }
+}
+
+
+@media (width <= 735px) {
+    .chin h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .chin {
+        padding-block: 60px 100px;
+    }
+
+    .chin responsive {
+        max-width: 312px;
         gap: 60px;
     }
 }

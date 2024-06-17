@@ -80,7 +80,23 @@ nav a:hover {
     opacity: 0.75;
 }
 
+@media only screen and (max-width: 700px) {
+    nav {
+        border-radius: 0;
+        width: 100vw;
+        justify-content: space-around;
+        position: fixed;
+        top: 0px;
+    }
 
+    nav a svg {
+        display: none;
+    }
+
+    .selected svg {
+        display: initial;
+    }
+}
 
 
 
@@ -243,7 +259,22 @@ row {
     flex-direction: row;
 }
 
+.small {display: none}
 
+@media (width <= 1068px) {
+    responsive {
+        max-width: 700px;
+    }
+
+    .small {display: initial}
+}
+
+@media (width <= 735px) {
+    responsive {
+        max-width: 312px;
+    }
+
+}
 
 
 
@@ -371,6 +402,7 @@ slider a {
     padding: 40px;
     gap: 15px;
     position: relative;
+    text-align: center;
 }
 
 #heroes a {
@@ -424,6 +456,81 @@ slider a {
 .white { 
     color: white; 
 }
+
+@media (width <= 1068px) {
+    .top {
+        margin-top: -40px;
+    }
+
+    .horizontal-gallery {
+        padding: 120px 60px 20px 60px;
+    }
+
+    carousel {
+        height: 650px;
+    }
+
+    slider a {
+        padding: 30px;
+    }
+
+    .design { background-image: url("Im/design-m.webp"); }
+    .think { background-image: url("Im/think-m.webp"); }
+    .cosmic { background-image: url("Im/cosmic-m.webp"); }
+
+    #writing a {
+        padding: 50px;
+    }
+
+    #writing h1 {
+        font-weight: 700;
+    }
+}
+
+@media (width <= 735px) {
+    .top {
+        margin-top: 0px;
+    }
+
+    .horizontal-gallery {
+        padding: 90px 0px 20px 0px;
+        gap: 30px;
+    }
+
+    carousel {
+        border-radius: 0;
+        height: 600px;
+    }
+
+    #heroes a, #interests a {
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        gap: 0;
+        padding: 60px;
+    }
+
+    #heroes p {
+        position: relative;
+        bottom:auto;
+        right: auto;
+    }
+
+    .design { background-image: url("Im/design-s.webp"); }
+    .think { background-image: url("Im/think-s.webp"); }
+    .cosmic { background-image: url("Im/cosmic-s.webp"); }
+
+    .rams { background-image: url("Im/rams-s.webp"); }
+    .jobs { background-image: url("Im/jobs-s.webp"); }
+}
+
+
+
+
+
+
+
+
 
 
 /* Buttons */
@@ -506,6 +613,12 @@ border:hover, #music border:hover {
     color: black;
     background: #fff;
     border-color: #fff;
+}
+
+@media (width <= 735px) {
+    controls {
+        top: -56px;
+    }
 }
 
 
