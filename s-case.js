@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     'Im/s-cabinet-2.webp',
     'Im/s-cabinet-2-voice.webp',
     'Im/s-cabinet-2-link.webp',
-    'Im/s-cabinet-2-note.webp',
     'Im/s-cabinet-2-photo.webp',
     'Im/s-cabinet-2-tunnel.webp',
     'Im/s-cabinet-3.webp',
