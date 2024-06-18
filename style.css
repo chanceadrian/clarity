@@ -433,9 +433,9 @@ slider a {
     color: rgb(255, 255, 255);
 }
 
-.design { background-image: url("Im/design.webp"); }
-.think { background-image: url("Im/think.webp"); }
-.cosmic { background-image: url("Im/cosmic.webp"); }
+.design { background-image: url("Im/Design.webp"); }
+.think { background-image: url("Im/Think.webp"); }
+.cosmic { background-image: url("Im/Cosmic.webp"); }
 
 .rams { background-image: url("Im/rams.webp"); }
 .jobs { background-image: url("Im/jobs.webp"); }
@@ -474,9 +474,9 @@ slider a {
         padding: 30px;
     }
 
-    .design { background-image: url("Im/design-m.webp"); }
-    .think { background-image: url("Im/think-m.webp"); }
-    .cosmic { background-image: url("Im/cosmic-m.webp"); }
+    .design { background-image: url("Im/Design-med.webp"); }
+    .think { background-image: url("Im/Think-med.webp"); }
+    .cosmic { background-image: url("Im/Cosmic-med.webp"); }
 
     #writing a {
         padding: 50px;
@@ -516,9 +516,9 @@ slider a {
         right: auto;
     }
 
-    .design { background-image: url("Im/design-s.webp"); }
-    .think { background-image: url("Im/think-s.webp"); }
-    .cosmic { background-image: url("Im/cosmic-s.webp"); }
+    .design { background-image: url("Im/Design-sm.webp"); }
+    .think { background-image: url("Im/Think-sm.webp"); }
+    .cosmic { background-image: url("Im/Cosmic-sm.webp"); }
 
     .rams { background-image: url("Im/rams-s.webp"); }
     .jobs { background-image: url("Im/jobs-s.webp"); }

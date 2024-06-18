@@ -233,7 +233,6 @@ row {
     gap: 10px;
     align-items: center;
     text-align: center;
-    padding: 30px;
 }
 
 .header column p {
@@ -343,7 +342,7 @@ photo-front {
 
 
 /* READ ------------------------------------------------------------------------------------------------------------ */
-.p-grid, .prin-grid { padding: 0px 70px 30px; }
+.p-grid, .prin-grid { padding: 0px 70px 60px; }
 .subheading { padding: 0px 70px; }
 .end { padding-bottom: 90px; }
 .plat { padding-bottom: 90px; }

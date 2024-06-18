@@ -405,10 +405,9 @@ h3 {
 }
 
 .prim-btn, .prim-btn-show {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 100px;
-    font-size: 17px;
 }
 
 .prim-btn svg, .prim-btn-show svg {
@@ -467,7 +466,7 @@ h3 {
 .fit-cabinet .cabinet {
     aspect-ratio: 979/630;
     min-height: 660px;
-    background-image: url(Im/s-cabinet-1.webp);
+    background-image: url("Im/s-cabinet-1.webp");
     transition: background-image 0.25s ease-in-out;
     z-index: 3;
 }
@@ -554,6 +553,11 @@ h3 {
         font-size: 17px;
         line-height: 25px;
         min-width: 65px;
+    }
+
+    .prim-btn, .prim-btn-show {
+        width: 44px;
+        height: 44px;
     }
 }
 
@@ -648,7 +652,7 @@ h3 {
 .items {
     aspect-ratio: 1170/385;
     min-height: 400px;
-    background-image: url(Im/s-items.webp);
+    background-image: url("Im/s-items.webp");
 }
 
 @media (width <= 1068px) {
@@ -667,8 +671,8 @@ h3 {
 
     .items {
         aspect-ratio: 795/385;
-        min-height: 380px;
-        background-image: url(Im/s-items-med.webp);
+        min-height: 360px;
+        background-image: url("Im/s-items-med.webp");
     }
 }
 
@@ -679,8 +683,8 @@ h3 {
     
     .items {
         aspect-ratio: 400/650;
-        min-height: 600px;
-        background-image: url(Im/s-items-small.webp);
+        min-height: 560px;
+        background-image: url("Im/s-items-small.webp");
     }
 }
 
