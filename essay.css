@@ -227,6 +227,7 @@ row {
 
 .header {
     gap: 0px;
+    max-width: 1730px;
 }
 
 .header column {
@@ -253,7 +254,8 @@ row {
 photo-back {
     display: flex;
     width: 100vw;
-    height: 800px;
+    max-width: 1730px;
+    height: 850px;
     position: relative;
     padding: 30px 60px;
 }
@@ -274,7 +276,8 @@ photo-frame {
 
 photo-front {
     width: 100vw;
-    height: 800px;
+    max-width: 1730px;
+    height: 850px;
     position: absolute;
     left: -60px;
     z-index: 2;
@@ -302,6 +305,38 @@ photo-front {
 .iOS-9 {background-image: url("Im/iOS-9.webp");}
 .WWDC {background-image: url("Im/WWDC.webp");}
 .v606-601 {background-image: url("Im/606-601.webp");}
+
+.side-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #FAFBFC 0%, rgb(250, 251, 252, 0) 7%, rgba(250, 251, 252, 0) 93%, #FAFBFC 100%);
+    display: none;
+}
+
+@media (width >= 1730px) {
+    .side-gradient {
+        display: initial;
+    }
+}
+
+@media (width >= 1600px) {
+    photo-back {
+        height: 900px;
+        padding: 30px 120px;
+    }
+    photo-front {
+        height: 900px;
+        left: -120px;
+    }
+
+    .header row {
+        padding-inline: 130px;
+    }
+
+}
 
 @media (width <= 1068px) {
     photo-back {
@@ -351,6 +386,7 @@ photo-front {
 .p-grid {
     columns: 250px 4;
     column-gap: 30px;
+    max-width: 1730px;
 }
 
 .p-grid p {
@@ -362,6 +398,7 @@ photo-front {
     gap: 10px;
     width: 100%;
     align-items: flex-start;
+    max-width: 1730px;
 }
 
 line {
@@ -378,10 +415,15 @@ line {
     align-items: flex-start;
     row-gap: 30px;
     width: 100%;
+    max-width: 1730px;
 }
 
 .end { padding-bottom: 90px; }
 
+@media (width >= 1600px) {
+    .p-grid, .prin-grid { padding: 0px 130px 30px; }
+    .subheading { padding: 0px 130px; }
+}
 
 @media (width <= 735px) {
     .p-grid, .prin-grid { padding: 0px 30px 30px; }

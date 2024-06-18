@@ -805,7 +805,7 @@ h3 {
 }
 
 .tunnel-grid responsive {
-    max-width: 1280px;
+    max-width: 1330px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     row-gap: 80px;
@@ -1156,6 +1156,11 @@ bold {
 .shelf-vision {
     height: 950px;
     background: inherit;
+    max-width: 1730px;
+}
+
+.vis-word {
+    background: white;
 }
 
 .vis-word responsive {
@@ -1245,6 +1250,48 @@ bold {
     100% {
       transform: translateX(0);
       opacity: 1;
+    }
+}
+
+
+
+@media (width >= 1600px) {
+    @keyframes moveAnimation {
+        0% {
+          transform: translateX(2000px);
+        }
+        25% {
+            transform: translateX(2000px);
+            opacity: 0.5;
+        }
+        75% {
+            transform: translateX(-40px);
+            opacity: 1;
+          }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+    }
+}
+
+@media (width >= 2300px) {
+    @keyframes moveAnimation {
+        0% {
+          transform: translateX(2400px);
+        }
+        25% {
+            transform: translateX(2400px);
+            opacity: 0.5;
+        }
+        75% {
+            transform: translateX(-50px);
+            opacity: 1;
+          }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
     }
 }
 

@@ -368,8 +368,12 @@ row {
 
 .horizontal-gallery {
     padding: 120px 60px 20px 60px;
-    align-items: flex-start;
     gap: 15px;
+}
+
+.horizontal-gallery responsive {
+    max-width: 1330px;
+    align-items: flex-start;
 }
 
 .horizontal-gallery h5 {
@@ -382,6 +386,7 @@ carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 1330px;
 }
 
 slider {
@@ -470,6 +475,12 @@ slider a {
     font-weight: 600;
     margin-bottom: 1em;
     color: rgb(0, 0, 0, 0.5);
+}
+
+@media (width >= 1600px) {
+    carousel {
+        height: 800px;
+    }
 }
 
 @media (width <= 1068px) {
@@ -675,6 +686,10 @@ border:hover, #music border:hover {
 .playlist {
     gap: 15px;
     padding: 60px;
+}
+
+.playlist responsive {
+    max-width: 1330px;
     align-items: flex-start;
 }
 
