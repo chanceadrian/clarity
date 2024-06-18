@@ -233,6 +233,7 @@ row {
     gap: 10px;
     align-items: center;
     text-align: center;
+    padding-inline: 30px;
 }
 
 .header column p {
