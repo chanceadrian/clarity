@@ -349,8 +349,8 @@ photo-front {
 .plat { padding-bottom: 90px; }
 
 .p-grid {
-    columns: 353px 4;
-    column-gap: 25px;
+    columns: 250px 4;
+    column-gap: 30px;
 }
 
 .p-grid p {
@@ -386,6 +386,10 @@ line {
 @media (width <= 735px) {
     .p-grid, .prin-grid { padding: 0px 30px 30px; }
     .subheading { padding: 0px 30px; }
+    .p-grid {
+        columns: 353px 4;
+        column-gap: 30px;
+    }
 }
 
 
