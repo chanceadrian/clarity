@@ -188,11 +188,11 @@ row {
     background: linear-gradient(to bottom, #1D1D1D, black);
 }
 
-.dark h2, .darker h2, .dark-gradient h2 {
+.dark h2, .darker h2 {
     color: rgb(255, 255, 255, 0.55);
 }
 
-.dark prim, .darker prim, .dark-gradient prim {
+.dark prim, .darker prim {
     color: rgb(255, 255, 255);
 }
 
@@ -219,6 +219,7 @@ h3 {
     font-weight: 700;
     color: rgb(0, 0, 0, 0.5);
 }
+
 
 @media (width <= 1068px) {
     responsive {
@@ -573,59 +574,6 @@ h3 {
 
 
 
-/* PRESHOW ----------------------------------------------------------------------------------------------------- */
-
-/* Font */
-.preshow h1 {
-    font-size: 64px;
-    line-height: 68px;
-    align-self: flex-start;
-}
-
-/* Structure */
-.preshow {
-    padding-block: 100px 0px;
-}
-
-.preshow responsive {
-    gap: 90px;
-}
-
-.preshow .iPhone {
-    max-height: 530px;
-}
-
-@media (width <= 1068px) {
-    .preshow h1 {
-        font-size: 48px;
-        line-height: 52px;
-    }
-
-    .preshow {
-        padding-block: 75px 0px;
-    }
-}
-
-@media (width <= 735px) {
-    .preshow h1 {
-        font-size: 40px;
-        line-height: 44px;
-    }
-
-    .preshow {
-        padding-block: 70px 0px;
-    }
-
-    .preshow .iPhone {
-        max-height: 400px;
-    }
-}
-
-
-
-
-
-
 
 /* ARTIFACT INTRO ----------------------------------------------------------------------------------------------------- */
 
@@ -733,11 +681,11 @@ h3 {
 
 .artifact-gallery holder {
     max-width: 330px;
-    max-height: 815px;
+    max-height: 770px;
 }
 
 .artifact-gallery .iPhone {
-    max-height: 950px;
+    max-height: 910px;
 }
 
 @media (width <= 1068px) {
@@ -799,13 +747,15 @@ h3 {
 
 /* TUNNEL GRID ----------------------------------------------------------------------------------------------------- */
 
-.dark-gradient h2 {
+.tunnel-grid h2 {
     width: 240px;
+    font-size: 19px;
+    line-height: 27px;
 }
 
 /* Structure */
 .tunnel-grid {
-    padding-block: 160px 120px;
+    padding-block: 160px;
 }
 
 .tunnel-grid responsive {
@@ -836,7 +786,7 @@ h3 {
 
 @media (width <= 735px) {
     .tunnel-grid {
-        padding-block: 120px 100px;
+        padding-block: 100px;
     }
 
     .tunnel-grid responsive {
@@ -850,80 +800,6 @@ h3 {
 
 
 
-/* SHELF-ICONS ----------------------------------------------------------------------------------------------------- */
-
-/* Font */
-
-.shelf-icons h2 {
-    max-width: 320px;
-}
-
-/* Structure */
-
-.shelf-icons {
-    padding-block: 120px 0px;
-}
-
-.shelf-icons responsive {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.shelf-icons holder {
-    max-width: 490px;
-    text-align: left;
-}
-
-.left-word {
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.shelf-icons .iPhone {
-    max-height: 540px
-}
-
-@media (width <= 1068px) {
-    .shelf-icons h2 {
-        max-width: 290px;
-    }
-
-    .shelf-icons holder {
-        max-width: 300px;
-    }
-
-    .shelf-icons .iPhone {
-        max-height: 480px
-    }
-}
-
-@media (width <= 735px) {
-    .shelf-icons responsive {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .shelf-icons h2 {
-        max-width: none;
-    }
-
-    .shelf-icons {
-        padding-block: 100px 0px;
-    }
-
-    .shelf-icons holder {
-        max-width: none;
-    }
-
-    .shelf-icons .iPhone {
-        max-height: 380px
-    }
-}
-
-
-
-
-
 
 
 
@@ -931,7 +807,7 @@ h3 {
 
 /* Structure */
 .workflow {
-    padding-block: 120px 0px;
+    padding-block: 150px 0px;
 }
 
 .workflow responsive {
@@ -1095,13 +971,12 @@ h3 {
 
 
 /* VISION-PRESHOW ----------------------------------------------------------------------------------------------------- */
-.vision-preshow h1 {
+.vision-preshow h1, .magic-color {
     font-size: 48px;
     line-height: 52px;
     background: linear-gradient(to bottom, #5ABEBA, #4682BD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
-    text-align: center;
     max-width: 750px;
 }
 
@@ -1115,9 +990,10 @@ bold {
 } 
 
 .vision-preshow {
-    padding-block: 180px 120px;
+    padding-block: 150px 120px;
     background: white;
     gap: 0px;
+    text-align: center;
 }
 
 @media (width <= 1068px) {
@@ -1252,6 +1128,73 @@ bold {
         height: 360px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* RESEARCH ----------------------------------------------------------------------------------------------------- */
+.research, .research-work {
+    background: #F5F7F9;
+}
+
+.research-work { padding-top: 30px;}
+
+.research-worktrail { background: linear-gradient(to bottom, #FAFBFC, #F5F7F9); }
+
+.research responsive {
+    align-items: flex-start;
+}
+
+.research h2 {
+    color: black;
+}
+
+.blue h2 { color: #437EBD; }
+
+.research column {
+    gap: 10px;
+}
+
+.research-text {
+    gap: 30px;
+    width: 100%;
+}
+
+.research-text p {
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 15px;
+}
+
+.research-text f {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.research-text column {
+    padding: 36px 40px;
+    background: white;
+    border-radius: 20px;
+    gap: 15px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

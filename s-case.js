@@ -223,6 +223,7 @@ class Slideshow {
 // Instantiate the slideshow
 document.addEventListener('DOMContentLoaded', () => {
   new Slideshow('Slider', 'leftSlide', 'rightSlide', 10);
+  new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 6);
 });
 
 
