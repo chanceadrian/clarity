@@ -120,6 +120,10 @@ nav a:hover {
     width: 100vw;
 }
 
+body {
+    background: linear-gradient(to top, white, #F5F7F9);
+}
+
 holder {
     display: flex;
     flex-direction: column;
@@ -1154,27 +1158,98 @@ bold {
 
 /* SHELF-VISION ----------------------------------------------------------------------------------------------------- */
 .shelf-vision {
-    height: 950px;
+    height: 1000px;
     background: inherit;
+    max-width: 1730px;
+}
+
+.hold-two-visions {
+    gap: 10px;
+    flex-direction: row;
+    background: inherit;
+    padding-block: 0px;
     max-width: 1730px;
 }
 
 .vis-word {
     background: white;
+    padding-block: 90px 180px;
+}
+
+.vis-word h1 {
+    font-size: 32px;
+    line-height: 36px;
+    min-width: 330px;
+}
+
+.vis-word h2 {
+    width: 100%;
 }
 
 .vis-word responsive {
-    gap: 0px;
-    text-align: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 120px;
+    justify-content: space-between;
 }
 
 .vis-1 {background-image: url("Im/s-vision-1.webp");}
+.vis-s {background-image: url("Im/s-vision-search.webp");}
+.vis-m {background-image: url("Im/s-vision-mail.webp");}
 .vis-2 {background-image: url("Im/s-vision-2.webp");}
 .vis-3 {background-image: url("Im/s-vision-3.webp");}
+
+@media (width >= 1730px) {
+    .shelf-vision {
+        border-radius: 40px;
+    }
+
+    .hold-two-visions {
+        gap: 20px;
+    }
+}
 
 @media (width <= 1068px) {
     .shelf-vision {
         height: 500px;
+    }
+
+    .vis-word h1 {
+        font-size: 24px;
+        line-height: 28px;
+        min-width: 230px;
+    }
+
+
+    .vis-word h2 {
+        font-size: 17px;
+        line-height: 25px;
+    }  
+
+    .vis-word responsive {
+        gap: 60px;
+    }
+}
+
+@media (width <= 735px) {
+    .vis-word h1 {
+        font-size: 21px;
+        line-height: 25px;
+        min-width: auto;
+        width: 80%;
+    }
+
+    .vis-word responsive {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .vis-word {
+        padding-block: 50px 100px;
+    }
+
+    .shelf-vision {
+        height: 360px;
     }
 }
 
@@ -1253,9 +1328,8 @@ bold {
     }
 }
 
-
-
 @media (width >= 1600px) {
+
     @keyframes moveAnimation {
         0% {
           transform: translateX(2000px);
@@ -1412,6 +1486,12 @@ bold {
     }
 }
 
+@media (width <= 1068px) {
+    .chin responsive {
+        max-width: 312px;
+        gap: 30px;
+    }
+}
 
 
 

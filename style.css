@@ -18,7 +18,7 @@ svg {
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom, white, #F5F5F7);
+    background: linear-gradient(to top, white, #F5F7F9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,7 +381,7 @@ row {
 }
 
 carousel {
-    height: 750px;
+    height: 770px;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -479,7 +479,7 @@ slider a {
 
 @media (width >= 1600px) {
     carousel {
-        height: 800px;
+        height: 840px;
     }
 }
 
@@ -524,9 +524,14 @@ slider a {
         gap: 30px;
     }
 
+    .horizontal-gallery responsive {
+        width: 100vw;
+    }
+
     carousel {
         border-radius: 0;
         height: 600px;
+        width: 100vw;
     }
 
     #heroes a, #interests a {
@@ -689,7 +694,7 @@ border:hover, #music border:hover {
 }
 
 .playlist responsive {
-    max-width: 1330px;
+    max-width: 1488px;
     align-items: flex-start;
 }
 
