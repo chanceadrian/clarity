@@ -361,6 +361,13 @@ h3 {
     padding-inline: 80px;
 }
 
+.discover h3 {
+    font-size: 36px;
+    line-height: 40px;
+    color: black;
+    font-weight: 600;
+}
+
 .yourself {
     flex-direction: row;
     justify-content: space-between;
@@ -481,6 +488,11 @@ h3 {
         padding-inline: 0px;
     }
 
+    .discover h3 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
     .yourself .text {
         padding-block: 0px;
         max-width: 293px;
@@ -522,6 +534,11 @@ h3 {
     .yourself {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .discover h3 {
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .yourself .text {
@@ -997,7 +1014,7 @@ bold {
 }
 
 @media (width <= 1068px) {
-    .vision-preshow h1 {
+    .vision-preshow h1, .magic-color {
         font-size: 40px;
         line-height: 44px;
         max-width: 570px;
@@ -1010,7 +1027,7 @@ bold {
 }
 
 @media (width <= 735px) {
-    .vision-preshow h1 {
+    .vision-preshow h1, .magic-color {
         font-size: 32px;
         line-height: 36px;
         min-width: 350px;
@@ -1127,6 +1144,10 @@ bold {
     .shelf-vision {
         height: 360px;
     }
+
+    .hold-two-visions {
+        gap: 5px;
+    }
 }
 
 
@@ -1139,27 +1160,13 @@ bold {
 
 
 /* RESEARCH ----------------------------------------------------------------------------------------------------- */
-.research, .research-work {
-    background: #F5F7F9;
-}
-
-.research-work { padding-top: 30px;}
-
+.research, .research-work { background: #F5F7F9; }
 .research-worktrail { background: linear-gradient(to bottom, #FAFBFC, #F5F7F9); }
-
-.research responsive {
-    align-items: flex-start;
-}
-
-.research h2 {
-    color: black;
-}
-
+.research-work { padding-top: 30px;}
+.research responsive { align-items: flex-start;}
+.research h2 { color: black; }
 .blue h2 { color: #437EBD; }
-
-.research column {
-    gap: 10px;
-}
+.research column { gap: 10px; }
 
 .research-text {
     gap: 30px;
@@ -1170,6 +1177,7 @@ bold {
     font-size: 19px;
     line-height: 27px;
     margin-bottom: 15px;
+    height: 100%;
 }
 
 .research-text f {
@@ -1186,7 +1194,32 @@ bold {
     width: 100%;
 }
 
+.end {
+    padding-block: 60px;
+}
 
+@media (width <= 1068px) {
+    .research-text p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@media (width <= 735px) {
+    .research responsive {
+        gap: 20px;
+    }
+
+    .research-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .research-text column {
+        min-width: 353px;
+        align-self: center;
+    }
+}
 
 
 

@@ -160,10 +160,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 class Slideshow {
-  constructor(sliderId, leftArrowId, rightArrowId, totalSlides) {
+  constructor(sliderId, leftArrowId, rightArrowId, trailId, totalSlides) {
       this.slider = document.getElementById(sliderId);
       this.leftArrow = document.getElementById(leftArrowId);
       this.rightArrow = document.getElementById(rightArrowId);
+      this.h2Element = document.getElementById(trailId);
       this.totalSlides = totalSlides;
       this.index = 0;
 
@@ -180,25 +181,31 @@ class Slideshow {
   }
 
   setIndex() {
-      this.slider.style.transform = 'translate(' + (this.index * -10) + '%)';
+      const transformPercentage = 100 / this.totalSlides;
+      this.slider.style.transform = 'translate(' + (this.index * -transformPercentage) + '%)';
       const holders = document.querySelectorAll(`#${this.slider.id} holder`);
+
       holders.forEach(holder => {
           holder.classList.remove('current');
       });
-      holders[this.index].classList.add('current');
 
-      // Update the h2 text with the data-body attribute of the current slide
       const currentHolder = holders[this.index];
-      const dataBody = currentHolder.getAttribute('data-body');
-      const h2Element = document.querySelector('.workflow-trail h2');
-      if (h2Element && dataBody) {
-          setTimeout(() => {
-            h2Element.innerHTML = dataBody;
-          }, 350);
-          h2Element.classList.add('swap');
-          setTimeout(() => {
-            h2Element.classList.remove('swap');
-          }, 1000);
+      if (currentHolder) {
+          currentHolder.classList.add('current');
+
+          // Update the h2 text with the data-body attribute of the current slide
+          const dataBody = currentHolder.getAttribute('data-body');
+          if (this.h2Element && dataBody) {
+              setTimeout(() => {
+                this.h2Element.innerHTML = dataBody;
+              }, 350);
+              this.h2Element.classList.add('swap');
+              setTimeout(() => {
+                this.h2Element.classList.remove('swap');
+              }, 1000);
+          }
+      } else {
+          console.error(`No element found at index ${this.index}`);
       }
 
       this.updateArrowOpacity();
@@ -222,9 +229,11 @@ class Slideshow {
 
 // Instantiate the slideshow
 document.addEventListener('DOMContentLoaded', () => {
-  new Slideshow('Slider', 'leftSlide', 'rightSlide', 10);
-  new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 6);
+  new Slideshow('Slider', 'leftSlide', 'rightSlide', 'trail', 10);
+  new Slideshow('Slider2', 'leftSlide2', 'rightSlide2', 'trail2', 6);
 });
+
+
 
 
 
