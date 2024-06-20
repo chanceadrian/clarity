@@ -1203,6 +1203,10 @@ bold {
         font-size: 17px;
         line-height: 25px;
     }
+
+    .research-text column {
+        padding: 32px 36px;
+    }
 }
 
 @media (width <= 735px) {
@@ -1217,6 +1221,7 @@ bold {
 
     .research-text column {
         min-width: 353px;
+        gap: 10px;
         align-self: center;
     }
 }
