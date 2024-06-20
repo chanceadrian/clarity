@@ -1199,30 +1199,35 @@ bold {
 }
 
 @media (width <= 1068px) {
+    .research responsive {
+        gap: 20px;
+    }
+
+    .research-text {
+        gap: 20px;
+    }
+
     .research-text p {
         font-size: 17px;
         line-height: 25px;
     }
 
     .research-text column {
-        padding: 32px 36px;
+        padding: 28px 32px;
     }
 }
 
 @media (width <= 735px) {
-    .research responsive {
-        gap: 20px;
-    }
 
     .research-text {
         flex-direction: column;
-        gap: 20px;
     }
 
     .research-text column {
         min-width: 353px;
         gap: 10px;
         align-self: center;
+        padding: 32px 36px;
     }
 }
 
