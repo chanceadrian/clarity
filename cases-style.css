@@ -1152,7 +1152,7 @@ row {
 }
 
 @media (width <= 1400px) {
-    .vis-2 {background-image: url("Im/s-vision-2-small.webp");}
+    .vis-2 {background-image: url("Im/s-vision-2-med.webp");}
 }
 
 @media (width <= 1068px) {
@@ -1171,6 +1171,10 @@ row {
 }
 
 @media (width <= 735px) {
+    .vis-s {background-image: url("Im/s-vision-search-sm.webp");}
+    .vis-m {background-image: url("Im/s-vision-mail-sm.webp");}
+    .vis-2 {background-image: url("Im/s-vision-2-sm.webp");}
+    .vis-3 {background-image: url("Im/s-vision-3-sm.webp");}
 
     .vis-word responsive {
         gap: 20px;
@@ -1182,7 +1186,7 @@ row {
     }
 
     .shelf-vision {
-        height: 370px;
+        height: 460px;
     }
 
     .hold-two-visions {
