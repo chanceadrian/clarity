@@ -1075,7 +1075,6 @@ row {
 }
 
 .vision-preshow {
-    padding-block: 120px 90px;
     background: white;
     gap: 0px;
     text-align: center;
@@ -1094,10 +1093,6 @@ row {
         font-size: 32px;
         line-height: 36px;
         min-width: 350px;
-    }
-
-    .vision-preshow {
-        padding-block: 100px 90px;
     }
 }
 
