@@ -293,7 +293,6 @@ view, responsive {
     position: relative;
     align-items: center;
     justify-content: center;
-    padding-block: 120px;
     gap: 30px;
     width: 100%;
 }
@@ -301,6 +300,7 @@ view, responsive {
 view {
     overflow: hidden;
     background: linear-gradient(to bottom, white, #FAFBFC);
+    padding-block: 140px;
 }
 
 .white {
@@ -309,7 +309,6 @@ view {
 }
 
 responsive {
-    padding-block: 0;
     gap: 30px;
     width: 90vw;
     max-width: 980px;
@@ -392,6 +391,7 @@ row {
 .keymark {
     gap: 60px;
     text-align: center;
+    padding-block: 120px 150px;
 }
 
 .five {
@@ -684,7 +684,7 @@ row {
 /* Structure */
 
 .artifact-intro {
-    padding-block: 120px 60px;
+    padding-block: 140px 70px;
 }
 
 .artifact-intro responsive {
@@ -848,9 +848,6 @@ row {
 }
 
 /* Structure */
-.tunnel-grid {
-    padding-block: 160px;
-}
 
 .tunnel-grid responsive {
     max-width: 1330px;
@@ -879,9 +876,6 @@ row {
 }
 
 @media (width <= 735px) {
-    .tunnel-grid {
-        padding-block: 100px;
-    }
 
     .tunnel-grid responsive {
         max-width: 320px;
@@ -1120,7 +1114,7 @@ row {
 
 .vis-word {
     background: white;
-    padding-block: 90px 180px;
+    padding-block: 70px 140px;
 }
 
 .vis-word responsive {
