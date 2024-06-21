@@ -451,6 +451,10 @@ slider a {
     color: var(--d-prim);
 }
 
+#interests h6 {
+    color: var(--d-prim);
+}
+
 .white h1, .white p {
     color: var(--d-prim);
 }
@@ -557,6 +561,10 @@ slider a {
         color: white;
         gap: 0;
         padding: 60px;
+    }
+
+    #heroes h1, #heroes p {
+        color: var(--d-prim);
     }
 
     #heroes p {
