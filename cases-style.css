@@ -1151,9 +1151,13 @@ row {
     }
 }
 
+@media (width <= 1400px) {
+    .vis-2 {background-image: url("Im/s-vision-2-small.webp");}
+}
+
 @media (width <= 1068px) {
     .shelf-vision {
-        height: 500px;
+        height: 650px;
     } 
 
     .vis-word responsive {
