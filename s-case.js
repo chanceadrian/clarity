@@ -212,8 +212,8 @@ class Slideshow {
   }
 
   updateArrowOpacity() {
-      this.leftArrow.style.opacity = (this.index === 0) ? 0.2 : 0.5;
-      this.rightArrow.style.opacity = (this.index === this.totalSlides - 1) ? 0.2 : 0.5;
+      this.leftArrow.style.opacity = (this.index === 0) ? 0.5 : 1;
+      this.rightArrow.style.opacity = (this.index === this.totalSlides - 1) ? 0.5 : 1;
   }
 
   nextSlide() {

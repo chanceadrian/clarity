@@ -27,21 +27,22 @@ body {
     width: 100vw;
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    height: fit-content;
-    font-weight: 600;
-}
+:root {
+    --s-word: linear-gradient(to top, #1981C2, #62B7DC);
+    --s-magic: linear-gradient(to top, #4682BD, #5ABEBA);
+    --s-blue: #437EBD;
 
-h1, h2, h3, h4 {
-    font-weight: 600;
-    color: rgb(0, 0, 0, 0.85);
-}
+    --l-prim: black;
+    --l-sec: rgb(60, 63, 67, 0.65);
+    --l-tert: rgba(60, 63, 67, 0.03);
+    
+    --l-seperator: linear-gradient(to right, rgba(60, 63, 67, 0.07), rgba(60, 63, 67, 0.25), rgba(60, 63, 67, 0.07)) 1;
 
-p {
-    font-weight: 400;
+    --d-prim: white;
+    --d-sec: rgb(255, 255, 255, 0.55);
+
+    --picker: rgb(0, 20, 40, 0.05);
+    --picker-2: rgb(232, 234, 236, 0.75);
 }
 
 nav {
@@ -49,7 +50,7 @@ nav {
     padding: 4px;
     gap: 4px;
     border-radius: 15px;
-    background-color: rgb(250, 251, 252, 0.75);
+    background-color: rgb(255, 255, 255, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
@@ -61,7 +62,7 @@ nav {
 
 nav a {
     padding: 8px 16px;
-    opacity: 0.5;
+    color: var(--l-sec);
     font-size: 17px;
     align-items: center;
     border-radius: 11px;
@@ -70,15 +71,11 @@ nav a {
 
 nav a:hover {
     background: rgb(0, 0, 0, 0.05);
-    opacity: 0.75;
+    color: var(--l-prim);
 }
 
 .selected {
-    opacity: 0.75;
-}
-
-sec {
-    color:rgb(0, 0, 0, 0.5);
+    color: var(--l-prim);
 }
 
 @media only screen and (max-width: 700px) {
@@ -103,7 +100,25 @@ sec {
 
 
 
+
 /* FONT */
+h1, h2, h3, h4, p {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    height: fit-content;
+    font-weight: 600;
+    color: var(--l-prim);
+}
+
+sec {
+    color: var(--l-sec);
+}
+
+p {
+    font-weight: 400;
+}
+
 h1 {
     font-size: 80px;
     line-height: 84px;
@@ -128,11 +143,7 @@ h4 {
 p {
     font-size: 19px;
     line-height: 27px;
-    color:rgb(0, 0, 0, 0.5);
-}
-
-.sec {
-    color: rgb(0, 0, 0, 0.25);
+    color: var(--l-sec);
 }
 
 @media (width <= 1068px) {
@@ -391,7 +402,8 @@ photo-front {
 
 .p-grid p {
     margin-bottom: 1em;
-    color: rgb(0, 0, 0, 0.75);
+    color: var(--l-prim);
+    opacity: 0.85;
 }
 
 .subheading {
@@ -486,7 +498,7 @@ line {
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
-    color: rgb(0, 0, 0, 0.5);
+    color: var(--l-sec);
 }
 
 .chin p {

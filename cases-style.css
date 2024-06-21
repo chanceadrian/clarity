@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, p1, bold, .magic {
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -25,9 +25,178 @@ button {
     background: none;
 }
 
-prim {
-    color:rgb(0, 0, 0, 1);
+:root {
+    --s-word: linear-gradient(to top, #1981C2, #62B7DC);
+    --s-magic: linear-gradient(to top, #4682BD, #5ABEBA);
+    --s-blue: #437EBD;
+
+    --l-prim: black;
+    --l-sec: rgb(60, 63, 67, 0.65);
+    --l-tert: rgba(60, 63, 67, 0.03);
+    
+    --l-seperator: linear-gradient(to right, rgba(60, 63, 67, 0.07), rgba(60, 63, 67, 0.25), rgba(60, 63, 67, 0.07)) 1;
+
+    --d-prim: white;
+    --d-sec: rgb(255, 255, 255, 0.55);
+
+    --picker: rgb(0, 20, 40, 0.05);
+    --picker-2: rgb(232, 234, 236, 0.75);
 }
+
+/* TYPOGRAPHY */
+prim {color: var(--l-prim);}
+
+h1 {
+    font-size: 80px;
+    line-height: 84px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    background: var(--s-word);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+bold {
+    font-size: 64px;
+    line-height: 68px;
+} 
+
+h2, .magic {
+    font-size: 48px;
+    line-height: 52px;
+    color: var(--l-prim);
+}
+
+.magic {
+    background: var(--s-magic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    max-width: 750px;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 36px;
+    min-width: 330px;
+}
+
+h5 {
+    font-size: 21px;
+    line-height: 29px;
+    color: var(--l-sec);
+}
+
+p1, p {
+    font-size: 19px;
+    line-height: 27px;
+}
+
+p1 {
+    color: var(--l-sec);
+    max-width: 312px;
+}
+
+f {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--l-sec);
+}
+
+.dark h5, .darker h5, .dark p1, .darker p1, .dark f, .darker f {
+    color: var(--d-sec);
+}
+
+.dark prim, .dark h2, .darker prim, .darker h2 {
+    color: var(--d-prim);
+}
+
+
+
+@media (width <= 1068px) {
+    h1 {
+        font-size: 64px;
+        line-height: 60px;
+    }
+
+    bold {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    h2, .magic {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 28px;
+        min-width: 230px;
+    }
+
+    h5 {
+        font-size: 19px;
+        line-height: 27px;
+    }
+}
+
+@media (width <= 735px) {
+    h1 {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    bold {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    h2, .magic {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 28px;
+        width: 80%;
+    }
+
+    p1, p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -50,7 +219,7 @@ nav {
 
 nav a {
     padding: 8px 16px;
-    opacity: 0.5;
+    color: var(--l-sec);
     font-size: 17px;
     align-items: center;
     border-radius: 11px;
@@ -59,11 +228,11 @@ nav a {
 
 nav a:hover {
     background: rgb(0, 0, 0, 0.05);
-    opacity: 0.75;
+    color: var(--l-prim);
 }
 
 .selected {
-    opacity: 0.75;
+    color: var(--l-prim);
 }
 
 @media only screen and (max-width: 700px) {
@@ -168,47 +337,17 @@ row {
     background: black;
 }
 
-.dark h2, .darker h2 {
-    color: rgb(255, 255, 255, 0.55);
-}
+
 
 .dark prim, .darker prim {
     color: rgb(255, 255, 255);
 }
 
 
-h1, .keymark h3 {
-    font-size: 48px;
-    line-height: 52px;
-    font-weight: 600;
-}
-
-.keymark h3 {
-    color: rgb(0, 0, 0, 1);
-}
-
-h2 {
-    font-size: 21px;
-    line-height: 29px;
-    color:rgb(0, 0, 0, 0.5);
-}
-
-h3 {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 700;
-    color: rgb(0, 0, 0, 0.5);
-}
-
 
 @media (width <= 1068px) {
     responsive {
         max-width: 700px;
-    }
-
-    h1, .keymark h3 {
-        font-size: 40px;
-        line-height: 44px;
     }
 }
 
@@ -229,15 +368,6 @@ h3 {
         display: none;
     }
 
-    h1, .keymark h3 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    h2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
 }
 
 
@@ -250,16 +380,8 @@ h3 {
 /* KEYMARK ----------------------------------------------------------------------------------------------------- */
 
 /* Font */
-.keymark h1 {
-    font-size: 80px;
-    line-height: 84px;
-}
 
-.keymark h2 {
-    font-size: 36px;
-    line-height: 40px;
-    color: black;
-}
+
 
 /* Structure */
 .keymark {
@@ -286,10 +408,6 @@ h3 {
 }
 
 @media (width <= 1068px) {
-    .keymark h1 {
-        font-size: 64px;
-        line-height: 68px;
-    }
 
     .five {
         width: 1315px;
@@ -305,15 +423,8 @@ h3 {
 }
 
 @media (width <= 735px) {
-    .keymark h1 {
-        font-size: 48px;
-        line-height: 52px;
-    }
     
-    .keymark h2 {
-        font-size: 28px;
-        line-height: 32px;
-    }
+   
 
     .five {
         width: 900px;
@@ -341,12 +452,6 @@ h3 {
     padding-inline: 80px;
 }
 
-.discover h3 {
-    font-size: 36px;
-    line-height: 40px;
-    color: black;
-    font-weight: 600;
-}
 
 .yourself {
     flex-direction: row;
@@ -392,7 +497,7 @@ h3 {
     gap: 15px;
     border-radius: 100px;
     align-self: center;
-    background-color: rgb(0, 0, 47, 0.05);
+    background-color: var(--picker);
     width:fit-content;
 }
 
@@ -403,7 +508,7 @@ h3 {
 }
 
 .prim-btn svg, .prim-btn-show svg {
-    opacity: 0.5;
+    fill: var(--l-sec);
 }
 
 .progressive-views {
@@ -425,13 +530,16 @@ h3 {
 .sec-btn {
     font-size: 19px;
     line-height: 25px;
-    color: rgb(0, 0, 0, 0.5);
+    color: var(--l-sec);
     width: 70px;
 }
 
 .pressed {
     background-color: white;
-    opacity: 1;
+}
+
+.pressed svg {
+    fill: var(--l-prim);
 }
 
 .selec {
@@ -445,14 +553,10 @@ h3 {
     width: 100%;
 }
 
-.pressed svg {
-    opacity: 1;
-}
-
 .fit-cabinet holder {
     max-height: 600px;
     border-top: 2px solid transparent;
-    border-image: linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05)) 1;
+    border-image: var(--l-seperator);
 }
 
 .fit-cabinet .cabinet {
@@ -466,11 +570,6 @@ h3 {
 @media (width <= 1068px) {
     .discover responsive {
         padding-inline: 0px;
-    }
-
-    .discover h3 {
-        font-size: 32px;
-        line-height: 36px;
     }
 
     .yourself .text {
@@ -514,11 +613,6 @@ h3 {
     .yourself {
         flex-direction: column;
         gap: 40px;
-    }
-
-    .discover h3 {
-        font-size: 28px;
-        line-height: 32px;
     }
 
     .yourself .text {
@@ -744,10 +838,8 @@ h3 {
 
 /* TUNNEL GRID ----------------------------------------------------------------------------------------------------- */
 
-.tunnel-grid h2 {
+.tunnel-grid p1 {
     width: 240px;
-    font-size: 19px;
-    line-height: 27px;
 }
 
 /* Structure */
@@ -837,7 +929,7 @@ h3 {
 }
 
 .workflow-trail {
-    padding-block: 30px 90px;
+    padding-block: 30px 120px;
     background: white;
 }
 
@@ -865,12 +957,16 @@ h3 {
     cursor: pointer;
 }
 
-.left:active, .right:active {
-    opacity: 0.85 !important;
+.left svg, .right svg {
+    fill: var(--l-sec);
+}
+
+.left:active > svg, .right:active > svg{
+    fill: var(--l-prim) !important;
 }
 
 .left {
-    opacity: 0.25;
+    opacity: 0.3;
 }
 
 .spring-up {
@@ -981,11 +1077,6 @@ h3 {
     color: black;
 }
 
-bold {
-    font-size: 64px;
-    line-height: 68px;
-} 
-
 .vision-preshow {
     padding-block: 150px 120px;
     background: white;
@@ -999,11 +1090,6 @@ bold {
         line-height: 44px;
         max-width: 570px;
     }
-
-    bold {
-        font-size: 48px;
-        line-height: 52px;
-    }
 }
 
 @media (width <= 735px) {
@@ -1011,11 +1097,6 @@ bold {
         font-size: 32px;
         line-height: 36px;
         min-width: 350px;
-    }
-
-    bold {
-        font-size: 40px;
-        line-height: 44px;
     }
 
     .vision-preshow {
@@ -1049,16 +1130,6 @@ bold {
     padding-block: 90px 180px;
 }
 
-.vis-word h1 {
-    font-size: 32px;
-    line-height: 36px;
-    min-width: 330px;
-}
-
-.vis-word h2 {
-    width: 100%;
-}
-
 .vis-word responsive {
     flex-direction: row;
     align-items: flex-start;
@@ -1085,32 +1156,19 @@ bold {
 @media (width <= 1068px) {
     .shelf-vision {
         height: 500px;
-    }
-
-    .vis-word h1 {
-        font-size: 24px;
-        line-height: 28px;
-        min-width: 230px;
-    }
-
-
-    .vis-word h2 {
-        font-size: 17px;
-        line-height: 25px;
-    }  
+    } 
 
     .vis-word responsive {
         gap: 60px;
     }
+
+    .vis-word h5 {
+        font-size: 17px;
+        line-height: 25px;
+    }
 }
 
 @media (width <= 735px) {
-    .vis-word h1 {
-        font-size: 21px;
-        line-height: 25px;
-        min-width: auto;
-        width: 80%;
-    }
 
     .vis-word responsive {
         gap: 20px;
@@ -1145,7 +1203,7 @@ bold {
 .research-work { padding-top: 30px;}
 .research responsive { align-items: flex-start;}
 .research h2 { color: black; }
-.blue h2 { color: #437EBD; }
+.blue h5 { color: var(--s-blue); }
 .research column { gap: 10px; }
 
 .research-text {
@@ -1154,16 +1212,8 @@ bold {
 }
 
 .research-text p {
-    font-size: 19px;
-    line-height: 27px;
     margin-bottom: 15px;
     height: 100%;
-}
-
-.research-text f {
-    font-size: 14px;
-    line-height: 18px;
-    color: rgb(0, 0, 0, 0.5);
 }
 
 .research-text column {
@@ -1228,17 +1278,6 @@ bold {
 
 
 /* EFFECTS ----------------------------------------------------------------------------------------------------- */
-
-.title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    background: linear-gradient(to bottom, #62B7DC, #1981C2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .appear {
     opacity: 0;  
@@ -1407,40 +1446,27 @@ bold {
     width: 100%;
 }
 
+.sect p {
+    font-weight: 500;
+}
+
 .sub-sect {
     gap: 10px;
 }
 
-.chin h1 {
-    font-size: 48px;
-    line-height: 52px;
-    font-weight: 600;
-}
-
-.chin h2 {
+.chin h5 {
     font-size: 17px;
-    line-height: 22px;
-    font-weight: 600;
-    color: rgb(0, 0, 0, 1);
-}
-
-.chin h3, .chin p {
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 500;
-    color: rgb(0, 0, 0, 0.5);
+    line-height: 21px;
+    color: var(--l-prim);
 }
 
 .chin p {
+    font-size: 12px;
     line-height: 20px;
-    font-weight: 400;
+    color: var(--l-sec);
 }
 
 @media (width <= 1068px) {
-    .chin h1 {
-        font-size: 40px;
-        line-height: 44px;
-    }
 
     .chin {
         padding-block: 60px 100px;

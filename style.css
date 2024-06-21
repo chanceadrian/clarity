@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
@@ -39,12 +37,26 @@ h1, h2, h3, h4, h5, h6, h7, p {
     font-weight: 600;
 }
 
-h1, h2, h3, h4, h5, h6, h7 {
-    font-weight: 600;
-}
-
 p {
     font-weight: 400;
+}
+
+:root {
+    --s-word: linear-gradient(to top, #1981C2, #62B7DC);
+    --s-magic: linear-gradient(to top, #4682BD, #5ABEBA);
+    --s-blue: #437EBD;
+
+    --l-prim: black;
+    --l-sec: rgb(60, 63, 67, 0.65);
+    --l-tert: rgba(60, 63, 67, 0.03);
+    
+    --l-seperator: linear-gradient(to right, rgba(60, 63, 67, 0.07), rgba(60, 63, 67, 0.25), rgba(60, 63, 67, 0.07)) 1;
+
+    --d-prim: white;
+    --d-sec: rgb(255, 255, 255, 0.55);
+
+    --picker: rgb(0, 20, 40, 0.05);
+    --picker-2: rgb(232, 234, 236, 0.75);
 }
 
 nav {
@@ -64,7 +76,7 @@ nav {
 
 nav a {
     padding: 8px 16px;
-    opacity: 0.5;
+    color: var(--l-sec);
     font-size: 17px;
     align-items: center;
     border-radius: 11px;
@@ -73,11 +85,11 @@ nav a {
 
 nav a:hover {
     background: rgb(0, 0, 0, 0.05);
-    opacity: 0.75;
+    color: var(--l-prim);
 }
 
 .selected {
-    opacity: 0.75;
+    color: var(--l-prim);
 }
 
 @media only screen and (max-width: 700px) {
@@ -106,6 +118,7 @@ nav a:hover {
 h1 {
     font-size: 96px;
     line-height: 100px;
+    color: var(--l-prim);
 }
 
 h2 {
@@ -117,6 +130,7 @@ h2 {
 h3 {
     font-size: 56px;
     line-height: 60px;
+    color: var(--l-prim);
 }
 
 h4 {
@@ -132,28 +146,31 @@ h4 {
 h5 {
     font-size: 28px;
     line-height: 32px;
-    color: rgb(0, 0, 0, 0.5);
+    color: var(--l-sec);
     margin-inline: 10px;
 }
 
 h6 {
     font-size: 24px;
     line-height: 28px;
+    color: var(--l-prim);
 }
 
 h7 {
     font-size: 21px;
     line-height: 25px;
     font-weight: 700;
+    color: var(--l-prim);
 }
 
 p {
     font-size: 17px;
     line-height: 22px;
+    color: var(--l-prim);
 }
 
 prim {
-    color: black;
+    color: var(--l-prim);
 }
 
 @media (width <= 1068px) {
@@ -314,7 +331,7 @@ row {
 
 .shelf-cover h3, .shelf-cover h5 {
     min-width: 175.44px;
-    color: black;
+    color: var(--l-prim);
     margin-inline: 0;
 }
 
@@ -422,8 +439,8 @@ slider a {
     opacity: 0.5;
 }
 
-#music a {
-    color: white;
+#music a, #music h1, #music h7 {
+    color: var(--d-prim);
     justify-content: center;
 }
 
@@ -431,11 +448,11 @@ slider a {
     align-items: center;
     justify-content: flex-end;
     gap: 0;
-    color: white;
+    color: var(--d-prim);
 }
 
-.white {
-    color: rgb(255, 255, 255);
+.white h1, .white p {
+    color: var(--d-prim);
 }
 
 .design { background-image: url("Im/Design.webp"); }
@@ -474,7 +491,7 @@ slider a {
     line-height: 27px;
     font-weight: 600;
     margin-bottom: 1em;
-    color: rgb(0, 0, 0, 0.5);
+    color: var(--l-sec);
 }
 
 @media (width >= 1600px) {
@@ -607,7 +624,7 @@ controls {
     gap: 16px;
     width:fit-content;
     align-items: center;
-    background-color: rgb(232, 232, 237, 0.75);
+    background-color: var(--picker-2);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     border-radius: 100px;
@@ -636,20 +653,20 @@ border {
     border: 1.5px solid;
     border-radius: 100px;
     margin-top: 5px;
-    color: #000;
+    color: var(--l-prim);
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
 }
 
 #music border {
-    color: white;
-    border-color: white;
+    color: var(--d-prim);
+    border-color: var(--d-prim);
     justify-content: center;
 }
 
 border:hover, #music border:hover {
-    color: black;
-    background: #fff;
-    border-color: #fff;
+    color: var(--l-prim);
+    background: var(--d-prim);
+    border-color: var(--d-prim);
 }
 
 @media (width <= 735px) {
@@ -721,7 +738,7 @@ heading {
 }
 
 .gray {
-    background:rgb(0, 0, 0, 0.025)
+    background:var(--l-tert);
 }
 
 .ghost {
@@ -755,7 +772,7 @@ play {
     align-items: center;
     min-width: 36px;
     min-height: 36px; 
-    background:rgb(0, 0, 0, 0.025);
+    background:var(--l-tert);
     border-radius: 100px;
     transition: background-color 0.3s ease-in-out;
 }
