@@ -1,24 +1,9 @@
-html {
-    scroll-behavior: smooth;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-svg {
-    fill: inherit;
-}
-
-
 h1, h2, h3, h4, h5, p {
     margin: 0;
     margin-block-start: 0;
@@ -26,10 +11,9 @@ h1, h2, h3, h4, h5, p {
     height: fit-content;
     font-weight: 600;
 }
-
-p {
-    font-weight: 400;
-}
+a { text-decoration: none; color: inherit; }
+svg { fill: inherit; }
+p { font-weight: 400;}
 
 button {
     outline: none;
@@ -176,16 +160,12 @@ row {
 }
 
 .dark, .darker, .dark-gradient {
-    background: #1D1D1D;
+    background: #151515;
     color: white;
 }
 
 .darker {
     background: black;
-}
-
-.dark-gradient {
-    background: linear-gradient(to bottom, #1D1D1D, black);
 }
 
 .dark h2, .darker h2 {
@@ -875,7 +855,7 @@ h3 {
     align-self: center;
     justify-self: center;
     z-index: 3;
-    margin-top: 210px;
+    margin-top: 180px;
 }
 
 .left, .right {
