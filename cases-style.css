@@ -303,6 +303,11 @@ view {
     background: linear-gradient(to bottom, white, #FAFBFC);
 }
 
+.white {
+    background: white;
+    padding-block: 0;
+}
+
 responsive {
     padding-block: 0;
     gap: 30px;
@@ -1078,7 +1083,7 @@ row {
 }
 
 .vision-preshow {
-    padding-block: 150px 120px;
+    padding-block: 120px 90px;
     background: white;
     gap: 0px;
     text-align: center;
@@ -1100,7 +1105,7 @@ row {
     }
 
     .vision-preshow {
-        padding-block: 120px 100px;
+        padding-block: 100px 90px;
     }
 }
 
@@ -1115,13 +1120,14 @@ row {
     height: 1000px;
     background: inherit;
     max-width: 1730px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hold-two-visions {
     gap: 10px;
-    flex-direction: row;
-    background: inherit;
-    padding-block: 0px;
+    width: 100%;
     max-width: 1730px;
 }
 
