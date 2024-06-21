@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   buttons.forEach(button => {
     button.addEventListener("click", function() {
-      // Remove 'pressed' class from all buttons
       buttons.forEach(btn => {
         btn.classList.remove("pressed");
       });
