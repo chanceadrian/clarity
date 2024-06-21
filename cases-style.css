@@ -938,12 +938,6 @@ row {
     background: white;
 }
 
-.workflow-trail h2 {
-    font-size: 19px;
-    line-height: 27px;
-    max-width: 330px;
-}
-
 .button-container {
     display: flex;
     width: 486px;
@@ -1050,9 +1044,7 @@ row {
         max-height: 450px;
     }
 
-    .workflow-trail h2 {
-        font-size: 17px;
-        line-height: 25px;
+    .workflow-trail p1 {
         max-width: 240px;
     }
 
