@@ -1214,6 +1214,7 @@ row {
 .research-text p {
     margin-bottom: 15px;
     height: 100%;
+    opacity: 0.85;
 }
 
 .research-text column {
