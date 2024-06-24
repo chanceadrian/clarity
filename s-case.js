@@ -32,11 +32,6 @@ handleScroll();
 // Load Cabinet Photos -------------------------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
   const imagesView = [
-    'Im/s-key-1.webp',
-    'Im/s-key-2.webp',
-    'Im/s-key-3.webp',
-    'Im/s-key-4.webp',
-    'Im/s-key-5.webp',
     'Im/s-cabinet-1.webp',
     'Im/s-cabinet-2.webp',
     'Im/s-cabinet-2-voice.webp',
@@ -45,6 +40,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     'Im/s-cabinet-2-tunnel.webp',
     'Im/s-cabinet-3.webp',
     'Im/s-cabinet-4.webp',
+    'Im/s-standby-1.webp',
+    'Im/s-standby-2.webp',
+    'Im/s-standby-3.webp',
   ];
 
   // Function to preload a single image
@@ -93,6 +91,23 @@ document.addEventListener("DOMContentLoaded", function() {
           // Set the background image in the specified places
           if (cabinet) {
             cabinet.style.backgroundImage = `url(${imageUrl1})`;
+          }
+      });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll("#swap-view-2");
+  const standby = document.querySelector(".standby-view");
+
+  buttons.forEach(button => {
+      button.addEventListener("click", function() {
+          // Get the background image URL from the data attribute
+          const imageUrl2 = this.getAttribute("data-image-1");
+
+          // Set the background image in the specified places
+          if (standby) {
+            standby.style.backgroundImage = `url(${imageUrl2})`;
           }
       });
   });

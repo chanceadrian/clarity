@@ -31,16 +31,16 @@ button {
     --s-blue: #437EBD;
 
     --l-prim: black;
-    --l-sec: rgb(60, 63, 67, 0.65);
-    --l-tert: rgba(60, 63, 67, 0.03);
+    --l-sec: rgb(37, 43, 46, 0.6);
+    --l-tert: rgba(37, 43, 46, 0.05);
     
-    --l-seperator: linear-gradient(to right, rgba(60, 63, 67, 0.07), rgba(60, 63, 67, 0.25), rgba(60, 63, 67, 0.07)) 1;
+    --l-seperator: linear-gradient(to right, rgba(37, 43, 46, 0.07), rgba(37, 43, 46, 0.25), rgba(37, 43, 46, 0.07)) 1;
 
     --d-prim: white;
-    --d-sec: rgb(255, 255, 255, 0.55);
+    --d-sec: rgb(231, 233, 234, 0.6);
 
-    --picker: rgb(0, 20, 40, 0.05);
-    --picker-2: rgb(232, 234, 236, 0.75);
+    --picker: rgb(37, 43, 46, 0.05);
+    --picker-2: rgb(231, 233, 234, 0.75);
 }
 
 /* TYPOGRAPHY */
@@ -308,6 +308,15 @@ view {
     padding-block: 0;
 }
 
+.standby-white {
+    background: white;
+    padding-bottom: 90px;
+}
+
+.back-blue {
+    background: #FAFBFC; 
+}
+
 responsive {
     gap: 30px;
     width: 90vw;
@@ -372,6 +381,10 @@ row {
         display: none;
     }
 
+    .standby-white {
+        padding-bottom: 60px;
+    }
+
 }
 
 
@@ -382,12 +395,6 @@ row {
 
 
 /* KEYMARK ----------------------------------------------------------------------------------------------------- */
-
-/* Font */
-
-
-
-/* Structure */
 .keymark {
     gap: 60px;
     text-align: center;
@@ -428,8 +435,14 @@ row {
 }
 
 @media (width <= 735px) {
+    .keymark {
+        padding-block: 100px 120px;
+    }
     
-   
+    .keymark h3 {
+        font-size: 32px;
+        line-height: 36px;
+    }
 
     .five {
         width: 900px;
@@ -484,13 +497,13 @@ row {
     max-height: 950px;
 }
 
-.fit-cabinet {
+.fit-cabinet, .fit-standby {
     gap: 60px;
     padding-inline: 80px;
     align-items: flex-start;
 }
 
-.fit-cabinet .text {
+.fit-cabinet .text, .fit-standby .text {
     gap: 30px;
     max-width: 570px;
 }
@@ -516,7 +529,7 @@ row {
     fill: var(--l-sec);
 }
 
-.progressive-views {
+.progressive-views, .standby {
     justify-content: center;
     width: 100%;
     gap: 40px;
@@ -524,6 +537,11 @@ row {
     transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
     margin-bottom: -40px;
     z-index: 1;
+}
+
+.standby {
+    opacity: 1;
+    margin-bottom: 0;
 }
 
 .show {
@@ -572,6 +590,22 @@ row {
     z-index: 3;
 }
 
+.fit-standby holder {
+    max-height: 650px;
+}
+
+.fit-standby .standby-view {
+    aspect-ratio: 1/1;
+    min-height: 650px;
+    background-image: url("Im/s-standby-1.webp");
+    transition: background-image 0.35s ease-in-out;
+}
+
+.standby-built {
+    background: white;
+}
+
+
 @media (width <= 1068px) {
     .discover responsive {
         padding-inline: 0px;
@@ -595,12 +629,12 @@ row {
         max-height: 750px;
     }
 
-    .fit-cabinet {
+    .fit-cabinet, .fit-standby {
         gap: 40px;
         padding-inline: 0px;
     }
 
-    .fit-cabinet .text {
+    .fit-cabinet .text, .fit-standby .text {
         gap: 30px;
         max-width: 570px;
     }
@@ -615,6 +649,14 @@ row {
 }
 
 @media (width <= 735px) {
+    .fit-standby holder {
+        max-height: 343px;
+    }
+
+    .fit-standby .standby-view {
+        min-height: 343px;
+    }
+
     .yourself {
         flex-direction: column;
         gap: 40px;
@@ -900,7 +942,7 @@ row {
 
 .workflow responsive {
     align-items: flex-start;
-    gap: 90px;
+    gap: 120px;
 }
 
 .workflow row {
@@ -1200,9 +1242,9 @@ row {
 /* RESEARCH ----------------------------------------------------------------------------------------------------- */
 .research, .research-work { background: #F5F7F9; }
 .research-worktrail { background: linear-gradient(to bottom, #FAFBFC, #F5F7F9); }
+.workflow-trail responsive p1 {color: var(--l-prim);}
 .research-work { padding-top: 30px;}
 .research responsive { align-items: flex-start;}
-.research h2 { color: black; }
 .blue h5 { color: var(--s-blue); }
 .research column { gap: 10px; }
 

@@ -33,16 +33,16 @@ body {
     --s-blue: #437EBD;
 
     --l-prim: black;
-    --l-sec: rgb(60, 63, 67, 0.65);
-    --l-tert: rgba(60, 63, 67, 0.03);
+    --l-sec: rgb(37, 43, 46, 0.6);
+    --l-tert: rgba(37, 43, 46, 0.05);
     
-    --l-seperator: linear-gradient(to right, rgba(60, 63, 67, 0.07), rgba(60, 63, 67, 0.25), rgba(60, 63, 67, 0.07)) 1;
+    --l-seperator: linear-gradient(to right, rgba(37, 43, 46, 0.07), rgba(37, 43, 46, 0.25), rgba(37, 43, 46, 0.07)) 1;
 
     --d-prim: white;
-    --d-sec: rgb(255, 255, 255, 0.55);
+    --d-sec: rgb(231, 233, 234, 0.6);
 
-    --picker: rgb(0, 20, 40, 0.05);
-    --picker-2: rgb(232, 234, 236, 0.75);
+    --picker: rgb(37, 43, 46, 0.05);
+    --picker-2: rgb(231, 233, 234, 0.75);
 }
 
 nav {
@@ -50,7 +50,7 @@ nav {
     padding: 4px;
     gap: 4px;
     border-radius: 15px;
-    background-color: rgb(255, 255, 255, 0.75);
+    background-color: rgb(250, 251, 252, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
