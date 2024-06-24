@@ -654,7 +654,7 @@ row {
     }
 
     .fit-standby .standby-view {
-        min-height: 343px;
+        min-height: 333px;
     }
 
     .yourself {
@@ -1281,8 +1281,8 @@ row {
     }
 
     .research-text p {
-        font-size: 17px;
-        line-height: 25px;
+        font-size: 19px;
+        line-height: 27px;
     }
 
     .research-text column {
@@ -1300,7 +1300,7 @@ row {
         min-width: 353px;
         gap: 10px;
         align-self: center;
-        padding: 32px 36px;
+        padding: 30px;
     }
 }
 
